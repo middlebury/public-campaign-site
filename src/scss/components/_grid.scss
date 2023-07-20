@@ -1,0 +1,36 @@
+.container {
+    @include make-container;
+
+    @media print {
+        padding-right: 0;
+        padding-left: 0;
+    }
+}
+
+.row {
+    @include make-row;
+}
+
+.row--no-gutters {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+
+    > .col, 
+    > [class*='col-'] {
+        padding-right: 0;
+        padding-left: 0;
+    }
+}
+
+.row--sm-gutters {
+    margin-right: ($grid-gutter-width / -2) !important;
+    margin-left: ($grid-gutter-width / -2) !important;
+
+    > .col,
+    > [class*='col-'] {
+        padding-left: $grid-gutter-width / 2;
+        padding-right: $grid-gutter-width / 2;
+    }
+} 
+
+@include make-grid-columns;

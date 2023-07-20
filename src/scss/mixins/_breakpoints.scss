@@ -1,0 +1,21 @@
+// stylelint-disable scss/no-duplicate-dollar-variables
+
+@mixin breakpoint($breakpoint) {
+    @if $breakpoint == '' {
+      @content;
+    } @else {
+        $value: map-get($breakpoints, $breakpoint);
+
+        // If the key exists in the map
+        @if $value != '' {
+        // Prints a media query based on the value
+        @media only screen and (min-width: $value) {
+            @content;
+        }
+        } @else {
+        // If the key doesn't exist in the map
+        @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+            + "Please make sure it is defined in `$breakpoints` map.";
+        }
+    }
+}

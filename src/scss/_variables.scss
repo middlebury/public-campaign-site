@@ -1,0 +1,278 @@
+////
+/// Sass Variables
+////
+
+////
+/// Breakpoints
+////
+
+$screen-sm: 512px !default;
+$screen-md: 768px !default;
+$screen-lg: 1200px !default;
+$screen-xl: 1440px !default;
+
+////
+/// Grid configuration
+////
+$grid-columns: 12 !default;
+$container-max-width: 1440px !default;
+
+$grid-gutter-width: rem(32) !default;
+$grid-gutter-width-lg: rem(64) !default;
+
+$breakpoints: (
+  xs: 0,
+  sm: $screen-sm,
+  md: $screen-md,
+  lg: $screen-lg,
+  xl: $screen-xl
+) !default;
+
+////
+//// Responsive variants
+//// Used for easily generating responsive utility classes or grid columns.
+////
+$responsive-variants: (
+  '': '',
+  sm: '-sm',
+  md: '-md',
+  lg: '-lg',
+  xl: '-xl'
+);
+
+////
+/// Spacing
+////
+
+$spacing-0: 0 !default;
+$spacing-1: rem(4) !default;
+$spacing-2: rem(8) !default;
+$spacing-3: rem(16) !default;
+$spacing-4: rem(24) !default;
+$spacing-5: rem(32) !default;
+$spacing-6: rem(40) !default;
+$spacing-7: rem(48) !default;
+$spacing-8: rem(64) !default;
+$spacing-9: rem(96) !default;
+
+$spacing: (
+  0: $spacing-0,
+  1: $spacing-1,
+  2: $spacing-2,
+  3: $spacing-3,
+  4: $spacing-4,
+  5: $spacing-5,
+  6: $spacing-6,
+  7: $spacing-7,
+  8: $spacing-8,
+  9: $spacing-9
+);
+
+////
+/// Colors
+////
+
+$blue: #75a3cd !default;
+$brown: #b1850b !default;
+$green: #537e2c !default;
+$light-green: #a7c504 !default;
+
+$navy-light: #174872 !default;
+$navy: #0d395f !default;
+$navy-dark: #022543 !default;
+
+$gray-light: #dedede !default;
+
+// shades
+$white: #fff !default;
+$black: #202020 !default;
+
+// brand colors
+$color-primary: $navy !default;
+$color-primary-dark: $navy-dark !default;
+
+////
+/// Typography
+////
+
+// font families
+// prettier-ignore
+$font-family-sans-serif: (
+  'Open Sans',
+  tahoma,
+  geneva,
+  sans-serif
+) !default;
+
+// prettier-ignore
+$font-family-serif: (
+  'Domine',
+  georgia,
+  serif
+) !default;
+
+// type scale
+$typescale-1: rem(12) !default;
+$typescale-2: rem(14) !default;
+$typescale-3: rem(16) !default;
+$typescale-4: rem(18) !default;
+$typescale-5: rem(20) !default;
+$typescale-6: rem(24) !default;
+$typescale-7: rem(28) !default;
+$typescale-8: rem(36) !default;
+$typescale-9: rem(48) !default;
+$typescale-10: rem(64) !default;
+
+$typescale: (
+  1: $typescale-1,
+  2: $typescale-2,
+  3: $typescale-3,
+  4: $typescale-4,
+  5: $typescale-5,
+  6: $typescale-6,
+  7: $typescale-7,
+  8: $typescale-8
+);
+
+// line heights
+$line-height-solid: 1;
+$line-height-heading: 1.4;
+$line-height-body: 1.7;
+$line-height-journey: 1.1;
+
+// Base
+$font-size-base: 16px !default;
+$line-height-base: $line-height-body !default;
+$font-family-base: $font-family-sans-serif !default;
+
+// Body
+$body-bg: $white !default;
+$body-color: $black !default;
+
+// font weights
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+
+$letter-spacing-base: 0.1em;
+$letter-spacing-solid: 1px;
+$letter-spacing-secondary: 0.75px;
+
+// Border styles
+$border-width: 1px !default;
+$border-color: $gray-light !default;
+
+$chevron-transform: rotate(-180deg);
+$chevron-transition: transform 0.2s ease-in-out;
+
+////
+/// Element styles
+////
+
+// Headings
+$headings-font-family: $font-family-sans-serif !default;
+$headings-font-weight: $font-weight-bold !default;
+$headings-font-size: $typescale-4 !default;
+$headings-line-height: $line-height-heading !default;
+
+// Links
+$link-color: $color-primary !default;
+$link-decoration: none !default;
+$link-hover-color: $color-primary !default;
+$link-hover-decoration: underline !default;
+
+// Paragraphs
+$paragraph-font-size: $typescale-4 !default;
+$paragraph-line-height: $line-height-body !default;
+$paragraph-margin-bottom: $spacing-4 !default;
+
+// Buttons
+$btn-bg: $white !default;
+$btn-color: $navy !default;
+
+// button size default
+$btn-padding-y: $spacing-3 !default;
+$btn-padding-x: $spacing-4 !default;
+$btn-line-height: $line-height-solid !default;
+$btn-font-size: $typescale-1 !default;
+
+// primary
+$btn-primary-bg: $color-primary !default;
+$btn-primary-color: $white !default;
+$btn-primary-hover-bg: lighten($color-primary, 10%) !default;
+$btn-primary-hover-color: $white !default;
+
+// light
+$btn-light-bg: $white !default;
+$btn-light-color: $color-primary !default;
+$btn-light-hover-bg: $color-primary-dark !default;
+$btn-light-hover-color: $white !default;
+
+$btn-border-width: $border-width !default;
+$btn-border-color: transparent !default;
+$btn-border-radius: 0 !default;
+
+$btn-transition: color 0.2s, background-color 0.2s, border-color 0.2s !default;
+
+$btn-themes: (
+  'primary': (
+    bg: $btn-primary-bg, // $bg -> background-color
+    color: $btn-primary-color, // $color -> color
+    border-color: $btn-primary-bg, // $border-color -> border-color
+    hover-bg: $btn-primary-hover-bg, // $hover-bg -> background-color (hover/focus)
+    hover-color: $btn-primary-hover-color, // $hover-color -> color (hover/focus)
+    hover-border-color: $btn-primary-hover-bg // $hover-bordercolor -> border-color (hover/focus)
+  ),
+  'primary-outline': (
+    color: $btn-primary-bg, 
+    bg: transparent,
+    border-color: $btn-primary-bg,
+    hover-color: $btn-primary-color,
+    hover-bg: $btn-primary-bg
+  ),
+  'light': (
+    color: $btn-light-color,
+    bg: $btn-light-bg,
+    border-color: $btn-light-bg,
+    hover-color: $btn-light-hover-color,
+    hover-bg: $btn-light-hover-bg,
+    hover-border-color: $btn-light-bg
+  ),
+  'light-outline': (
+    color: $btn-light-bg,
+    bg: transparent,
+    border-color: $btn-light-bg,
+    hover-color: $btn-light-color,
+    hover-bg: $btn-light-bg
+  ),
+  'dark-outline': (
+    color: $btn-light-color,
+    bg: transparent,
+    border-color: $btn-light-color,
+    hover-color: $btn-light-bg,
+    hover-bg: $btn-light-color
+  ),
+  'outer-border-light': (
+    border-color: $btn-light-bg,
+    outer-border-width: $btn-border-width,
+    outer-border-margin: $spacing-1,
+    outer-border-content: '',
+    outer-border-type: solid,
+    height: fit-content
+  )
+);
+
+///
+// z-indexes
+// Manage z-indexes across all components to prevent elements from accidentally overlapping incorrectly
+///
+
+$z-index-campaign-header: 200;
+
+$z-index-campaign-nav: 200;
+
+$z-index-campaign-nav-dropdown: 200;
+
+$z-index-video-button: 1;

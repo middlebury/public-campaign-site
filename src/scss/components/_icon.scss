@@ -1,0 +1,15 @@
+/*
+ * 1. Keep adjacent text on same line when followed by an icon.
+ * See explanation https://stackoverflow.com/a/42530599/2193516
+ *
+ * 2. Disable pointer-events on svgs so buttons with icons handle clicks correctly.
+ * https://css-tricks.com/slightly-careful-sub-elements-clickable-things/
+*/
+
+.icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  pointer-events: none; /* 2 */
+  vertical-align: middle; /* 1 */
+}

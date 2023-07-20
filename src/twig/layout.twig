@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Public Campaign Website</title>
+        <link rel="stylesheet" href="css/main.css"> 
+         <link
+            href="https://fonts.googleapis.com/css2?family=Domine:wght@400;700&family=Open+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    </head>
+    <body id="midd-pagetop">
+        <nav aria-labelledby="midd-skip-link">
+            <a href="#midd-main" class="sr-only sr-focusable" id="midd-skip-link">Skip to main content</a>
+        </nav>
+        <div style="display:none">
+        {% include 'partials/icons.twig' %}
+        </div>
+        <div class="site-container">
+
+            {% block layout_header %}{% endblock %}
+
+            <main id="#midd-main">
+
+                {% block page %}{% endblock %}
+                
+            </main>
+
+            {% block layout_footer %}{% endblock %}
+
+        </div>
+
+        {% if not env.production %}
+            {% include 'partials/grid-overlay.twig' %}
+        {% endif %}
+        {% block scripts %}
+            <script src="js/bundle.js" async></script>
+        {% endblock %}
+    </body>
+</html>

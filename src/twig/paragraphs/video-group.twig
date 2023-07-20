@@ -1,0 +1,25 @@
+<div class="paragraph paragraph--expand">
+  <div class="paragraphs--wide__offset">
+    <div class="section__header">
+      <h2 class="section__title">
+        Video group
+      </h2>
+      <p class="section__text">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus
+        quam optio ratione labore possimus iusto corrupti vero fugiat explicabo
+        officiis ex, a sunt obcaecati molestias voluptate eum earum ipsam
+        accusantium.
+      </p>
+    </div>
+  </div>
+
+  <div class="row">
+    {% for item in 1..2 %}
+      <div class="col-md-6 mb-7">
+        {% include 'partials/video.twig' with {
+          id: loop.index
+        } %}
+      </div>
+    {% endfor %}
+  </div>
+</div>

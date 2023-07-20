@@ -1,0 +1,42 @@
+////
+/// Flexbox utilities
+////
+
+@each $breakpoint, $variant in $responsive-variants {
+    @include breakpoint($breakpoint) {
+        .flex#{$variant}-wrap {
+            flex-wrap: wrap !important;
+        }
+    
+        .flex#{$variant}-1 {
+            flex: 1 1 0%;
+        }
+    
+        .flex#{$variant}-auto {
+            flex: 1 1 auto;
+        }
+    
+        .justify-content#{$variant}-start {
+            justify-content: flex-start !important;
+        }
+        .justify-content#{$variant}-end {
+            justify-content: flex-end !important;
+        }
+        .justify-content#{$variant}-center {
+            justify-content: center !important;
+        }
+        .justify-content#{$variant}-between {
+            justify-content: space-between !important;
+        }
+    
+        .align-items#{$variant}-start {
+            align-items: flex-start !important;
+        }
+        .align-items#{$variant}-end {
+            align-items: flex-end !important;
+        }
+        .align-items#{$variant}-center {
+            align-items: center !important;
+        }
+    }
+}

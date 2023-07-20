@@ -1,0 +1,45 @@
+////
+/// Margin and padding spacing utilities.
+/// Based on https://github.com/twbs/bootstrap/blob/v4.0.0-beta/scss/utilities/_spacing.scss
+////
+
+@each $breakpoint, $variant in $responsive-variants {
+    @include breakpoint($breakpoint) {
+        @each $prop, $abbrev in (margin: m, padding: p) {
+            @each $size, $length in $spacing {
+                .#{$abbrev}#{$variant}-#{$size} {
+                    #{$prop}: $length !important;
+                }
+                .#{$abbrev}t#{$variant}-#{$size} {
+                    #{$prop}-top: $length !important;
+                }
+                .#{$abbrev}r#{$variant}-#{$size} {
+                    #{$prop}-right: $length !important;
+                }
+                .#{$abbrev}b#{$variant}-#{$size} {
+                    #{$prop}-bottom: $length !important;
+                }
+                .#{$abbrev}l#{$variant}-#{$size} {
+                    #{$prop}-left: $length !important;
+                }
+                .#{$abbrev}x#{$variant}-#{$size} {
+                    #{$prop}-right: $length !important;
+                    #{$prop}-left: $length !important;
+                }
+                .#{$abbrev}y#{$variant}-#{$size} {
+                    #{$prop}-top: $length !important;
+                    #{$prop}-bottom: $length !important;
+                }
+            }
+        }
+    
+        .ml-auto {
+            margin-left: auto;
+        }
+    
+        .m-auto {
+            margin: auto;
+        }
+    }
+}
+  

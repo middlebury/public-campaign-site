@@ -1,0 +1,49 @@
+@mixin button-base() {
+    display: inline-block;
+    font-family: $font-family-base;
+    font-weight: $font-weight-bold;
+    text-align: center;
+    text-transform: uppercase;
+    border: $btn-border-width solid $btn-border-color;
+    color: $btn-color;
+    transition: $btn-transition;
+    padding: $btn-padding-y $btn-padding-x;
+    font-size: $btn-font-size;
+    line-height: $btn-line-height;
+    border-radius: $btn-border-radius;
+    white-space: nowrap;
+    letter-spacing: $letter-spacing-base;
+    
+    &:hover,
+    &:focus {
+        text-decoration: none;
+    }
+}
+
+@mixin button-theme($name, $themes: $btn-themes) {
+    $theme: map-get($themes, $name);
+    $bg: map-get($theme, 'bg');
+    $color: map-get($theme, 'color');
+    $border-color: map-get($theme, 'border-color');
+    $hover-color: map-get($theme, 'hover-color');
+    $hover-bg: map-get($theme, 'hover-bg');
+    $hover-border-color: map-get($theme, 'hover-border-color');
+    background-color: $bg;
+    color: $color;
+    border-color: $border-color;
+    border-width: map-get($theme, 'outer-border-width');
+    border-right-style: map-get($theme, 'outer-border-type');
+    height: map-get($theme, 'height');
+    
+    &:hover,
+    &:focus {
+      background-color: $hover-bg;
+      color: $hover-color;
+      border-color: $hover-border-color;
+    }
+
+    &:after {
+      content: map-get($theme, 'outer-border-content');
+      margin-left: map-get($theme, 'outer-border-margin');
+    }
+}

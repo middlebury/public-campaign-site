@@ -1,0 +1,25 @@
+<div class="campaign-pillars">
+    <div class="container">
+        {% include "partials/campaign-section-title.twig" with {
+            class: "offset-1 pillars-border-color",
+            text: "Lorem ipsum dolor sit amet, consectetur"
+        } %}
+        <div class="row campaign-pillars__wrapper">
+            {% for card in campaign_pillars %}
+                <article class="col-4 campaign-pillars__pillar-card">
+                    <div class="pillar-card__content">
+                        <figure class="pillar-card__image">
+                            {% include 'partials/img.twig' with {
+                                name: 'pillars'
+                            } %}
+                        </figure>
+                        <div class="pillar-card__text-content">
+                            <h3 class="pillar-card__title">{{card.title}}</h3>
+                            <p class="pillar-card__text">{{card.content}}</p>
+                        </div>
+                    </div>
+                </article>
+            {% endfor %}
+        </div>
+    </div>
+</div>

@@ -1,0 +1,49 @@
+.transcript {
+  margin-top: $spacing-3;
+}
+
+.transcript__button {
+  display: inline-block;
+  border-bottom: 1px solid transparent;
+  font-size: $typescale-2;
+  font-weight: $font-weight-medium;
+  letter-spacing: $letter-spacing-base;
+  text-transform: uppercase;
+  transition: border-color 0.2s;
+  color: $white;
+
+  &:hover {
+    border-color: $white;
+    text-decoration: none;
+  }
+}
+
+.transcript__icon {
+  margin-left: $spacing-2;
+  transition: $chevron-transition;
+
+  .transcript.is-toggled & {
+    transform: $chevron-transform;
+  }
+}
+
+.transcript__body {
+  margin-top: $spacing-2;
+
+  .transcript.has-toggler & {
+    display: none;
+  }
+
+  .transcript.is-toggled & {
+    display: block;
+  }
+
+  p {
+    font-size: $typescale-3;
+    margin-bottom: $paragraph-margin-bottom;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

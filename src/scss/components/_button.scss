@@ -1,0 +1,27 @@
+.button {
+    @include button-base;
+}
+
+.button--primary {
+    @include button-theme('primary');
+
+    &.button--outline {
+        @include button-theme('primary-outline');
+    }
+}
+
+.button--light {
+    @include button-theme('light');
+
+    &.button--outline {
+        @include button-theme('light-outline');
+    }
+
+    &.button--dark-outline {
+        @include button-theme('dark-outline');
+    }
+}
+
+.button--outer-border {
+    @include button-theme('outer-border-light');
+}

@@ -1,0 +1,10 @@
+///
+/// font sizes
+///
+
+@each $name, $size in $typescale {
+    .f#{$name} {
+        font-size: $size;
+    }
+}
+  

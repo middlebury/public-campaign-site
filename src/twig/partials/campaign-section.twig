@@ -1,0 +1,18 @@
+{% set id = random(1234) %}
+<section class="campaign-section {{name}}" aria-labelledby="campaign-section-titel-{{id}}">
+    <div class="campaign-section__wrapper">
+        <div class="campaign-section__content">
+            {% if name == 'intro' %}
+                {% include 'partials/campaign-intro.twig' %}
+            {% elseif name == 'pillars' %}
+                {% include 'paragraphs/campaign-pillars.twig' with {
+                    id: id
+                } %}
+            {% elseif name == 'video-group' %}
+                {% include 'partials/campaign-video-group.twig' with {
+                    id: id
+                } %}
+            {% endif %}
+        </div>
+    </div>
+</section>

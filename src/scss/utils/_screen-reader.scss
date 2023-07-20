@@ -1,0 +1,12 @@
+////
+/// Screen reader utilities
+////
+
+.visually-hidden,
+.sr-only {
+    @include sr-only;
+}
+
+.sr-focusable {
+   @include sr-only-focusable;
+}

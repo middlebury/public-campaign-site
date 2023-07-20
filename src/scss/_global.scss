@@ -1,0 +1,116 @@
+////
+/// Contains mainly classless selectors for base resets and styles
+////
+
+*,
+:before,
+:after {
+    box-sizing: border-box;
+}
+
+/*
+ * 1. prevent chrome from hiding background images and colors by default when printing
+ */
+body {
+    font-family: $font-family-base;
+    line-height: $line-height-body;
+    font-size: $font-size-base;
+    color: $body-color;
+    background-color: $body-bg;
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    /* stylelint-disable-next-line property-no-vendor-prefix */
+    -webkit-print-color-adjust: exact; /* 1 */
+  
+    @media print {
+        // remove padding top added for sticky headers
+        padding-top: 0 !important;
+    }
+}
+
+button {
+    padding: 0;
+    background: 0;
+    border: 0;
+    font-size: inherit;
+    font-family: inherit;
+    line-height: inherit;
+    cursor: pointer;
+}
+
+figure {
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+
+a {
+    color: $link-color;
+    text-decoration: $link-decoration;
+  
+    &:hover {
+        text-decoration: $link-hover-decoration;
+    }
+}
+
+p {
+    font-family: $font-family-base;
+    font-size: $paragraph-font-size;
+    line-height: $paragraph-line-height;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $headings-font-family;
+  font-weight: $headings-font-weight;
+  line-height: $headings-line-height;
+  letter-spacing: $letter-spacing-solid;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+strong {
+    font-weight: $font-weight-semibold;
+}
+  
+ol,
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+svg {
+    fill: currentColor;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    :before,
+    :after {
+        animation-delay: -1ms !important;
+        animation-duration: 1ms !important; // stylelint-disable-line
+        animation-iteration-count: 1 !important;
+        background-attachment: initial !important;
+        scroll-behavior: auto !important;
+        transition-delay: 0s !important;
+        transition-duration: 0s !important;
+    }
+}

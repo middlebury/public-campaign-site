@@ -1,0 +1,31 @@
+<div class="transcript js-transcript-{{ id }} {{ class }}">
+  <a href="#midd-transcript-{{ id }}"
+    class="transcript__button"
+    data-toggle-target=".js-transcript-{{ id }}"
+    aria-label="Toggle transcript"
+    aria-expanded="false"
+    role="button">
+    Transcript{% include 'partials/icon.twig' with {
+      name: 'chevron-down',
+      class: 'transcript__icon',
+      size: 'sm'
+    } %}
+  </a>
+  <div class="transcript__body" id="midd-transcript-{{ id }}">
+    <p>
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam, quo error
+      nesciunt unde magni, vitae ea in vero mollitia porro beatae a temporibus
+      iure excepturi aspernatur dolores iste, dignissimos aut?
+    </p>
+    <p>
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam, quo error
+      nesciunt unde magni, vitae ea in vero mollitia porro beatae a temporibus
+      iure excepturi aspernatur dolores iste, dignissimos aut?
+    </p>
+    <p>
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam, quo error
+      nesciunt unde magni, vitae ea in vero mollitia porro beatae a temporibus
+      iure excepturi aspernatur dolores iste, dignissimos aut?
+    </p>
+  </div>
+</div>

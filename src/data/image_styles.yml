@@ -1,0 +1,18 @@
+image_styles:
+  pillars: 
+    title: Homepage Campaign Pillars
+    ratio: "16:9"
+    srcset:
+      - 288x162
+      - 336x189
+      - 416x234
+
+  # paragraphs
+  video:
+    title: Video component
+    ratio: "16:9"
+    srcset:
+      - 400x225
+      - 640x360
+      - 832x468
+      - 1136x639

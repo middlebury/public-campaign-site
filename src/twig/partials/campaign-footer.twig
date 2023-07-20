@@ -1,0 +1,26 @@
+<footer class="midd-footer">
+    <h2 class="sr-only">Additional Navigation</h2>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3">
+                <a href="https://www.middlebury.edu">
+                    <img src="img/middlebury-logo-white.svg" 
+                        alt="Middlebury"
+                        width="195"
+                        height="71"
+                    />
+                </a>
+            </div>
+            <div class="col-lg-9">
+                <ul class="midd-footer__links">
+                    {% for link in campaign_footer %}
+                        <li>
+                            <a href="{{link.href}}">{{link.text}}</a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>

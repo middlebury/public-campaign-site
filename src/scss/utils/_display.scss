@@ -1,0 +1,32 @@
+////
+/// Display property utilities
+////
+
+@each $breakpoint, $variant in $responsive-variants {
+    @include breakpoint($breakpoint) {
+      .d#{$variant}-none {
+        display: none;
+      }
+  
+      .d#{$variant}-inline {
+        display: inline;
+      }
+  
+      .d#{$variant}-inline-block {
+        display: inline-block;
+      }
+  
+      .d#{$variant}-block {
+        display: block;
+      }
+  
+      .d#{$variant}-flex {
+        display: flex;
+      }
+  
+      .d#{$variant}-inline-flex {
+        display: inline-flex;
+      }
+    }
+  }
+  

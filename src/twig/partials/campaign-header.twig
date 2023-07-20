@@ -1,0 +1,30 @@
+<header class="campaign-header">
+    <div class="campaign-header__container">
+        <nav class="campaign-nav" aria-labelledby="campaign-header-nav-label">
+            <h2 class="sr-only" id="campaign-header-nav-label">Primary navigation</h2>
+            <button class="campaign-nav__give-button button--outer-border">
+                <span class="button button--light button--outline">Give a Gift</span>
+            </button>
+            <ul class="campaign-header__links">
+                {% for item in campaign_header %}
+                    <li class="nav__item nav__item--top">
+                        <a href="{{item.href}}">{{item.text}}</a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </nav>
+        <a class="campaign-header__logo" href="">
+            <img src="img/campaign-logo-top.svg"
+                alt="Top half of logo for Middlebury Campaign"
+                height="24"
+                width="293"
+            />
+            <img src="img/campaign-logo-bottom.svg"
+                alt="Bottom half of logo for Middlebury Campaign"
+                height="12"
+                width="287"
+            />
+            <span class="sr-only">For Every Future, the Campaign for Middlebury</span>
+        </a>
+    </div>
+</header>

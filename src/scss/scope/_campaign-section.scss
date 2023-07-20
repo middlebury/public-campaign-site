@@ -1,0 +1,14 @@
+$section-title-border-color: (
+    pillars: $blue,
+    video-group: $light-green
+);
+
+@mixin make-border-styles($border-colors: $section-title-border-color) {
+    @each $section-name, $color in $border-colors {
+        &.#{$section-name}-border-color {
+            .campaign-section__title-border {
+                border-top-color: $color;
+            }
+        }
+    }
+}

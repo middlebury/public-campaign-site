@@ -1,0 +1,57 @@
+.campaign-header {
+    background: transparent;
+    color: $white;
+    width: 100%;
+    position: fixed;
+    z-index: $z-index-campaign-header;
+    font-size: $typescale-2;
+    font-weight: $font-weight-bold;
+    line-height: $line-height-solid;
+    letter-spacing: $letter-spacing-base;
+    padding: $spacing-3;
+
+    @include breakpoint(md) {
+        padding-bottom: $spacing-4;
+        padding-top: $spacing-4;
+    }
+}
+
+.campaign-header__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    @include breakpoint(md) {
+        align-items: center;
+        @include make-gutters;
+    }
+}
+
+.campaign-nav {
+    display: flex;
+}
+
+.campaign-header__links {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    text-transform: uppercase;
+
+    li {
+        margin-left: $spacing-4;
+    }
+
+    a {
+        color: inherit;
+    }
+}
+
+.campaign-header__logo {
+    display: flex;
+    flex-direction: column;
+
+    img:first-child {
+        margin-left: -$spacing-8;
+        margin-bottom: $spacing-3;
+    }
+}

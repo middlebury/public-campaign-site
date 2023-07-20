@@ -1,0 +1,90 @@
+.campaign-pillars {
+    color: $white;
+
+    .campaign-section__title {
+
+    }
+}
+
+.campaign-pillars__pillar-card {
+    position: relative; 
+
+    &:before {
+        display: block;
+        content: "";
+        width: 100%;
+        padding-top: percentage(9/16);
+    }
+
+    .pillar-card__content {
+        display: flex;
+        align-items: center;
+        position: absolute;
+        top: 0;
+        opacity: 1;
+    }
+
+    .pillar-card__text-content {
+        transition: opacity 0.2s, background-color 0.2s;
+        position: absolute;
+        width: 100%;
+    }
+
+    .pillar-card__title {
+        display: flex;
+        justify-content: center;
+        text-transform: uppercase;
+        padding: $spacing-2 0;
+        font-size: $typescale-4;
+        letter-spacing: $letter-spacing-secondary;
+    }
+
+    .pillar-card__text {
+        font-size: $typescale-2;
+        opacity: 0;
+    }
+
+    &:hover {
+        .pillar-card__text-content {
+            height: 100%;
+
+            .pillar-card__title {
+                background-color: transparent;
+                padding-bottom: 0;
+                padding-top: $spacing-5;
+            }
+
+            .pillar-card__text {
+                display: block;
+                opacity: 1;
+                padding: 0 $spacing-3;
+                padding-top: $spacing-4;
+            }
+        }
+    }
+
+    &:first-child {
+        .pillar-card__title, 
+        &:hover .pillar-card__text-content {
+            background-color: $blue;
+        }
+    }
+
+    &:nth-child(2) {
+        .pillar-card__title, 
+        &:hover .pillar-card__text-content {
+            background-color: $brown;
+        }
+    }
+
+    &:last-child {
+        .pillar-card__title, 
+        &:hover .pillar-card__text-content {
+            background-color: $green;
+        }
+    }
+
+    .pillar-card__text {
+        display: none;
+    }
+}

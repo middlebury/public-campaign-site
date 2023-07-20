@@ -1,0 +1,19 @@
+<div class="container">
+    <div class="row">
+        {% include 'partials/campaign-section-title.twig' with {
+            class: "col-7 mt-7 video-group-border-color",
+            text: "Lorem ipsum dolor sit amet, consec tetur adipiscing elit"
+        }%}
+        <div  class="col-md-4 vertical-video-group">
+            {% for item in 1..2 %}
+                <div class="mb-8">
+                    {% include 'partials/video.twig' with {
+                        id: loop.index,
+                        no_transcript: true,
+                        hide_caption_text: true
+                    } %}
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>

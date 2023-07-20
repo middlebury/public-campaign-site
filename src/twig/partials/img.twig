@@ -1,0 +1,38 @@
+
+{% set image = image_styles[name] %}
+
+{% set placehold = 'https://via.placeholder.com/' %}
+
+{% set src = '' %}
+{% set srcset = [] %}
+{% set width = '' %}
+
+{% set inline_width = '' %}
+{% set inline_height = '' %}
+{# dependant on the sizes always starting small and ending in large #}
+{% for size in image.srcset %}
+
+    {% set dimensions = size|split('x') %}
+    {% set width = dimensions[0] %}
+
+    {# value of width and height attributes should be that of the largest dimensions in the srcset #}
+    {% if loop.last %}
+        {% set inline_width = dimensions[0] %}
+        {% set inline_height = dimensions[1] %}
+    {% endif %}
+
+    {% set src = placehold ~ size %}
+
+    {% set srcset = [placehold ~ size ~ ' ' ~ width ~ 'w']|merge(srcset) %}
+
+{% endfor %}
+
+{% if not env.production %}
+    <!--  image style: {{name}} -->
+{% endif %}
+
+{% if lazy %} 
+    <img class="js-lazy-load" width="{{inline_width}}" height="{{inline_height}}" data-src="{{image.src|default(src)}}" data-srcset="{{srcset|reverse|join(',')}}" {% if image.sizes %} sizes="{{image.sizes}}" {% else %} sizes="(max-width: {{width}}px) 100vw, {{width}}px" {% endif %} alt=""/>
+{% else %}
+    <img src="{{image.src|default(src)}}" srcset="{{srcset|reverse|join(',')}}" {% if image.sizes %} sizes="{{image.sizes}}" {% else %} sizes="(max-width: {{width}}px) 100vw, {{width}}px" {% endif %} alt=""/>
+{% endif %}

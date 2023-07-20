@@ -1,0 +1,21 @@
+{% extends "layout.twig" %}
+
+{% block layout_header %}
+    {% include 'partials/campaign-header.twig' %}
+{% endblock %}
+
+{% block page %}
+    {% include 'partials/campaign-section.twig' with {
+        name: 'intro'
+    } %}
+    {% include 'partials/campaign-section.twig' with {
+        name: 'pillars'
+    }%}
+    {% include 'partials/campaign-section.twig' with {
+        name: 'video-group'
+    } %}
+{% endblock %}
+
+{% block layout_footer %}
+    {% include 'partials/campaign-footer.twig' %}
+{% endblock %}
