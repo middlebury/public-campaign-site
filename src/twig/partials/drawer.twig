@@ -1,0 +1,20 @@
+<div class="drawer" id="midd-nav-drawer" aria-hidden="true">
+  <div class="drawer__overlay" tabindex="-1" data-drawer-close>
+    <div class="drawer__content" role="dialog" aria-modal="true" aria-labelledby="midd-modal-1-title">
+      <div class="drawer__header">
+        <h2 class="sr-only" id="midd-modal-1-title">{{title}}</h2>
+        <button class="campaign-nav__handle close-button" aria-label="Close modal" data-drawer-close>
+          Close
+          {% include 'partials/icon.twig' with { name: 'times', class: 'ml-2' } %}
+        </button>
+        <button class="drawer__header--cta button--outer-border m-3">
+            <span class="button button--light button--outline">Give a Gift CTA</span>
+        </button>
+      </div>
+      <div id="midd-modal-1-content">
+        {% block content %}{% endblock %}
+      </div>
+    </div>
+  </div>
+</div>
+

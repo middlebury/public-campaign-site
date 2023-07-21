@@ -1,3 +1,15 @@
+site_nav:
+  items:
+    - text: Our Priorities
+      items:
+        - text: Access
+        - text: Academic Excellence
+        - text: Experience
+        - text: Unrestricted Giving
+        - text: Capitol Projects
+    - text: Get Involved
+    - text: Your Impact
+
 campaign_header:
   - text: 'Our Priorities'
     href: 'https://www.middlebury.edu/'

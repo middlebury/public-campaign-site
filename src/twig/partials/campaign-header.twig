@@ -1,30 +1,60 @@
 <header class="campaign-header">
-    <div class="campaign-header__container">
-        <nav class="campaign-nav" aria-labelledby="campaign-header-nav-label">
-            <h2 class="sr-only" id="campaign-header-nav-label">Primary navigation</h2>
-            <button class="campaign-nav__give-button button--outer-border">
-                <span class="button button--light button--outline">Give a Gift</span>
-            </button>
-            <ul class="campaign-header__links">
-                {% for item in campaign_header %}
-                    <li class="nav__item nav__item--top">
-                        <a href="{{item.href}}">{{item.text}}</a>
-                    </li>
+
+    <div class="campaign-header__main">
+
+      <div class="campaign-header__content">
+
+        <div class="campaign-nav">
+          <button class="button--outer-border d-none d-md-inline-flex mr-3 mr-lg-4">
+            <span class="button button--light button--outline">Give a Gift CTA</span>
+          </button>
+          <button class="campaign-nav__handle menu-button" data-drawer="midd-nav-drawer" aria-label="Open navigation">
+            <span class="d-none d-md-inline mr-2">Menu</span>
+            {% include 'partials/icon.twig' with { name: 'bars', class: 'mr-1' } %}
+          </button>
+
+          <div class="campaign-nav__menu">
+
+            <nav aria-labelledby="midd-main-nav-label">
+              <h2 class="sr-only" id="midd-main-nav-label">Main navigation</h2>
+              <ul class="campaign-nav__list">
+                {% for item in site_nav.items %}
+                  <li class="campaign-nav__item">
+
+                    <a href="" class="campaign-nav__link">{{item.text}}</a>
+
+                    {% if item.items %}
+                      <ul class="campaign-nav__list campaign-nav__list--sub">
+                        {% for subitem in item.items %}
+                          <li class="campaign-nav__item campaign-nav__item--sub">
+                            <a href="" class="campaign-nav__link campaign-nav__link--sub">{{subitem.text}}</a>
+                          </li>
+                        {% endfor %}
+                      </ul>
+                    {% endif %}
+
+                  </li>
                 {% endfor %}
-            </ul>
-        </nav>
-        <a class="campaign-header__logo" href="">
-            <img src="img/campaign-logo-top.svg"
-                alt="Top half of logo for Middlebury Campaign"
-                height="24"
-                width="293"
-            />
-            <img src="img/campaign-logo-bottom.svg"
-                alt="Bottom half of logo for Middlebury Campaign"
-                height="12"
-                width="287"
-            />
-            <span class="sr-only">For Every Future, the Campaign for Middlebury</span>
-        </a>
+              </ul>
+            </nav>
+          </div>
+
+        </div>
+      </div>
+
+      <a class="campaign-header__logo" href="">
+        <img src="img/campaign-logo-top.svg"
+            alt="Top half of logo for Middlebury Campaign"
+            height="24"
+            width="293"
+        />
+        <img src="img/campaign-logo-bottom.svg"
+            alt="Bottom half of logo for Middlebury Campaign"
+            height="12"
+            width="287"
+        />
+        <span class="sr-only">For Every Future, the Campaign for Middlebury</span>
+      </a>
+
     </div>
 </header>

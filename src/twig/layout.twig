@@ -32,6 +32,8 @@
         {% if not env.production %}
             {% include 'partials/grid-overlay.twig' %}
         {% endif %}
+
+        {% block layout_before_body_close %}{% endblock %}
         {% block scripts %}
             <script src="js/bundle.js" async></script>
         {% endblock %}

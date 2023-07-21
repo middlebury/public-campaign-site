@@ -1,0 +1,58 @@
+.drawer {
+  display: none;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: $z-index-drawer;
+
+  &.is-open {
+    display: block;
+  }
+}
+
+.drawer__overlay {
+  background: rgba($black, 0.75);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: $z-index-drawer-overlay;
+  animation: fadeIn 0.2s;
+}
+
+.drawer__content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 240px;
+  max-width: 100%;
+  height: fit-content;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  z-index: $z-index-drawer-content;
+  animation: slideInLeft 0.2s;
+
+  // TODO: Move this elsewhere. Drawer should be an object, not aware of theming.
+  background: $navy;
+}
+
+.drawer__header {
+  text-align: right;
+  padding-top: $spacing-3;
+  padding-bottom: $spacing-3;
+}
+
+.drawer__header--cta {
+  width: calc(100% - #{$spacing-5});
+  display: inline-flex; 
+
+  .button {
+    padding-top: $spacing-2;
+    padding-bottom: $spacing-2;
+    width: 100%;
+  }
+}

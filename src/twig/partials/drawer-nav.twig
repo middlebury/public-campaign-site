@@ -1,0 +1,34 @@
+<nav class="drawer-nav" aria-labelledby="midd-drawer-nav-label">
+  <h2 class="sr-only" id="midd-drawer-nav-label">Navigation</h2>
+
+  <ul class="drawer-nav__list drawer-nav__list--top">
+    {% for item in site_nav.items %}
+      <li class="drawer-nav__item">
+
+        <a href="" class="drawer-nav__link drawer-nav__link--top">{{item.text}}</a>
+
+        {% if item.items %}
+          <button
+            class="drawer-nav__handle"
+            data-toggle-target=".js-subnav-{{loop.index}}"
+            aria-haspopup="true"
+            aria-expanded="false"
+            aria-controls="midd-subnav-{{loop.index}}"
+          >
+            {% include 'partials/icon.twig' with { name: 'chevron-down', class: 'drawer-nav__chevron' } %}
+          </button>
+
+          <ul class="drawer-nav__list drawer-nav__list--sub js-subnav-{{loop.index}}" id="midd-subnav-{{loop.index}}">
+            {% for subitem in item.items %}
+              <li class="drawer-nav__item drawer-nav__item--sub">
+                <a href="" class="drawer-nav__link drawer-nav__link--sub">{{subitem.text}}</a>
+              </li>
+            {% endfor %}
+          </ul>
+        {% endif %}
+
+      </li>
+    {% endfor %}
+
+  </ul>
+</nav>
