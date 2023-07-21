@@ -9,6 +9,12 @@
         padding-top: percentage(9/16);
     }
 
+    &.intro, &.pillars {
+        background: url('/img/panel-background.jpg') no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+
     &.intro {
         &:before {
             padding-top: 100vh;
@@ -22,6 +28,8 @@
     }
 
     &.video-group {
+        background-color: $navy-dark;
+        
         .campaign-section__title-border {
             max-width: percentage(5/7);
         }
@@ -57,7 +65,7 @@
         flex-direction: column;
         justify-content: center;
         height: 100%;
-        background-color: $navy-dark;
+        // background-color: $navy-dark;
 
         .campaign-wordmark {
             width: 100%;
