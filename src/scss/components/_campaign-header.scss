@@ -33,27 +33,14 @@ $campaign-header-breakpoint: lg;
 }
 
 .campaign-header__logo {
-  padding-top: $spacing-2;
-  padding-bottom: $spacing-2;
-}
-
-.campaign-header__content {
-//   display: flex;
-//   align-items: flex-start;
-//   justify-content: flex-start;
-//   flex-direction: row-reverse;
-
-//   @include breakpoint($campaign-header-breakpoint) {
-//     position: relative;
-//   }
-}
-
-.campaign-header__logo {
   display: flex;
   flex-direction: column;
 
   img:first-child {
       margin-left: -$spacing-8;
       margin-bottom: $spacing-3;
+      opacity: 0;
+      
+      animation: fadeIn 1s ease-in 3s forwards;
   }
 }

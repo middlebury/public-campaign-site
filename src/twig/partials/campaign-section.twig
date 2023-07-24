@@ -3,16 +3,24 @@
     <div class="campaign-section__wrapper">
         <div class="campaign-section__content">
             {% if name == 'intro' %}
-                {% include 'partials/campaign-intro.twig' %}
+                {% include 'partials/campaign-section-intro.twig' %}
             {% elseif name == 'pillars' %}
-                {% include 'paragraphs/campaign-pillars.twig' with {
+                {% include 'partials/campaign-section-pillars.twig' with {
                     id: id
                 } %}
             {% elseif name == 'video-group' %}
-                {% include 'partials/campaign-video-group.twig' with {
+                {% include 'partials/campaign-section-video-group.twig' with {
                     id: id
                 } %}
             {% endif %}
         </div>
+        {% if background_video %}
+            <figure class="campaign-section__background" aria-label="[place alt text here]">
+                <video playsinline muted loop class="campaign-section__video" data-campaign-video poster="data:image/gif;base64,r0lgodlhaqabaiaaaaaaap///yh5baeaaaaalaaaaaabaaeaaaibraa7">
+                    <source data-src="{{background_video}}" type="video/mp4">
+                    <track kind="descriptions" srclang="en" src="descriptions.vtt" default/>
+                </video>
+            </figure>
+        {% endif %}
     </div>
 </section>

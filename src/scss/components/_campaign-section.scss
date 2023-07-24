@@ -1,6 +1,7 @@
 .campaign-section {
     position: relative;
     color: $white;
+    overflow: hidden; 
     
     &:before {
         display: block;
@@ -10,9 +11,10 @@
     }
 
     &.intro, &.pillars {
-        background: url('/img/panel-background.jpg') no-repeat;
-        background-size: cover;
-        background-attachment: fixed;
+        // background: url('/img/panel-background.jpg') no-repeat;
+        // background-size: cover;
+        // background-attachment: fixed;
+        // background-color: $navy-dark;
     }
 
     &.intro {
@@ -43,6 +45,42 @@
         left: 0;
     }
 
+    .campaign-section__background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        z-index: -1;
+        background: transparent no-repeat 50% 0% / cover;
+    
+        @include breakpoint(lg) {
+          min-width: initial;
+          min-height: initial;
+          left: 0;
+        }
+    
+        video[poster] {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+    
+        &:after {
+          content: '';
+          display: block;
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          opacity: 1;
+          background-color: $navy-dark;
+          animation: fadeBackground 0.5s ease-in 2s forwards;
+        }
+    }
+
     .campaign-section__title {
         display: flex;
         flex-direction: column;
@@ -65,13 +103,41 @@
         flex-direction: column;
         justify-content: center;
         height: 100%;
-        // background-color: $navy-dark;
 
-        .campaign-wordmark {
-            width: 100%;
+        .campaign-intro__intro-anim {
+            position: relative;
+
+            .intro-anim__wordmark {
+                position: relative;
+                // display: none;
+                animation: fadeOut 1s ease-out forwards 2s;
+                
+                > * {
+                    width: 100%;
+                }
+            }
+
+            .campaign-wordmark__mask {
+                position: absolute;
+                top: 0;
+                left: 0;
+                animation: revealLeftToRight 2s ease-in-out forwards;
+            }
+
+            .intro-anim__text {
+                p {
+                    font-size: rem(32);
+                    font-weight: $font-weight-semibold;
+                    letter-spacing: $letter-spacing-solid;
+                    color: white;
+                    text-transform: uppercase;
+                }
+                // opacity: 0;
+                // animation: fadeIn 1s ease-in 3s forwards;
+            }
         }
         
-        .campaign-section__cta {
+        .campaign-intro__cta {
             display: flex;
             flex-direction: column;
             width: 100%;
@@ -87,7 +153,7 @@
             }
         }
 
-        .campaign-section__scroll-anim {
+        .scroll-anim {
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -95,6 +161,10 @@
 
             img:nth-child(2) {
                 margin-top: $spacing-2;
+            }
+
+            .scroll-anim__arrow {
+                animation: moveUpDown 1s ease-in-out infinite;
             }
         }
     }
