@@ -1,3 +1,6 @@
+$intro-text-animation-duration: 1s;
+$intro-text-animation: fadeInFromTop $intro-text-animation-duration ease-in forwards;
+
 .campaign-section {
     position: relative;
     color: $white;
@@ -8,13 +11,6 @@
         content: "";
         width: 100%;
         padding-top: percentage(9/16);
-    }
-
-    &.intro, &.pillars {
-        // background: url('/img/panel-background.jpg') no-repeat;
-        // background-size: cover;
-        // background-attachment: fixed;
-        // background-color: $navy-dark;
     }
 
     &.intro {
@@ -106,10 +102,15 @@
 
         .campaign-intro__intro-anim {
             position: relative;
+            height: 100%;
+            display: flex;
+            align-items: center;
 
             .intro-anim__wordmark {
                 position: relative;
-                // display: none;
+                position: absolute;
+                width: 100%;
+                margin: auto;
                 animation: fadeOut 1s ease-out forwards 2s;
                 
                 > * {
@@ -125,6 +126,15 @@
             }
 
             .intro-anim__text {
+                width: 100%;
+                margin-bottom: $spacing-8;
+
+                span {
+                    display: block;
+                    animation: $intro-text-animation;
+                    opacity: 0;
+                }
+
                 p {
                     font-size: rem(32);
                     font-weight: $font-weight-semibold;
@@ -132,8 +142,43 @@
                     color: white;
                     text-transform: uppercase;
                 }
-                // opacity: 0;
-                // animation: fadeIn 1s ease-in 3s forwards;
+
+                .line-two {
+                    padding-top: $spacing-4;
+                    color: $yellow;
+                }
+
+                .intro-anim__text-top {
+                    .line-one {
+                        animation-delay: 3s;
+                    }
+
+                    .line-two {
+                        animation-delay: #{3 + ($intro-text-animation-duration * 1)};
+                    }
+                }
+
+                .intro-anim__text-middle {
+                    margin-top: $spacing-8;
+
+                    .line-one {
+                        animation-delay: #{3 + ($intro-text-animation-duration * 2)};
+                    }
+
+                    .line-two {
+                        animation-delay: #{3 + ($intro-text-animation-duration * 3)};
+                    }
+                }
+
+                .intro-anim__text-bottom {
+                    width: fit-content;
+                    margin: auto;
+                    margin-top: $spacing-8;
+                    color: $red;
+                    opacity: 0;
+                    animation: $intro-text-animation;
+                    animation-delay: #{3 + ($intro-text-animation-duration * 4)};
+                }
             }
         }
         
