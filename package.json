@@ -4,7 +4,7 @@
   "description": "Public Campaign Website",
   "scripts": {
     "start": "gulp dev",
-    "dev": "gulp build",
+    "build": "gulp build",
     "build:icons": "svg-sprite --shape-id-generator=\"icon-%s\" --symbol --svg-xmldecl=false --symbol-dest='' --symbol-sprite=icons.twig --dest=src/twig/partials src/icons/*.svg",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
