@@ -33,6 +33,14 @@ $intro-text-animation: fadeInFromTop $intro-text-animation-duration ease-in forw
         }
     }
 
+    &.stats {
+        background-color: $light-green;
+        
+        &:before {
+            padding-top: percentage(113/240);
+        }
+    }
+
     .campaign-section__wrapper {
         position: absolute;
         top: 0;

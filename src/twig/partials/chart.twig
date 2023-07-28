@@ -1,0 +1,28 @@
+<div
+  class="chart"
+  {# enum = bar | percentBar | horizontalBar | line | doughnut | pie #}
+  data-chart="{{type|default("bar")}}"
+
+  {# Array<{label:string,data: Array<number>}> #}
+  data-datasets='{{datasets|json_encode()|default('[{"label": "dataset 1", "data": [1,2,3,4,5]}]')}}'
+
+  {# Array<string> #}
+  data-labels='{{labels|json_encode()|default('["label 1", "label 2", "label 3", "label 4"]')}}'
+
+  {# optional values: #}
+
+  {# title #}
+  data-title="{{title}}" {# string #}
+
+  {# custom y/x labels #}
+  data-y-label="{{yLabel}}" {# string #}
+  data-x-label="{{xLabel}}" {# string #}
+
+  {# manually set a max value for the datasets, so percentage charts can make more sense #}
+  data-max="{{max}}" {# int #}
+  data-min="{{min}}" {# int #}
+
+  {# examples of prefix and suffix #}
+  data-value-prefix="{{prefix}}" {# string #}
+  data-value-suffix="{{suffix}}" {# string #}
+></div>

@@ -1,0 +1,31 @@
+.campaign-stats {
+    color: $black;
+
+    h3 {
+        color: #202020;
+        font-size: rem(32);
+        font-weight: $font-weight-normal;
+        letter-spacing: $letter-spacing-secondary;
+        text-transform: uppercase;
+    }
+
+    hr {
+        border-top: 1px solid rgba($green, 0.5);
+        margin-left: calc(50% - 50vw);
+        margin-right: calc(50% - 50vw);
+    }
+
+    .campaign-stats__chart {
+        margin-bottom: $spacing-8;
+
+        &:nth-child(3) {
+            margin-top: $spacing-8; 
+        }
+    }
+
+    .campaign-stats__date {
+        font-size: $typescale-2;
+        letter-spacing: $letter-spacing-secondary;
+        text-transform: uppercase;
+    }
+}

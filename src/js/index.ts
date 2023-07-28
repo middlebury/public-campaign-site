@@ -1,3 +1,4 @@
+import './charts';
 import './drawer';
 import './lazy-load-video';
 import './toggler';

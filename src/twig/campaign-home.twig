@@ -20,7 +20,10 @@
         text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
         background_image: true
     } %}
-{% endblock %}
+    {% include 'partials/campaign-section.twig' with {
+      name: 'stats'
+    } %}
+{% endblock %} 
 
 {% block layout_footer %}
     {% include 'partials/campaign-footer.twig' %}

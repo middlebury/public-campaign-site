@@ -101,6 +101,12 @@ svg {
     fill: currentColor;
 }
 
+hr {
+    box-sizing: border-box;
+    border: 0;
+    margin: 0;
+}
+
 @media (prefers-reduced-motion: reduce) {
     *,
     :before,

@@ -1,0 +1,58 @@
+
+///
+//// Single chart
+///
+
+.chart {
+  // max-width: 600px;
+  // margin-left: auto;
+  // margin-right: auto;
+}
+
+///
+//// Chart legend
+///
+
+.chart-legend {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.chart-legend--inline {
+  .chart-legend__list {
+    @include breakpoint(md) {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+
+  .chart-legend__item {
+    flex: 0 0 auto;
+    @include breakpoint(md) {
+      &:not(:last-child) {
+        margin-right: 1rem;
+      }
+    }
+  }
+}
+
+.chart-legend__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.chart-legend__item {
+  font-size: $typescale-2;
+  margin-bottom: $spacing-1;
+}
+
+.chart-legend__icon {
+  display: inline-block;
+  background: $gray-light;
+  width: 1rem;
+  height: 0.5rem;
+  margin-right: $spacing-2;
+}

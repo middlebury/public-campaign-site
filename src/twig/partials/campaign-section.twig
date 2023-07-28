@@ -16,6 +16,24 @@
                 {% include 'paragraphs/mega-cta.twig' with {
                     id: id
                 } %}
+            {% elseif name == 'stats' %}
+                {% include 'paragraphs/campaign-stats.twig' with {
+                    title: 'Percentage bar',
+                    items: [
+                        {
+                            type: 'percentBar',
+                            title: 'Progress to $600 M Goal',
+                            labels: ['$250 M', '$600 M'],
+                            datasets: [ { label: 'data set 1', data: [25, 75] }, ],
+                        },
+                        {
+                            type: 'percentBar',
+                            title: 'Progress towards 85% participation',
+                            labels: ['33%', '85%', '100%'],
+                            datasets: [ { label: 'data set 2', data: [33, 85, 100] }, ],
+                        }
+                    ]
+                } %}
             {% endif %}
         </div>
         {% if background_video %}
