@@ -6,10 +6,10 @@
         }%}
         <div  class="col-md-4 vertical-video-group">
             {% for item in 1..2 %}
-                <div class="mb-8">
+                <div class="{% if not loop.last %}mb-8{% endif %}">
                     {% include 'partials/video.twig' with {
                         id: loop.index,
-                        no_transcript: true,
+                        no_transcript: false,
                         hide_caption_text: true
                     } %}
                 </div>

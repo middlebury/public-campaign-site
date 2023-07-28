@@ -1,5 +1,5 @@
 {% set id = random(1234) %}
-<section class="campaign-section {{name}}" aria-labelledby="campaign-section-titel-{{id}}">
+<section class="campaign-section {{name}}" aria-labelledby="campaign-section-title-{{id}}">
     <div class="campaign-section__wrapper">
         <div class="campaign-section__content">
             {% if name == 'intro' %}
@@ -12,14 +12,24 @@
                 {% include 'partials/campaign-section-video-group.twig' with {
                     id: id
                 } %}
+            {% elseif name == 'mega-cta-panel' %}
+                {% include 'paragraphs/mega-cta.twig' with {
+                    id: id
+                } %}
             {% endif %}
         </div>
         {% if background_video %}
-            <figure class="campaign-section__background" aria-label="[place alt text here]">
+            <figure class="campaign-section__background video" aria-label="[place alt text here]">
                 <video playsinline muted loop class="campaign-section__video" data-campaign-video poster="data:image/gif;base64,r0lgodlhaqabaiaaaaaaap///yh5baeaaaaalaaaaaabaaeaaaibraa7">
                     <source data-src="{{background_video}}" type="video/mp4">
                     <track kind="descriptions" srclang="en" src="descriptions.vtt" default/>
                 </video>
+            </figure>
+        {% elseif background_image %}
+            <figure class="campaign-section__background image">
+                {% include 'partials/img.twig' with {
+                    name: 'mega-cta-panel'
+                } %}
             </figure>
         {% endif %}
     </div>

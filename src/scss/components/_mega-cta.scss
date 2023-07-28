@@ -1,0 +1,59 @@
+%make-columns {
+  @include make-col-ready;
+
+  @include breakpoint(sm) {
+    @include make-col(8);
+  }
+}
+
+.mega-cta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: $white;
+}
+
+.mega-cta__content {
+  @extend %make-columns;
+
+  button {
+    > * {
+      font-size: $typescale-2;
+    }
+  }
+}
+
+.mega-cta__content-border {
+  position: absolute;
+  border-left: 4px solid $light-green;
+  height: 100%;
+}
+
+.mega-cta__text-content {
+  margin-left: $spacing-5;
+}
+
+.mega-cta__title {
+  font-size: $typescale-10;
+  font-weight: $font-weight-light;
+  letter-spacing: $letter-spacing-solid;
+  text-transform: uppercase;
+  margin-bottom: rem(14);
+}
+
+.mega-cta__date-time {
+  font-size: $typescale-7;
+  font-weight: 400;
+  line-height: $line-height-heading;
+  letter-spacing: $letter-spacing-solid;
+  text-transform: uppercase;
+
+  span {
+    display: block;
+  }
+}
+
+.mega-cta__text {
+  font-size: $typescale-4;
+  margin-bottom: $spacing-7;
+}

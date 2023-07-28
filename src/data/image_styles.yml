@@ -16,3 +16,10 @@ image_styles:
       - 640x360
       - 832x468
       - 1136x639
+  
+  mega-cta-panel:
+    title: Mega CTA Panel
+    ratio: "16:9"
+    srcset:
+      - 1200x675
+      - 1440x810
