@@ -19,6 +19,7 @@
   "dependencies": {
     "@middlebury/gulp-config": "^1.1.1",
     "@types/micromodal": "^0.3.3",
+    "intersection-observer": "^0.12.2",
     "micromodal": "^0.4.10",
     "normalize.css": "^8.0.1",
     "preact": "^10.16.0",

@@ -2,7 +2,7 @@
     color: $white;
 
     .campaign-section__title {
-
+        color: $navy-dark;
     }
 }
 
@@ -47,6 +47,7 @@
     &:hover {
         .pillar-card__text-content {
             height: 100%;
+            cursor: default;
 
             .pillar-card__title {
                 background-color: transparent;

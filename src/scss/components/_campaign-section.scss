@@ -20,14 +20,13 @@ $intro-text-animation: fadeInFromTop $intro-text-animation-duration ease-in forw
     }
 
     &.pillars {
+        background-color: $yellow;
         .campaign-section__title-border {
             @include make-col(5);
         }
     }
 
     &.video-group {
-        background-color: $navy-dark;
-        
         .campaign-section__title-border {
             max-width: percentage(5/7);
         }
@@ -186,6 +185,7 @@ $intro-text-animation: fadeInFromTop $intro-text-animation-duration ease-in forw
                     }
 
                     .line-two {
+                        color: $light-green;
                         animation-delay: #{3 + ($intro-text-animation-duration * 3)};
                     }
                 }

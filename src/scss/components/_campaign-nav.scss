@@ -144,3 +144,20 @@
     // @include themify(border-top-color);
   }
 }
+
+.campaign-header.text-dark {
+  .campaign-nav__link{
+    color: $navy-dark;
+
+    &:hover,
+    &:focus {
+      border-top-color: $navy-dark;
+    }
+  }
+
+  .campaign-nav__list--sub {
+    .campaign-nav__link{
+      color: $white;
+    }
+  }
+}

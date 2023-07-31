@@ -15,6 +15,27 @@ $campaign-header-breakpoint: lg;
   @media print {
     border: 0;
   }
+
+  &.text-dark {
+    color: $navy-dark;
+
+    button {
+      &.button--outer-border {
+        border-color: $navy-dark;
+      }
+
+      .button--light.button--outline {
+        color: $navy-dark;
+        border-color: $navy-dark;
+      }
+    }
+
+    .campaign-header__logo {
+      svg {
+        fill: $navy-dark;
+      }
+    }
+  }
 }
 
 .campaign-header__title {
@@ -36,11 +57,15 @@ $campaign-header-breakpoint: lg;
   display: flex;
   flex-direction: column;
 
-  img:first-child {
+  svg {
+    fill: $white;
+
+    &:first-child {
       margin-left: -$spacing-8;
       margin-bottom: $spacing-3;
       opacity: 0;
       
       animation: fadeIn 1s ease-in 3s forwards;
+    }
   }
 }

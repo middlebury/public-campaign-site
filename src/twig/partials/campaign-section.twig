@@ -1,5 +1,5 @@
 {% set id = random(1234) %}
-<section class="campaign-section {{name}}" aria-labelledby="campaign-section-title-{{id}}">
+<section class="campaign-section {{name}}" aria-labelledby="campaign-section-title-{{id}}" {% if dark_header %} data-toggle-color-trigger {% endif %}>
     <div class="campaign-section__wrapper">
         <div class="campaign-section__content">
             {% if name == 'intro' %}

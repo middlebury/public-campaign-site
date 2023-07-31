@@ -1,4 +1,4 @@
-<header class="campaign-header">
+<header class="campaign-header" data-toggle-color-target>
 
     <div class="campaign-header__main">
 
@@ -43,16 +43,7 @@
       </div>
 
       <a class="campaign-header__logo" href="">
-        <img src="img/campaign-logo-top.svg"
-            alt="Top half of logo for Middlebury Campaign"
-            height="24"
-            width="293"
-        />
-        <img src="img/campaign-logo-bottom.svg"
-            alt="Bottom half of logo for Middlebury Campaign"
-            height="12"
-            width="287"
-        />
+        {% include 'partials/campaign-logo.twig' %}
         <span class="sr-only">For Every Future, the Campaign for Middlebury</span>
       </a>
 
