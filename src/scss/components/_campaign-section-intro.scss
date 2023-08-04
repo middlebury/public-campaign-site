@@ -1,0 +1,151 @@
+$intro-text-animation-duration: 1s;
+$intro-text-animation: fadeInFromTop $intro-text-animation-duration ease-in forwards;
+
+.campaign-intro__intro-anim {
+    position: relative;
+    height: 100%;
+    display: flex;
+    align-items: center;
+
+    .intro-anim__wordmark {
+        position: relative;
+        position: absolute;
+        width: 100%;
+        margin: auto;
+        animation: fadeOut 1s ease-out forwards 2s;
+        
+        > * {
+            width: 100%;
+        }
+    }
+
+    .campaign-wordmark__mask {
+        position: absolute;
+        top: 0;
+        left: 0;
+        animation: revealLeftToRight 2s ease-in-out forwards;
+    }
+
+    .intro-anim__text {
+        width: 100%;
+        margin-bottom: $spacing-8;
+
+        span {
+            display: block;
+            animation: $intro-text-animation;
+            opacity: 0;
+        }
+
+        p {
+            font-size: $typescale-4;
+            font-weight: $font-weight-semibold;
+            line-height: $line-height-heading;
+            letter-spacing: $letter-spacing-solid;
+            color: white;
+            text-transform: uppercase;
+
+            @include breakpoint(md) {
+                font-size: $typescale-6;
+            }
+
+            @include breakpoint(lg) {
+                font-size: $typescale-7;
+            }
+
+            @include breakpoint(xl) {
+                font-size: rem(32);
+            }
+        }
+
+        .line-two {
+            padding-top: $spacing-2;
+            color: $yellow;
+
+            @include breakpoint(xl) {
+                padding-top: $spacing-4;
+            }
+        }
+
+        .intro-anim__text-top {
+            .line-one {
+                animation-delay: 3s;
+            }
+
+            .line-two {
+                animation-delay: #{3 + ($intro-text-animation-duration * 1)};
+            }
+        }
+
+        .intro-anim__text-middle {
+            margin-top: $spacing-6;
+
+            @include breakpoint(md) {
+                margin-top: $spacing-7;
+            }
+
+            @include breakpoint(lg) {
+                margin-top: $spacing-8;
+            }
+
+            .line-one {
+                animation-delay: #{3 + ($intro-text-animation-duration * 2)};
+            }
+
+            .line-two {
+                color: $light-green;
+                animation-delay: #{3 + ($intro-text-animation-duration * 3)};
+            }
+        }
+
+        .intro-anim__text-bottom {
+            width: fit-content;
+            margin: auto;
+            margin-top: $spacing-6;
+            color: $red;
+            opacity: 0;
+            animation: $intro-text-animation;
+            animation-delay: #{3 + ($intro-text-animation-duration * 4)};
+
+            @include breakpoint(md) {
+                margin-top: $spacing-7;
+            }
+
+            @include breakpoint(lg) {
+                margin-top: $spacing-8;
+            }
+
+        }
+    }
+}
+
+.campaign-intro__cta {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    bottom: $spacing-1;
+    
+    button {
+        margin: 0 auto;
+
+        .button {
+            font-size: $typescale-3;
+        }
+    }
+}
+
+.scroll-anim {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: $spacing-5;
+
+    img:nth-child(2) {
+        margin-top: $spacing-2;
+    }
+
+    .scroll-anim__arrow {
+        animation: moveUpDown 1s ease-in-out infinite;
+        height: 50%;
+    }
+}

@@ -1,6 +1,3 @@
-$intro-text-animation-duration: 1s;
-$intro-text-animation: fadeInFromTop $intro-text-animation-duration ease-in forwards;
-
 .campaign-section {
     position: relative;
     color: $white;
@@ -10,7 +7,15 @@ $intro-text-animation: fadeInFromTop $intro-text-animation-duration ease-in forw
         display: block;
         content: "";
         width: 100%;
-        padding-top: percentage(9/16);
+        padding-top: percentage(377/160); 
+
+        @include breakpoint(sm) {
+            padding-top: percentage(225/256);
+        }
+
+        @include breakpoint(lg) {
+            padding-top: percentage(9/16);
+        }
     }
 
     &.intro {
@@ -21,9 +26,6 @@ $intro-text-animation: fadeInFromTop $intro-text-animation-duration ease-in forw
 
     &.pillars {
         background-color: $yellow;
-        .campaign-section__title-border {
-            @include make-col(5);
-        }
     }
 
     &.video-group {
@@ -34,10 +36,6 @@ $intro-text-animation: fadeInFromTop $intro-text-animation-duration ease-in forw
 
     &.stats {
         background-color: $light-green;
-        
-        &:before {
-            padding-top: percentage(113/240);
-        }
     }
 
     .campaign-section__wrapper {
@@ -89,10 +87,10 @@ $intro-text-animation: fadeInFromTop $intro-text-animation-duration ease-in forw
             }
         }
 
-        &.image {
-            img {
-                width: 100%;
-            }
+        &.image{
+            background-image: url('https://via.placeholder.com/1440x810');
+            background-size: cover;
+            background-position: center center;
         }
     }
 
@@ -100,10 +98,23 @@ $intro-text-animation: fadeInFromTop $intro-text-animation-duration ease-in forw
         display: flex;
         flex-direction: column;
         font-weight: $font-weight-normal;
-        font-size: rem(32);
+        font-size: $typescale-4;
         letter-spacing: 1px;
         text-transform: uppercase;
-        margin-bottom: $spacing-8;
+        margin-bottom: $spacing-4;
+
+        @include breakpoint(md) {
+            font-size: $typescale-6;
+            margin-bottom: $spacing-8;
+        }
+
+        @include breakpoint(lg) {
+            font-size: $typescale-7;
+        }
+
+        @include breakpoint(xl) {
+            font-size: rem(32);
+        }
 
         @include make-border-styles;
 
@@ -118,119 +129,5 @@ $intro-text-animation: fadeInFromTop $intro-text-animation-duration ease-in forw
         flex-direction: column;
         justify-content: center;
         height: 100%;
-
-        .campaign-intro__intro-anim {
-            position: relative;
-            height: 100%;
-            display: flex;
-            align-items: center;
-
-            .intro-anim__wordmark {
-                position: relative;
-                position: absolute;
-                width: 100%;
-                margin: auto;
-                animation: fadeOut 1s ease-out forwards 2s;
-                
-                > * {
-                    width: 100%;
-                }
-            }
-
-            .campaign-wordmark__mask {
-                position: absolute;
-                top: 0;
-                left: 0;
-                animation: revealLeftToRight 2s ease-in-out forwards;
-            }
-
-            .intro-anim__text {
-                width: 100%;
-                margin-bottom: $spacing-8;
-
-                span {
-                    display: block;
-                    animation: $intro-text-animation;
-                    opacity: 0;
-                }
-
-                p {
-                    font-size: rem(32);
-                    font-weight: $font-weight-semibold;
-                    letter-spacing: $letter-spacing-solid;
-                    color: white;
-                    text-transform: uppercase;
-                }
-
-                .line-two {
-                    padding-top: $spacing-4;
-                    color: $yellow;
-                }
-
-                .intro-anim__text-top {
-                    .line-one {
-                        animation-delay: 3s;
-                    }
-
-                    .line-two {
-                        animation-delay: #{3 + ($intro-text-animation-duration * 1)};
-                    }
-                }
-
-                .intro-anim__text-middle {
-                    margin-top: $spacing-8;
-
-                    .line-one {
-                        animation-delay: #{3 + ($intro-text-animation-duration * 2)};
-                    }
-
-                    .line-two {
-                        color: $light-green;
-                        animation-delay: #{3 + ($intro-text-animation-duration * 3)};
-                    }
-                }
-
-                .intro-anim__text-bottom {
-                    width: fit-content;
-                    margin: auto;
-                    margin-top: $spacing-8;
-                    color: $red;
-                    opacity: 0;
-                    animation: $intro-text-animation;
-                    animation-delay: #{3 + ($intro-text-animation-duration * 4)};
-                }
-            }
-        }
-        
-        .campaign-intro__cta {
-            display: flex;
-            flex-direction: column;
-            width: 100%;
-            position: absolute;
-            bottom: $spacing-1;
-            
-            button {
-                margin: 0 auto;
-
-                .button {
-                    font-size: $typescale-3;
-                }
-            }
-        }
-
-        .scroll-anim {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-top: $spacing-5;
-
-            img:nth-child(2) {
-                margin-top: $spacing-2;
-            }
-
-            .scroll-anim__arrow {
-                animation: moveUpDown 1s ease-in-out infinite;
-            }
-        }
     }
 }

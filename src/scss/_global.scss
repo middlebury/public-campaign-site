@@ -107,6 +107,10 @@ hr {
     margin: 0;
 }
 
+.main {
+    min-height: 85vh;
+}
+
 @media (prefers-reduced-motion: reduce) {
     *,
     :before,

@@ -5,19 +5,44 @@
     font-weight: $font-weight-semibold;
     line-height: $line-height-solid;
     letter-spacing: $letter-spacing-base;
-    padding-bottom: $spacing-4;
-    padding-top: $spacing-4;
+    padding-bottom: $spacing-5;
+    padding-top: $spacing-5;
 }
 
 .midd-footer__links {
     height: 100%;
     display: flex;
-    justify-content: flex-end;
-    align-items: center;
+    flex-direction: column;
     text-transform: uppercase;
 
+    @include breakpoint(sm) {
+        flex-direction: row;
+        // justify-content: flex-end;
+        align-items: center;
+    }
+
+    @include breakpoint(md) {
+        justify-content: flex-start;
+    }
+
+    @include breakpoint(lg) {
+        justify-content: flex-end;
+    }
+
     li {
-        margin-left: $spacing-4;
+        &:not(:last-child) {
+            margin-bottom: $spacing-4;
+
+            @include breakpoint(sm) {
+                margin-bottom: 0;
+            }
+        }
+
+        &:not(:first-child) {
+            @include breakpoint(sm) {
+                margin-left: $spacing-4;
+            }
+        }
     }
 
     a {

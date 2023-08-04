@@ -83,5 +83,33 @@
 
 // Vertical Video Group 
 .vertical-video-group {
-    @include make-col-offset(1, $grid-columns, 'right');
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    @include breakpoint(sm) {
+        flex-direction: row;
+    }
+
+    @include breakpoint(lg) {
+        display: initial;
+        padding-right: ($grid-gutter-width-lg / 2);
+        padding-left: ($grid-gutter-width-lg / 2);
+
+        @include make-col(4);
+        @include make-col-offset(1, $grid-columns, 'right');
+    }
+
+    .video-group--video {
+        @include make-gutters();
+
+        @include breakpoint(sm) {
+            @include make-col(6);
+        }
+
+        @include breakpoint(lg) {
+            padding: 0;
+            max-width: 100%;
+        }
+    }
 }

@@ -1,0 +1,165 @@
+.campaign-pillars {
+    color: $white;
+
+    .campaign-pillars--container {
+        @include make-container;
+        padding: 0;
+
+        @include breakpoint(sm) {
+            display: flex;
+        }
+
+        @include breakpoint(lg) {
+            display: block;
+        }
+    }
+
+    .campaign-section__title {
+        @include make-gutters;
+
+        @include breakpoint(sm) {
+            @include make-col(7);
+        }
+
+        color: $navy-dark;
+        margin: 0;
+        margin-top: $spacing-8;
+        
+        @include breakpoint(lg) {
+            @include make-col(9);
+            padding: 0;
+        }
+    }
+
+    .campaign-section__title-border {
+        max-width: percentage(4/7);
+
+        @include breakpoint(lg) {
+            max-width: percentage(5/9);
+        }
+    }
+
+    .campaign-pillars__cards {
+        @include make-gutters;
+
+        @include breakpoint(sm) {
+            @include make-col(5);
+        }
+
+        @include breakpoint(lg) {
+            max-width: initial;
+            padding: 0;
+            @include make-row;
+        }
+    }
+}
+
+.campaign-pillars__pillar-card {
+    padding-bottom: $spacing-4;
+
+    @include breakpoint(lg) {
+        @include make-gutters;
+        @include make-col(4);
+    }
+
+    .pillar-card__content {
+        display: flex;
+        align-items: center;
+        position: relative;
+        top: 0;
+        opacity: 1;
+
+        .pillar-card__image,
+        .pillar-card__image img {
+            width: 100%;
+        }
+    }
+
+    .pillar-card__text-content {
+        transition: opacity 0.2s, background-color 0.2s;
+        position: absolute;
+        width: 100%;
+    }
+
+    .pillar-card__title {
+        display: flex;
+        justify-content: center;
+        text-transform: uppercase;
+        padding: $spacing-2 0;
+        font-size: $typescale-3;
+        letter-spacing: $letter-spacing-secondary;
+        text-align: center;
+
+        @include breakpoint(xl) {
+            font-size: $typescale-4;
+        }
+    }
+
+    .pillar-card__text {
+        font-size: $typescale-1;
+        opacity: 0;
+
+        @include breakpoint(lg) {
+            font-size: $typescale-2;
+        }
+    }
+
+    &:hover {
+        .pillar-card__text-content {
+            height: 100%;
+            cursor: default;
+            overflow-y: auto;
+
+            .pillar-card__title {
+                line-height: $line-height-solid;
+                background-color: transparent;
+                padding-bottom: 0;
+                padding-top: $spacing-3;
+
+                @include breakpoint(lg) {
+                    padding-top: $spacing-4;
+                }
+
+                @include breakpoint(xl) {
+                    padding-top: $spacing-5;
+                }
+            }
+
+            .pillar-card__text {
+                display: block;
+                opacity: 1;
+                padding: 0 $spacing-3;
+                padding-top: $spacing-3;
+
+                @include breakpoint(xl) {
+                    padding-top: $spacing-4;
+                }
+            }
+        }
+    }
+
+    &:first-child {
+        .pillar-card__title, 
+        &:hover .pillar-card__text-content {
+            background-color: $blue;
+        }
+    }
+
+    &:nth-child(2) {
+        .pillar-card__title, 
+        &:hover .pillar-card__text-content {
+            background-color: $green;
+        }
+    }
+
+    &:last-child {
+        .pillar-card__title, 
+        &:hover .pillar-card__text-content {
+            background-color: $brown;
+        }
+    }
+
+    .pillar-card__text {
+        display: none;
+    }
+}

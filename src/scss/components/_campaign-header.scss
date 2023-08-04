@@ -10,7 +10,11 @@ $campaign-header-breakpoint: lg;
   font-weight: $font-weight-bold;
   line-height: $line-height-solid;
   letter-spacing: $letter-spacing-base;
-  padding: $spacing-4 0;
+  padding: $spacing-3 0;
+
+  @include breakpoint(md) {
+    padding: $spacing-4 0;
+  }
 
   @media print {
     border: 0;
@@ -27,6 +31,10 @@ $campaign-header-breakpoint: lg;
       .button--light.button--outline {
         color: $navy-dark;
         border-color: $navy-dark;
+      }
+
+      &.campaign-nav__handle {
+        color: $navy-dark;
       }
     }
 
@@ -45,7 +53,7 @@ $campaign-header-breakpoint: lg;
 .campaign-header__main {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   margin: 0 $spacing-3;
 
   @include breakpoint(lg) {
@@ -61,11 +69,27 @@ $campaign-header-breakpoint: lg;
     fill: $white;
 
     &:first-child {
-      margin-left: -$spacing-8;
-      margin-bottom: $spacing-3;
+      margin-left: -$spacing-5;
+      margin-bottom: $spacing-2;
       opacity: 0;
       
       animation: fadeIn 1s ease-in 3s forwards;
+
+      width: 200px;
+
+      @include breakpoint(md) {
+        width: initial;
+        margin-left: -$spacing-8;
+        margin-bottom: $spacing-3;
+      }
+    }
+
+    &:nth-child(2) {
+      width: 200px;
+
+      @include breakpoint(md) {
+        width: initial;
+      }
     }
   }
 }

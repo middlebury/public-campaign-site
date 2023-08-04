@@ -22,7 +22,7 @@
 
 .chart-legend--inline {
   .chart-legend__list {
-    @include breakpoint(md) {
+    @include breakpoint(sm) {
       display: flex;
       flex-wrap: wrap;
     }
@@ -30,7 +30,7 @@
 
   .chart-legend__item {
     flex: 0 0 auto;
-    @include breakpoint(md) {
+    @include breakpoint(sm) {
       &:not(:last-child) {
         margin-right: 1rem;
       }
