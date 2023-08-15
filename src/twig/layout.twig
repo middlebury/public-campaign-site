@@ -20,7 +20,9 @@
             {% block layout_header %}{% endblock %}
 
             <main class="main" id="#midd-main">
-
+                {% if page_header %}
+                    {% include 'partials/page-header.twig' with page_header %}
+                {% endif %}
                 {% block page %}{% endblock %}
                 
             </main>

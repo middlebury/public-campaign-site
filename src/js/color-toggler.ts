@@ -31,7 +31,7 @@ class ColorToggler {
         for (let i = 0; i <= 1.0; i += 0.01) {
             this.thresholdSet.push(i);
         }
-        console.log(this.thresholdSet);
+        
         this.io = new IntersectionObserver(this.handleIntersection, 
             {
                 threshold: this.thresholdSet

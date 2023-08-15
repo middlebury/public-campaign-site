@@ -9,6 +9,21 @@ const colors = [
   '#ffffff'
 ];
 
+const theme: {[key: string]: string[]} = {
+  'access': [
+    '#022543',
+    '#ffffff'
+  ],
+  'academic-excellence': [
+    '#a7c504',
+    '#ffffff'
+  ],
+  'experience': [
+    '#f4b824',
+    '#ffffff'
+  ]
+}
+
 const ALLOW_CHART_TYPES = [
   'percentBar' // custom Preact component
 ];
@@ -18,7 +33,8 @@ const ALLOW_CHART_TYPES = [
 // Also adds a wrapper class so we can change the position of the legend.
 function renderPercentBarChart(el: HTMLElement, config: ChartConfig) {
   el.classList.add('chart--singlebar');
-  render(<PercentBarChart {...config} colors={colors} legend='inline' />, el);
+  
+  render(<PercentBarChart {...config} colors={config.theme ? theme[config.theme] : colors} legend='inline' />, el);
 }
 
 export interface DataSet {
@@ -83,6 +99,8 @@ interface ChartConfig {
    * chart is presented as a percentage chart.
    */
   valueSuffix?: string;
+
+  theme: string;
 }
 
 /**
@@ -150,7 +168,8 @@ function parseConfig(el: HTMLElement): ChartConfig | void {
     max,
     valuePrefix,
     valueSuffix,
-    title
+    title,
+    theme
   } = el.dataset;
 
   if (!datasets || !labels) {
@@ -172,6 +191,7 @@ function parseConfig(el: HTMLElement): ChartConfig | void {
     labels: parseJsonData(labels),
     type: chart,
     title,
+    theme,
     valuePrefix,
     valueSuffix,
     min: Number(min),

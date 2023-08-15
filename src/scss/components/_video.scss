@@ -1,6 +1,22 @@
 .video {
     // position: relative;
     color: $white;
+
+    &.video--top-level {
+        color: $black;
+
+        .video__title {
+            margin: 0;
+            margin-top: $spacing-3;
+        }
+
+        .transcript a {
+            font-size: $typescale-1;
+            font-weight: $font-weight-semibold;
+            letter-spacing: $letter-spacing-video-group;
+            color: $navy-dark;
+        }
+    }
 }
   
 .video__content {

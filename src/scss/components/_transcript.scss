@@ -13,7 +13,7 @@
   color: $white;
 
   &:hover {
-    border-color: $white;
+    border-color: currentColor;
     text-decoration: none;
   }
 }

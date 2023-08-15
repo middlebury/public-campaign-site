@@ -1,5 +1,31 @@
+.paragraph--campaign-stats {
+
+    &.campaign-stats{
+        color: $white;
+
+        h3 {
+            font-size: $typescale-4;
+            font-weight: $font-weight-semibold;
+            color: $white;
+        }
+
+        &.access {
+            background-color: $blue;
+        }
+
+        &.academic-excellence {
+            background-color: $green;
+        }
+
+        &.experience {
+            background-color: $brown;
+        }
+    }
+}
+
 .campaign-stats {
     color: $black;
+    width: 100%;
 
     h3 {
         color: #202020;
@@ -22,37 +48,37 @@
         margin-left: calc(50% - 50vw);
         margin-right: calc(50% - 50vw);
     }
+}
 
-    .campaign-stats__chart {
-        margin-bottom: rem(54);
+.campaign-stats__chart {
+    margin-bottom: rem(54);
 
-        @include breakpoint(sm) {
-            margin-bottom: rem(72);
-        }
-        @include breakpoint(lg) {
-            margin-bottom: rem(84);
-        }
-
-        &:nth-child(3) {
-            margin-top: $spacing-5;
-
-            @include breakpoint(sm) {
-                margin-top: $spacing-7;
-            }
-
-            @include breakpoint(lg) {
-                margin-top: $spacing-8; 
-            }
-        }
+    @include breakpoint(sm) {
+        margin-bottom: rem(72);
+    }
+    @include breakpoint(lg) {
+        margin-bottom: rem(84);
     }
 
-    .campaign-stats__date {
-        font-size: $typescale-2;
-        letter-spacing: $letter-spacing-secondary;
-        text-transform: uppercase;
+    &:not(:first-child) {
+        margin-top: $spacing-5;
 
         @include breakpoint(sm) {
-            margin: auto;
+            margin-top: $spacing-7;
         }
+
+        @include breakpoint(lg) {
+            margin-top: $spacing-8; 
+        }
+    }
+}
+
+.campaign-stats__date {
+    font-size: $typescale-2;
+    letter-spacing: $letter-spacing-secondary;
+    text-transform: uppercase;
+
+    @include breakpoint(sm) {
+        margin: auto;
     }
 }

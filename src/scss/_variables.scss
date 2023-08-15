@@ -85,6 +85,7 @@ $navy: #0d395f !default;
 $navy-dark: #022543 !default;
 
 $gray-light: #dedede !default;
+$gray: #767676 !default;
 
 // shades
 $white: #fff !default;
@@ -141,6 +142,7 @@ $typescale: (
 $line-height-solid: 1;
 $line-height-heading: 1.4;
 $line-height-body: 1.7;
+$line-height-lead: 1.9;
 $line-height-journey: 1.1;
 
 // Base
@@ -162,6 +164,7 @@ $font-weight-bold: 700;
 $letter-spacing-base: 0.1em;
 $letter-spacing-solid: 1px;
 $letter-spacing-secondary: 0.75px;
+$letter-spacing-video-group: 2px;
 
 // Border styles
 $border-width: 1px !default;
@@ -267,6 +270,16 @@ $btn-themes: (
   )
 );
 
+////
+/// Component variables
+////
+
+// Lead
+$lead-font-size: $typescale-4 !default;
+$lead-line-height: $line-height-lead !default;
+$lead-margin-bottom: $spacing-5 !default;
+$lead-border-bottom: 1px solid $navy-dark !default;
+
 ///
 // z-indexes
 // Manage z-indexes across all components to prevent elements from accidentally overlapping incorrectly
@@ -293,3 +306,7 @@ $z-index-school-search-content: 200;
 $z-index-mega-cta-image: 1;
 $z-index-mega-cta-front: 2;
 $z-index-mega-cta-caption: 3;
+
+$z-index-page-header-caption: 3;
+
+$z-index-box-menu: 6;

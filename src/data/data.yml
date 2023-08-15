@@ -38,3 +38,9 @@ campaign_pillars:
     content: 'Drive innovative approaches in education to ensure Middlebury prepares students to learn how to learn, to be comfortable with complexity, and thrive in an ever-changing world.' 
   - title: 'Experience'
     content: 'Maximize immersive, experiential opportunities to accelerate learning and deepen understanding to prepare our students for meaningful careers and a lifetime of leadership.'
+
+top_level_nav_example:
+  - text: About
+  - text: Your Impact
+  - text: By the Numbers
+  - text: Big Oppurtunities

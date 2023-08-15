@@ -1,0 +1,21 @@
+.typography {
+    ul {
+        > li {
+            position: relative;
+            margin-left: 20px;
+            margin-bottom: $spacing-5;
+
+            &:before {
+            content: '\2022';
+            position: absolute;
+            right: calc(100% + 20px);
+            top: 6px;
+            font-size: 10px;
+            }
+        }
+    }
+
+    strong {
+        font-weight: $font-weight-bold;
+    }
+}

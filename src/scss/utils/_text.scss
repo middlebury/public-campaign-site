@@ -7,4 +7,18 @@
         font-size: $size;
     }
 }
+
+///
+/// lead
+///
+
+.lead {
+    font-size: $lead-font-size;
+    line-height: $lead-line-height;
+    // padding-bottom: $lead-margin-bottom;
+
+    a {
+        @include link-border;
+    }
+}
   

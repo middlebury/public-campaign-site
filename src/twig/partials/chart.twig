@@ -3,6 +3,8 @@
   {# enum = bar | percentBar | horizontalBar | line | doughnut | pie #}
   data-chart="{{type|default("bar")}}"
 
+  data-theme="{{theme}}"
+
   {# Array<{label:string,data: Array<number>}> #}
   data-datasets='{{datasets|json_encode()|default('[{"label": "dataset 1", "data": [1,2,3,4,5]}]')}}'
 

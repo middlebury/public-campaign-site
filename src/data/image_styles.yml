@@ -23,3 +23,23 @@ image_styles:
     srcset:
       - 1200x675
       - 1440x810
+
+  top_level: # 5:2
+    title: Top Level
+    ratio: "5:2"
+    srcset:
+      - 400x160
+      - 640x256
+      - 960x384
+      - 1280x512
+      - 1440x576
+
+  article_spotlight_item: # 3:4
+    title: Article spotlight
+    ratio: "16:9"
+    srcset:
+      - 288x162
+      - 224x126
+      - 336x189
+      - 416x232
+    # sizes: "(max-width: 512px) 90px, (max-width: 768px) 144px, 288px"
