@@ -75,6 +75,7 @@
 }
 
 .campaign-stats__chart {
+    margin: auto;
     margin-bottom: rem(54);
 
     @include breakpoint(sm) {
