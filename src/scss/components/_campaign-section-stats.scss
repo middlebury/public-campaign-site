@@ -7,6 +7,30 @@
             font-size: $typescale-4;
             font-weight: $font-weight-semibold;
             color: $white;
+
+            @include breakpoint(md) {
+                font-size: $typescale-6;
+            }
+
+            @include breakpoint(lg) {
+                font-size: $typescale-5;
+            }
+
+            @include breakpoint(xl) {
+                font-size: $typescale-4;
+            }
+        }
+
+        .chart {
+            font-size: $typescale-2;
+
+            @include breakpoint(md) {
+                font-size: $typescale-3;
+            }
+
+            @include breakpoint(lg) {
+                font-size: $typescale-4;
+            }
         }
 
         &.access {

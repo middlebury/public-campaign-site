@@ -1,7 +1,7 @@
 <div class="paragraph">
   <div class="section__header">
     <h2 class="section__title">
-      Video group
+      <strong>Voices</strong> of Access
     </h2>
     {% if blurb %}
       <p class="section__text">
@@ -16,7 +16,7 @@
     <div class="container">
       <div class="row">
         {% for item in 1..2 %}
-          <div class="col-sm-6">
+          <div class="col-sm-6 {{not loop.last ? "mb-6 mb-md-0" : ""}}">
             {% include 'partials/video.twig' with {
               id: loop.index,
               hide_caption_text: true,

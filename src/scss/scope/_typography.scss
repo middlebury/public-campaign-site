@@ -2,8 +2,9 @@
     ul {
         > li {
             position: relative;
-            margin-left: 20px;
+            margin-left: 22px;
             margin-bottom: $spacing-5;
+            font-size: $typescale-4;
 
             &:before {
             content: '\2022';
@@ -11,6 +12,10 @@
             right: calc(100% + 20px);
             top: 6px;
             font-size: 10px;
+            }
+
+            @include breakpoint(md) {
+                margin-left: 20px;
             }
         }
     }

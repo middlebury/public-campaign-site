@@ -5,7 +5,7 @@
       {% if loop.index > 1 %}
           <hr>
       {% endif %}
-      <div class="campaign-stats__chart col-sm-8 m-auto px-0">
+      <div class="campaign-stats__chart {{top_level ? "col-12 col-md-10 col-lg-8" : "col-sm-8"}} m-auto px-0">
         {% if item.title %}
           <h3 class="h2 mb-3">{{item.title}}</h3>
         {% endif %}
@@ -14,6 +14,6 @@
         
       </div>
     {% endfor %}
-    <p class="campaign-stats__date col-8 px-0">As of <time datetime="2023-08-21">August 21, 2023</time></p>
+    <p class="campaign-stats__date {{top_level ? "col-10 col-lg-8" : "col-8"}} px-0">As of <time datetime="2023-08-21">August 21, 2023</time></p>
   </div>
 </div>

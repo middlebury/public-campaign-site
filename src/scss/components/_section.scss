@@ -1,8 +1,16 @@
 .section__title {
-    font-size: rem(32);
+    font-size: $typescale-7;
     font-weight: $font-weight-normal;
     text-transform: uppercase;
-    padding-top: $spacing-9;
-    padding-bottom: $spacing-8;
+    padding-top: $spacing-8;
+    padding-bottom: $spacing-7;
     // border-top: 1px solid currentColor;
+
+    @include breakpoint(md) {
+        font-size: rem(32);
+    }
+
+    @include breakpoint(lg) {
+        padding-top: $spacing-9;
+    }
 }

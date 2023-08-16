@@ -1,6 +1,16 @@
+.paragraph--article-spotlight {
+  ul li {
+    &:not(:last-child) {
+      .article-spotlight-item {
+        margin-bottom: $spacing-6;
+      }
+    }
+  }
+}
+
 .article-spotlight-item {
-  margin-bottom: $spacing-5;
   display: flex;
+  flex-direction: column;
 
   @include breakpoint(md) {
     display: block;
@@ -9,11 +19,15 @@
 }
 
 .article-spotlight-item__media {
-  margin-bottom: $spacing-3;
-  margin-right: $spacing-3;
+  margin-bottom: $spacing-2;
+  // margin-right: $spacing-3;
 
   @include breakpoint(md) {
     margin-right: 0;
+  }
+
+  @include breakpoint(xl) {
+    margin-bottom: $spacing-3;
   }
 }
 

@@ -38,11 +38,7 @@
 }
   
 .paragraphs {
-    margin-bottom: $spacing-7;
-
-    @include breakpoint(md) {
-        margin-bottom: $spacing-8;
-    }
+    margin-bottom: $spacing-8;
 
     @include breakpoint(lg) {
         margin-bottom: $spacing-9;
@@ -96,11 +92,7 @@
 .paragraph--video-group, 
 .paragraph--lead,
 .paragraph--text {
-  margin-bottom: $spacing-7;
-  
-  @include breakpoint(md) {
-    margin-bottom: $spacing-8;
-  }
+  margin-bottom: $spacing-8;
 
   @include breakpoint(lg) {
     margin-bottom: $spacing-9;
