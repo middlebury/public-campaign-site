@@ -43,3 +43,13 @@ image_styles:
       - 336x189
       - 416x232
     # sizes: "(max-width: 512px) 90px, (max-width: 768px) 144px, 288px"
+  
+  image_text:
+    title: Our Priorities 
+    ratio: "16:9"
+    srcset: 
+      - 288x162
+      - 432x243
+      - 666x375
+      - 808x455
+    sizes: "(max-width: 512px) 288px, (max-width: 768px) 432px, (max-width: 1200px) 666px, 808px"

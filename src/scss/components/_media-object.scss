@@ -1,0 +1,157 @@
+%media-object-border-top {
+  border-top: 1px solid $gray-light;
+}
+
+.media-object {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    
+    @include breakpoint(sm) {
+      flex-direction: row;
+    }
+}
+
+.media-object__border {
+  position: absolute;
+  border-top: $spacing-2 solid;
+  max-width: calc(100% - 32px);
+  width: 100%;
+
+  @include breakpoint(md) {
+    border-top-width: $spacing-3;
+    max-width: calc(11 / 12 * 100% - 64px);
+  }
+
+  &.access {
+    border-top-color: $color-access;
+  }
+
+  &.academic-excellence {
+    border-top-color: $color-academic-excellence;
+  }
+
+  &.experience {
+    border-top-color: $color-experience;
+  }
+}
+
+.media-object__image {
+  width: 100%;
+  margin-bottom: $spacing-2;
+
+  @include breakpoint(md) {
+    width: initial;
+    margin-right: $spacing-5;
+    margin-left: -$spacing-3;
+  }
+
+  @include breakpoint(lg) {
+    margin-right: $spacing-8;
+    margin-left: -$spacing-5;
+  }
+}
+
+.media-object--right {
+  .media-object__image {
+    @include breakpoint(md) {
+      order: 2;
+      margin-right: -$spacing-3;
+      margin-left: $spacing-5;
+    }
+
+    @include breakpoint(lg) {
+      margin-right: -$spacing-5;
+      margin-left: $spacing-8;
+    }
+  }
+}
+
+.media-object__body {
+  @include breakpoint(md) {
+    @include make-col(5);
+  }
+
+  h3 {
+    font-size: $typescale-7;
+    font-weight: $font-weight-normal;
+    text-transform: uppercase;
+    letter-spacing: $letter-spacing-secondary;
+    margin-top: $spacing-3;
+    margin-bottom: $spacing-2;
+
+    @include breakpoint(md) {
+      margin-top: $spacing-4;
+    }
+
+    @include breakpoint(lg) {
+      font-size: rem(32);
+      font-weight: $font-weight-semibold;
+      margin-top: $spacing-5;
+      margin-bottom: $spacing-4;
+    }
+  }
+
+  @include breakpoint(sm) {
+    flex: 1;
+  }
+
+  p {
+    font-size: $typescale-3;
+    margin-bottom: $spacing-3;
+
+    @include breakpoint(lg) {
+      font-size: $typescale-4;
+      margin-bottom: $spacing-4;
+    }
+  }
+
+  .media-object__body-link {
+    font-size: $typescale-1;
+    font-weight: $font-weight-bold;
+    letter-spacing: $letter-spacing-secondary;
+    text-transform: uppercase;
+
+    @include breakpoint(lg) {
+      font-size: $typescale-2;
+    }
+  }
+}
+
+.border-top {
+  padding-top: $spacing-2;
+  @extend %media-object-border-top;
+}
+
+.paragraph--profile-list {
+  .media-object {
+    margin-left: -$spacing-3;
+    margin-right: -$spacing-3;
+    padding-left: $spacing-3;
+    padding-right: $spacing-3;
+
+    @include breakpoint(sm) {
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+  .profile-list .media-object:not(:nth-child(1)) {
+    border-top: solid 4px $gray-light;
+    padding-top: $spacing-5;
+
+    @include breakpoint(lg) {
+      padding-top: $spacing-7;
+    }
+  }
+
+  dl {
+    div:last-child {
+      padding-bottom: 0 !important;
+    }
+
+    & ~ ul {
+      margin-top: $spacing-2;
+    }
+  }
+}

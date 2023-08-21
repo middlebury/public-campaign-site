@@ -20,6 +20,23 @@ $campaign-header-breakpoint: lg;
     border: 0;
   }
 
+  &.campaign-header--sticky {
+    display: block;
+    position: absolute;
+  }
+
+  &.campaign-header--block {
+    display: block;
+    position: initial;
+
+    .campaign-header__logo {
+      svg {
+        opacity: 1;
+        animation: initial;
+      }
+    }
+  }
+
   &.text-dark {
     color: $navy-dark;
 
@@ -54,11 +71,6 @@ $campaign-header-breakpoint: lg;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  margin: 0 $spacing-3;
-
-  @include breakpoint(lg) {
-    margin: 0 $spacing-5;
-  }
 }
 
 .campaign-header__logo {

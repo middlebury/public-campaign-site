@@ -23,16 +23,18 @@
   </div>
 </div>
 
-{% include 'paragraphs/campaign-stats.twig' with {
-    title: 'Percentage bar',
-    items: [
-        {
-            type: 'percentBar',
-            title: 'Progress to $600 M Goal',
-            labels: ['$250 M', '$600 M'],
-            datasets: [ { label: 'data set 1', data: [25, 75] }, ],
-        }
-    ],
-    theme: theme,
-    top_level: true
-} %}
+{% if show_stats %}
+  {% include 'paragraphs/campaign-stats.twig' with {
+      title: 'Percentage bar',
+      items: [
+          {
+              type: 'percentBar',
+              title: 'Progress to $600 M Goal',
+              labels: ['$250 M', '$600 M'],
+              datasets: [ { label: 'data set 1', data: [25, 75] }, ],
+          }
+      ],
+      theme: theme,
+      top_level: true
+  } %}
+{% endif %}

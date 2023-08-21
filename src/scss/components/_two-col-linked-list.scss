@@ -1,0 +1,43 @@
+.two-col-linked-list {
+    margin-bottom: $spacing-9;
+    
+    li {
+        font-size: $typescale-3;
+        font-weight: $font-weight-semibold;
+        line-height: $line-height-solid;
+        letter-spacing: $letter-spacing-secondary;
+        text-transform: uppercase;
+
+        @include breakpoint(md) {
+            font-weight: $font-weight-normal;
+            font-size: $typescale-5;
+        }
+
+        @include breakpoint(lg) {
+            font-size: $typescale-7;
+        }
+
+        a {
+            display: block; 
+            width: 100%;
+            border-top: 8px solid;
+            padding-top: $spacing-2;
+
+            @include breakpoint(lg) {
+                padding-top: $spacing-4;
+            }
+        }
+
+        &:first-child {
+            a {
+                border-top-color: #1F9F8B;
+            }
+        }
+
+        &:nth-child(2) {
+            a {
+                border-top-color: #022543;
+            }
+        }
+    }
+}

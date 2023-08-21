@@ -1,12 +1,12 @@
-<header class="campaign-header" data-toggle-color-target>
+<header class="campaign-header {{is_fixed ? "campaign-header--sticky" : ""}} {{is_block ? "campaign-header--block" : ""}} {{dark ? "text-dark" : ""}}" data-toggle-color-target>
 
-    <div class="campaign-header__main">
+    <div class="container campaign-header__main">
 
       <div class="campaign-header__content">
 
         <div class="campaign-nav">
           <button class="button--outer-border d-none d-md-inline-flex mr-3 mr-lg-4">
-            <span class="button button--light button--outline">Give a Gift CTA</span>
+            <span class="button {{dark ? "button--primary" : "button--light"}} button--outline">Give a Gift CTA</span>
           </button>
           <button class="campaign-nav__handle menu-button" data-drawer="midd-nav-drawer" aria-label="Open navigation">
             <span class="d-none d-md-inline mr-2">Menu</span>
