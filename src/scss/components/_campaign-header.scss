@@ -20,14 +20,9 @@ $campaign-header-breakpoint: lg;
     border: 0;
   }
 
+  &.campaign-header--block,
   &.campaign-header--sticky {
     display: block;
-    position: absolute;
-  }
-
-  &.campaign-header--block {
-    display: block;
-    position: initial;
 
     .campaign-header__logo {
       svg {
@@ -35,6 +30,14 @@ $campaign-header-breakpoint: lg;
         animation: initial;
       }
     }
+  }
+
+  &.campaign-header--sticky {
+    position: absolute;
+  }
+
+  &.campaign-header--block {
+    position: initial;
   }
 
   &.text-dark {
