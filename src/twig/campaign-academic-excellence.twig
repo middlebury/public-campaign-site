@@ -2,12 +2,13 @@
 
 {% set has_page_image = true %}
 
-{% set page_header = {
-  title: 'Academic Excellence',
-  image_src: has_page_image,
-  has_menu: true
-} %}
-
+{% block page_header %}
+  {% include 'partials/page-header.twig' with {
+    title: 'Academic Excellence',
+    image_src: has_page_image,
+    has_menu: true
+  } %}
+{% endblock %}
 
 {% block page %}
   {% include 'partials/top-level-layout.twig' with {
