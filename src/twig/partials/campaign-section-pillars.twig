@@ -7,7 +7,7 @@
         <div class="campaign-pillars__cards">
             {% for card in campaign_pillars %}
                 <article class="campaign-pillars__pillar-card">
-                    <div class="pillar-card__content">
+                    <a href="#" class="pillar-card__content">
                         <figure class="pillar-card__image">
                             {% include 'partials/img.twig' with {
                                 name: 'pillars'
@@ -17,7 +17,7 @@
                             <h3 class="pillar-card__title">{{card.title}}</h3>
                             <p class="pillar-card__text">{{card.content}}</p>
                         </div>
-                    </div>
+                    </a>
                 </article>
             {% endfor %}
         </div>
