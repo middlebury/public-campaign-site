@@ -1,21 +1,124 @@
+.paragraphs.paragraphs--wide {
+    .typography {
+        ul {
+            > li {
+                position: relative;
+                margin-left: 22px;
+                margin-bottom: $spacing-5;
+                font-size: $typescale-4;
+    
+                &:before {
+                content: '\2022';
+                position: absolute;
+                right: calc(100% + 20px);
+                top: 6px;
+                font-size: 10px;
+                }
+    
+                @include breakpoint(md) {
+                    margin-left: 20px;
+                }
+            }
+        }
+    }
+}
+
 .typography {
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        line-height: $line-height-basic;
+        text-transform: uppercase;
+        font-weight: $font-weight-normal;
+        letter-spacing: $letter-spacing-secondary;
+    }
+
+    h2 {
+        font-size: $typescale-7;
+        margin-top: $spacing-5;
+        margin-bottom: $spacing-4;
+
+        @include breakpoint(md) {
+            font-size: rem(32);
+            margin-top: $spacing-7;
+        }
+    }
+
+    h3 {
+        font-size: $typescale-5;
+        margin-top: $spacing-4;
+        margin-bottom: rem(18);
+
+        @include breakpoint(md) {
+            margin-top: $spacing-5;
+        }
+    }
+
+    h4, h5, h6 {
+        margin-top: $spacing-3;
+        margin-bottom: $spacing-2;
+
+        @include breakpoint(md) {
+            font-size: $typescale-4;
+            margin-top: rem(18);
+        }
+    }
+
+    h4, h6 {
+        font-weight: $font-weight-semibold;
+    }
+
+    h6 {
+        font-size: $typescale-3;
+    }
+
+    p {
+        margin: rem(18) 0;
+    }
+
+    a {
+        font-weight: $font-weight-semibold;
+        @include link-border;
+    }
+
+    ul, ol {
+        margin: rem(18) 0;
+        margin-left: $spacing-5;
+
+        > li {
+            font-size: $typescale-4;
+            margin-top: $spacing-2;
+            position: relative;
+        }
+    }
+
     ul {
         > li {
-            position: relative;
-            margin-left: 22px;
-            margin-bottom: $spacing-5;
-            font-size: $typescale-4;
+            &:before {
+                content: '\2022';
+                position: absolute;
+                right: calc(100% + 8px);
+                top: 6px;
+                font-size: 10px;
+            }
+        }
+    }
+
+    ol {
+        list-style: none;
+        counter-reset: item;
+
+        > li {
+            counter-increment: item;
 
             &:before {
-            content: '\2022';
-            position: absolute;
-            right: calc(100% + 20px);
-            top: 6px;
-            font-size: 10px;
-            }
-
-            @include breakpoint(md) {
-                margin-left: 20px;
+                font-size: $typescale-2;
+                position: absolute;
+                content: counter(item)".";
+                right: calc(100% + 8px);
+                top: 4px;
             }
         }
     }

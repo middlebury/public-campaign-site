@@ -1,0 +1,217 @@
+.page-nav {
+  margin-top: $spacing-4;
+  margin-bottom: $spacing-5;
+
+  @include breakpoint(md) {
+    margin-top: $spacing-5;
+    margin-bottom: $spacing-8;
+  }
+
+  @include breakpoint(lg) {
+    padding-left: $spacing-5;
+    margin-left: -$spacing-5;
+    margin-top: 0;
+    background-color: $color-access;
+    height: 100%;
+  }
+
+  @include print-hide;
+
+  a {
+    color: $white;
+    font-size: $typescale-4;
+    font-weight: $font-weight-bold;
+    letter-spacing: $letter-spacing-secondary;
+    line-height: $line-height-heading;
+    text-transform: uppercase;
+
+    @include breakpoint(lg) {
+      font-size: $typescale-5;
+    }
+  }
+
+  &:before {
+    content: "";
+    display: block;
+    width: 70%;
+    border-top: $spacing-1 solid $navy-dark;
+    position: relative;
+    
+    
+    @include breakpoint(md) {
+      width: 100%;
+      // margin-top: $spacing-5;
+    }
+
+    @include breakpoint(lg) {
+      width: 70%;
+      margin-left: -$spacing-5;
+      // margin-top: 0;
+      border-top-width: $spacing-2;
+      top: -$spacing-2;
+    }
+
+  }
+}
+
+.page-nav__title {
+  a {    
+    letter-spacing: $letter-spacing-secondary;
+    padding-top: $spacing-3;
+
+    @include breakpoint(lg) {
+      padding-top: $spacing-5;
+    }
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    width: $spacing-5;
+    border-top: 1px solid $navy-dark;
+  }
+}
+
+.page-nav__button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: $spacing-2 $spacing-3;
+  font-size: $typescale-2;
+  font-weight: $font-weight-semibold;
+  letter-spacing: $letter-spacing-secondary;
+  color: $navy;
+  text-transform: uppercase;
+  border-bottom: 4px solid $blue;
+  background-color: $white;
+
+  @include breakpoint(md) {
+    padding-left: 0;
+    padding-right: $spacing-2;
+  }
+
+  &.is-toggled {
+    border-bottom: 0;
+  }
+
+  @include breakpoint(lg) {
+    display: none;
+  }
+}
+
+.page-nav__icon {
+  float: right;
+  transition: $chevron-transition;
+
+  .page-nav__button.is-toggled & {
+    transform: $chevron-transform;
+  }
+}
+
+.page-nav__content {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  // border: 1px solid $border-color;
+  border-top: 0;
+  background-color: $blue;
+
+  @include breakpoint(lg) {
+    padding-left: 0;
+    // padding-right: 0;
+    border: 0;
+    background-color: transparent;
+  }
+
+  &.has-toggler {
+    display: none;
+
+    @include breakpoint(lg) {
+      display: block;
+    }
+  }
+
+  &.is-toggled {
+    display: block;
+  }
+}
+
+.page-nav__list {
+  .page-nav__list {
+    margin-left: 2rem;
+    border-top: 1px solid $border-color;
+  }
+}
+
+.page-nav__item {
+  // &:not(:last-of-type) {
+  //   border-bottom: 1px solid $border-color;
+  // }
+
+  a {
+    font-size: $typescale-2;
+    font-weight: $font-weight-semibold;
+
+    @include breakpoint(lg) {
+      font-size: $typescale-3;
+    }
+
+    &:hover, &:focus, &.page-nav__link--active {
+      &:before {
+        content: "";
+        border-left: $spacing-2 solid $navy-dark;
+        padding-left: $spacing-2;
+        margin-left: -$spacing-3;
+
+        @include breakpoint(lg) {
+          content: "";
+          border-left-width: $spacing-3;
+          padding-left: $spacing-3;
+          margin-left: -$spacing-5;
+        }
+      }
+    }
+  }
+
+  &:not(:last-child) {
+    &::after {
+      content: "";
+      display: block;
+      width: $spacing-5;
+      border-top: 1px solid $navy-dark;
+    }
+  }
+}
+
+.page-nav__link {
+  display: block;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.page-nav__link--active {
+  color: $blue;
+  font-weight: $font-weight-semibold;
+}
+
+.page-nav.access {
+  @include make-basic-theme('access');
+}
+
+.page-nav.experience {
+  @include make-basic-theme('experience');
+}
+
+.page-nav.academic-excellence {
+  @include make-basic-theme('academic-excellence');
+}
+
+.page-nav.unrestricted-giving {
+  @include make-basic-theme('unrestricted-giving');
+}
+
+.page-nav.capital-projects {
+  @include make-basic-theme('capital-projects');
+}
+
+

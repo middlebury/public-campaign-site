@@ -115,8 +115,16 @@ hr {
     }
 }
 
+blockquote {
+    margin: 0;
+
+    p:last-child {
+        margin-bottom: 0;
+    }
+}
+
 .main {
-    min-height: 85vh;
+    // min-height: 85vh;
 }
 
 @media (prefers-reduced-motion: reduce) {

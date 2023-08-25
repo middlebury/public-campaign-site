@@ -53,3 +53,19 @@ image_styles:
       - 666x375
       - 808x455
     sizes: "(max-width: 512px) 288px, (max-width: 768px) 432px, (max-width: 1200px) 666px, 808px"
+  
+  featured: # basic content, event detail, story detail
+    title: Featured image (basic content, story page, event page)
+    ratio: "16:9"
+    srcset:
+      - 896x504
+  
+  image_floated: # 3:4
+    title: Image component with left/right alignment
+    ratio: "3:4"
+    srcset:
+      - 128x170
+      - 239x318
+      - 260x346
+      - 296x394
+    sizes: "(max-width: 512px) 128px, (max-width: 768px) 239px, (max-width: 1200px) 260px, 296px"

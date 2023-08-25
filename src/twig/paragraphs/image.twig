@@ -1,0 +1,17 @@
+{% set floated = left or right %}
+{% set _image_style = floated ? 'image_floated' : 'image' %}
+
+{% if name is not empty %}
+  {% set _image_style = name %}
+{% endif %}
+
+<div class="paragraph--image image {{
+  right
+    ? 'image--right'
+    : left ? 'image--left' : ''
+  }}">
+  {% include 'partials/image-with-caption.twig' with {
+    name: _image_style,
+    caption: caption
+  } %}
+</div>

@@ -1,6 +1,6 @@
-<div class="container px-0">
+<div class="container px-0 {{class}}">
 
-  <header class="page-header{% if image_src %} page-header--has-image{% endif %}{% if has_menu %} page-header--has-menu{% endif %}{% if app_header %} page-header--app{% endif %}" aria-labelledby="midd-page-header-label">
+  <header class="page-header{% if basic_level %} page-header--basic{% endif %}{% if image_src %} page-header--has-image{% endif %}{% if has_menu %} page-header--has-menu{% endif %}{% if app_header %} page-header--app{% endif %}" aria-labelledby="midd-page-header-label">
 
     {% if image_src %}
       <figure class="page-header__figure">

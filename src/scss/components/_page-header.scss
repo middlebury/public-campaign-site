@@ -64,6 +64,7 @@
 
   @include breakpoint(md) {
     padding-top: $spacing-6;
+    
     @include make-col(10);
     @include make-col-offset(1);
   }
@@ -75,23 +76,24 @@
 
   .page-header--has-image & {
     padding-top: $spacing-9;
-    // padding-bottom: $spacing-5;
   }
+}
 
-  // .page-header--has-menu & {
-  //   padding-bottom: $spacing-3;
+.page-header--basic {
+  .page-header__content {
+    padding: 0;
+    margin: 0;
+    max-width: initial;
+    margin-top: $spacing-5;
 
-  //   @include breakpoint(md) {
-  //     padding-bottom: $spacing-4;
-  //   }
+    @include breakpoint(md) {
+      margin-top: $spacing-6;
+      // margin-bottom: $spacing-7;
+    }
 
-  //   @include breakpoint(lg) {
-  //     padding-bottom: $spacing-5;
-  //   }
-  // }
-
-  .page-header--has-image.page-header--has-menu & {
-    // padding-bottom: $spacing-5;
+    @include breakpoint(lg) {
+      margin-top: 0;
+    }
   }
 }
 
@@ -105,22 +107,3 @@
     font-size: $typescale-10;
   }
 }
-
-// .page-header--app {
-//   .page-header__content {
-//     padding-top: $spacing-4;
-//     padding-bottom: $spacing-4;
-//     @include breakpoint(lg) {
-//       padding-top: $spacing-8;
-//       padding-bottom: $spacing-8;
-//     }
-//   }
-
-//   .page-header__title {
-//     font-size: $typescale-7;
-
-//     @include breakpoint(md) {
-//       font-size: $typescale-8;
-//     }
-//   }
-// }

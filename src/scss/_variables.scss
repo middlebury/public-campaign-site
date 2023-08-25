@@ -72,7 +72,9 @@ $spacing: (
 /// Colors
 ////
 
+$blue-dark: #407ab1 !default;
 $blue: #75a3cd !default;
+$blue-light: #acd6eb !default;
 $brown: #b1850b !default;
 $green: #537e2c !default;
 $light-green: #a7c504 !default;
@@ -99,7 +101,8 @@ $color-primary-dark: $navy-dark !default;
 $color-access: $blue;
 $color-academic-excellence: $green;
 $color-experience: $brown;
-
+$color-unrestricted-giving: #1f9f8b;
+$color-capital-projects: $navy-dark;
 
 ////
 /// Typography
@@ -150,6 +153,7 @@ $line-height-heading: 1.4;
 $line-height-body: 1.7;
 $line-height-lead: 1.9;
 $line-height-journey: 1.1;
+$line-height-basic: 1.2;
 
 // Base
 $font-size-base: 16px !default;
@@ -273,6 +277,29 @@ $btn-themes: (
     outer-border-content: '',
     outer-border-type: solid,
     height: fit-content
+  )
+);
+
+$basic-themes: (
+  'access': (
+    color-primary: $color-access,
+    color-secondary: $navy-dark
+  ),
+  'experience': (
+    color-primary: $color-experience,
+    color-secondary: $yellow
+  ),
+  'academic-excellence': (
+    color-primary: $color-academic-excellence,
+    color-secondary: $light-green
+  ),
+  'unrestricted-giving': (
+    color-primary: $color-unrestricted-giving,
+    color-secondary: $blue-light
+  ),
+  'capital-projects': (
+    color-primary: $color-capital-projects,
+    color-secondary: $blue-light
   )
 );
 

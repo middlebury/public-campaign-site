@@ -1,0 +1,34 @@
+{% macro list(menu) %}
+  <ul class="page-nav__list">
+    {% for item in menu %}
+      <li class="page-nav__item{% if item.items %} page-nav__item--active{% endif %}">
+        <a href="{{item.href}}" class="page-nav__link{% if item.active %} page-nav__link--active{% endif %}">{{item.text}}</a>
+        {% if item.items %}
+          {{ _self.list(item.items) }}
+        {% endif %}
+      </li>
+    {% endfor %}
+  </ul>
+{% endmacro %}
+
+{% import _self as macros %}
+
+<nav class="page-nav {{theme}}" aria-labelledby="midd-page-nav-label">
+  <button
+    class="page-nav__button"
+    data-toggle-target=".js-page-nav"
+    aria-haspopup="true"
+    aria-expanded="false"
+  >
+    Additional Navigation
+    {% include 'partials/icon.twig' with { name: 'chevron-down', class: 'page-nav__icon' } %}
+  </button>
+  <div class="page-nav__content js-page-nav">
+    <h2 class="page-nav__title" id="midd-page-nav-label">
+      <a href="{{href}}" class="page-nav__link">{{label|default("Lorem ipsum")}}</a>
+    </h2>
+
+    {{ macros.list(items) }}
+  </div>
+</nav>
+

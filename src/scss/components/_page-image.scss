@@ -1,0 +1,17 @@
+.page-image {
+  margin-bottom: $spacing-5;
+
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+
+  @include breakpoint(md) {
+    margin-bottom: $spacing-7;
+  }
+
+  @include breakpoint(lg) {
+    margin-top: $spacing-7;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+

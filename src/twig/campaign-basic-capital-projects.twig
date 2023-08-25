@@ -1,0 +1,35 @@
+{% extends "campaign-basic-content.twig" %}
+
+{% block page %}
+  {% embed 'partials/sidebar-layout.twig' %}
+    {% block nav %}
+      {# header to display on mobile and tablet #}
+      {% include 'partials/page-header.twig' with {
+        title: 'Capital Projects',
+        basic_level: true,
+        class: 'd-lg-none pl-3 pl-md-0'
+      } %}
+      {% include 'partials/page-nav.twig' with {
+        label: 'Capital Projects',
+        theme: 'capital-projects',
+        items: [
+          { text: 'Basic Level Title', href: '#' },
+          { text: 'Your Impact', href: '#', active: true },
+          { text: 'By the numbers', href: '#' },
+          { text: 'Big opportunities', href: '#' }
+        ]
+      } %}
+
+    {% endblock %}
+    {% block content %}
+      {# header to display on desktop #}
+      {% include 'partials/page-header.twig' with {
+        title: 'Capital Projects',
+        basic_level: true,
+        class: 'd-none d-lg-block'
+      } %}
+      {% include 'partials/basic-content.twig' %}
+
+    {% endblock %}
+  {% endembed %}
+{% endblock %}

@@ -1,0 +1,41 @@
+@mixin make-basic-theme($name, $themes: $basic-themes) {
+    $theme: map-get($themes, $name);
+
+    @include breakpoint(lg) {
+        background-color: map-get($theme, 'color-primary');
+    }
+
+    &:before {
+        border-top-color: map-get($theme, 'color-secondary');
+    }
+
+    .page-nav__title {
+        &::after {
+            border-top-color: map-get($theme, 'color-secondary');
+        }
+    }
+
+    .page-nav__item {
+    a {
+        &:hover, &:focus, &.page-nav__link--active {
+            &:before {
+                border-left-color: map-get($theme, 'color-secondary');
+            }
+        }
+    }
+    
+    &:not(:last-child) {
+            &::after {
+                border-top-color: map-get($theme, 'color-secondary');
+            }
+        }
+    }
+
+    .page-nav__button {
+        border-bottom-color: map-get($theme, 'color-primary');
+    }
+
+    .page-nav__content {
+        background-color: map-get($theme, 'color-primary');
+    }
+}

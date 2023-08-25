@@ -2,6 +2,7 @@
 /// Sass mixins
 ////
 
+@import 'mixins/basic-level-themes';
 @import 'mixins/breakpoints';
 @import 'mixins/clearfix';
 @import 'mixins/grid-framework';
@@ -27,3 +28,10 @@
         display: none !important;
     }
 }
+
+@mixin contains-links {
+    a {
+      @include link-border;
+    }
+  }
+  

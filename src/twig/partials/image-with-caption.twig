@@ -1,0 +1,13 @@
+<figure class="media media--image media--contain-caption">
+  <!-- {{name}} -->
+  {% include 'partials/img.twig' with {
+    name: name
+  } %}
+  <figcaption class="media__caption">
+    {{
+      caption|default(
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit (Photo: John Doe)'
+      )
+    }}
+  </figcaption>
+</figure>

@@ -1,0 +1,22 @@
+.media {
+}
+
+.media__caption {
+  font-size: $typescale-2;
+  padding: $spacing-2;
+  border-bottom: 1px solid $gray-light;
+  @include contains-links;
+
+  @include breakpoint(lg) {
+    padding: $spacing-2 0;
+  }
+}
+
+.media--contain-caption {
+  display: table;
+
+  .media__caption {
+    display: table-caption;
+    caption-side: bottom;
+  }
+}

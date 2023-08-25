@@ -1,9 +1,11 @@
 <div class="typography paragraph--text">
-    <div class="section__header">
-      <h2 class="section__title">
-        Funding Priorities
-      </h2>
-    </div>
+    {% if title %}
+      <div class="section__header">
+        <h2 class="section__title">
+          {{title}}
+        </h2>
+      </div>
+    {% endif %}
   
     <ul>
         <li><strong>Increase endowed scholarship funding</strong> for domestic and international students at the College</li>

@@ -1,0 +1,44 @@
+.image {
+  display: flex;
+  justify-content: center;
+}
+
+// margin is applied at .paragraphs level
+.image--right {
+  padding-left: $spacing-3;
+  padding-bottom: $spacing-3;
+
+  @include breakpoint(md) {
+    padding-left: $spacing-4;
+  }
+
+  float: right;
+  // }
+
+  @media print {
+    float: none !important;
+  }
+
+  .media__caption {
+    padding: $spacing-2 0;
+  }
+}
+
+.image--left {
+  padding-right: $spacing-3;
+  padding-bottom: $spacing-3;
+
+  @include breakpoint(md) {
+    padding-right: $spacing-4;
+  }
+
+  float: left;
+
+  @media print {
+    float: none !important;
+  }
+
+  .media__caption {
+    padding: $spacing-2 0;
+  }
+}

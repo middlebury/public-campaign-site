@@ -1,0 +1,57 @@
+{% extends "layout.twig" %}
+
+{% block layout_header %}
+  {% include 'partials/campaign-header.twig' with {
+    is_block: true,
+    dark: true
+  }%}
+{% endblock %}
+
+{% block page %}
+  {% embed 'partials/sidebar-layout.twig' %}
+    {% block nav %}
+      {# header to display on mobile and tablet #}
+      {% include 'partials/page-header.twig' with {
+        title: 'Basic Level Title',
+        basic_level: true,
+        class: 'd-lg-none pl-3 pl-md-0'
+      } %}
+      {% include 'partials/page-nav.twig' with {
+        label: 'Basic Level Title',
+        items: [
+          { text: 'Basic Level Title', href: '#' },
+          { text: 'Your Impact', href: '#', active: true },
+          { text: 'By the numbers', href: '#' },
+          { text: 'Big opportunities', href: '#' }
+        ]
+      } %}
+
+    {% endblock %}
+    {% block content %}
+      {# header to display on desktop #}
+      {% include 'partials/page-header.twig' with {
+        title: 'Basic Level Title',
+        basic_level: true,
+        class: 'd-none d-lg-block'
+      } %}
+      {% include 'partials/basic-content.twig' %}
+
+    {% endblock %}
+  {% endembed %}
+{% endblock %}
+
+{% block layout_footer %}
+    {% include 'partials/campaign-footer.twig' %}
+{% endblock %}
+
+{% block layout_before_body_close %}
+    {% embed 'partials/drawer.twig'
+    with {
+      title: 'Navigation'
+    }
+  %}
+    {% block content %}
+      {% include 'partials/drawer-nav.twig' %}
+    {% endblock %}
+  {% endembed %}
+{% endblock %}
