@@ -3,8 +3,9 @@
 // https://caniuse.com/intersectionobserver
 import 'intersection-observer';
 
+import './audio-player';
 import './charts';
-import './color-toggler';
+import './header-color-toggler';
 import './drawer';
 import './lazy-load-video';
 import './toggler';
