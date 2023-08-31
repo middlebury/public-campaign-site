@@ -1,6 +1,6 @@
 {% extends "campaign-basic-content.twig" %}
 
-{% set page_title = 'Access' %}
+{% set page_title = 'This is a story' %}
 
 {% block page %}
   {% embed 'partials/sidebar-layout.twig' %}
@@ -13,9 +13,9 @@
       } %}
       {% include 'partials/page-nav.twig' with {
         label: page_title,
-        theme: 'access',
+        theme: 'story',
         items: [
-          { text: 'Basic Level Title', href: '#' },
+          { text: 'page_title', href: '#' },
           { text: 'Your Impact', href: '#', active: true },
           { text: 'By the numbers', href: '#' },
           { text: 'Big opportunities', href: '#' }
@@ -30,8 +30,9 @@
         basic_level: true,
         class: 'd-none d-lg-block'
       } %}
-      {% include 'partials/basic-content.twig' %}
-
+      {% include 'partials/story-content.twig' with {
+        featured: random(['portrait-video', 'video', 'image', 'audio'])
+      }%}
     {% endblock %}
   {% endembed %}
-{% endblock %}
+{% endblock %} 

@@ -1,16 +1,18 @@
 {% extends "campaign-basic-content.twig" %}
 
+{% set page_title = 'Unrestricted Giving' %}
+
 {% block page %}
   {% embed 'partials/sidebar-layout.twig' %}
     {% block nav %}
       {# header to display on mobile and tablet #}
       {% include 'partials/page-header.twig' with {
-        title: 'Unrestricted Giving',
+        title: page_title,
         basic_level: true,
         class: 'd-lg-none pl-3 pl-md-0'
       } %}
       {% include 'partials/page-nav.twig' with {
-        label: 'Unrestricted Giving',
+        label: page_title,
         theme: 'unrestricted-giving',
         items: [
           { text: 'Basic Level Title', href: '#' },
@@ -24,7 +26,7 @@
     {% block content %}
       {# header to display on desktop #}
       {% include 'partials/page-header.twig' with {
-        title: 'Unrestricted Giving',
+        title: page_title,
         basic_level: true,
         class: 'd-none d-lg-block'
       } %}

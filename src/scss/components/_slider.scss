@@ -1,0 +1,19 @@
+.slider {
+  width: 100%;
+}
+
+.slider__label {
+  @include sr-only;
+}
+
+.slider__track {
+  background: $gray-light;
+}
+
+.slider__handle {
+  text-indent: -9999px;
+  display: block;
+  background-color: $color-primary;
+  height: 8px;
+  position: relative;
+}

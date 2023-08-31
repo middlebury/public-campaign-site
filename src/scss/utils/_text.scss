@@ -21,4 +21,36 @@
         @include link-border;
     }
 }
+
+
+///
+/// links
+///
+
+.link-underline {
+    @include link-border;
+}
+
+///
+/// font weight
+///
+
+.font-normal {
+    font-weight: $font-weight-normal;
+}
+
+.font-medium {
+font-weight: $font-weight-medium;
+}
+
+.font-semibold {
+font-weight: $font-weight-semibold;
+}
+
+.font-bold,
+// text-bold is deprecated
+.text-bold {
+font-weight: $font-weight-bold;
+}
+  
   

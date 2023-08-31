@@ -19,7 +19,9 @@
     </a>
   </div>
   <figcaption class="video__body">
-    <h3 class="video__title" id="midd-video-label-{{id}}">Practical Skills for Positive Change</h3>
+    {% if not no_title %}
+      <h3 class="video__title" id="midd-video-label-{{id}}">Practical Skills for Positive Change</h3>
+    {% endif %}
     {% if not hide_caption_text %}
       <p class="video__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque viverra aliquet lacus a tristique.
         <a href="">Suspendisse commodo</a>

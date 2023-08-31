@@ -1,0 +1,65 @@
+.audio {
+  margin-left: calc(50% - 50vw + #{$spacing-3});
+  margin-right: calc(50% - 50vw + #{$spacing-3});
+
+  @include breakpoint(lg) {
+    margin-left: initial;
+    margin-right: initial;
+  }
+}
+
+.audio__embed {
+  position: relative;
+  padding-top: percentage(9 / 16);
+
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.audio__text {
+  font-size: $typescale-3;
+}
+
+// TODO: this should be pulled out and only styling the js player
+.audio__player {
+  border: 1px solid $border-color;
+  display: flex;
+  align-items: center;
+}
+
+.audio__buttons {
+}
+
+.audio__button-text {
+  display: none;
+  @include breakpoint(md) {
+    display: inline;
+  }
+}
+
+.audio__times {
+  // width: 300px;
+  flex: 0 0 8rem;
+  text-align: center;
+  font-size: $typescale-2;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.audio__mute {
+}
+
+.audio__title {
+  margin-bottom: 0.5rem;
+}
+
+.audio__body {
+  // padding: 1rem;
+  // border: 1px solid $border-color;
+  border-top: 0;
+}

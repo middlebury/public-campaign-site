@@ -1,0 +1,9 @@
+.story-tags {
+    border-top: 1px solid $gray-light;
+    text-transform: uppercase;
+    flex-direction: column;
+
+    @include breakpoint(md) {
+        flex-direction: row;
+    }
+}

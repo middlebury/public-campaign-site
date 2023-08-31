@@ -1,5 +1,7 @@
 {% extends "layout.twig" %}
 
+{# {% set page_title = 'Basic Level Title' %} #}
+
 {% block layout_header %}
   {% include 'partials/campaign-header.twig' with {
     is_block: true,
@@ -12,12 +14,12 @@
     {% block nav %}
       {# header to display on mobile and tablet #}
       {% include 'partials/page-header.twig' with {
-        title: 'Basic Level Title',
+        title: page_title,
         basic_level: true,
         class: 'd-lg-none pl-3 pl-md-0'
       } %}
       {% include 'partials/page-nav.twig' with {
-        label: 'Basic Level Title',
+        label: page_title,
         items: [
           { text: 'Basic Level Title', href: '#' },
           { text: 'Your Impact', href: '#', active: true },
@@ -30,7 +32,7 @@
     {% block content %}
       {# header to display on desktop #}
       {% include 'partials/page-header.twig' with {
-        title: 'Basic Level Title',
+        title: page_title,
         basic_level: true,
         class: 'd-none d-lg-block'
       } %}

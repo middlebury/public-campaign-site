@@ -1,0 +1,76 @@
+.portrait-video {
+  max-width: 300px;
+  margin: 0 auto;
+  margin-top: $spacing-5;
+  margin-bottom: $spacing-7;
+
+  @include breakpoint(md) {
+    margin: 0;
+    margin-bottom: $spacing-7;
+  }
+
+  @include breakpoint(lg) {
+    margin-top: $spacing-7;
+  }
+}
+
+.portrait-video__content {
+  position: relative;
+  padding-bottom: percentage(16 / 9);
+
+  img,
+  iframe {
+    @include absolute-fill;
+  }
+}
+
+.portrait-video__body {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(180deg, rgba($black, 0) 0%, rgba($black, 0.78) 100%);
+  padding: $spacing-3;
+  padding-top: $spacing-5;
+  z-index: 3;
+}
+
+.portrait-video__button {
+  font-size: $typescale-3;
+  font-weight: $font-weight-semibold;
+  color: $white;
+
+  svg.video-button {
+    width: 0.5em;
+  }
+}
+
+.portrait-video__link {
+  &:after {
+    content: '';
+    display: block;
+    background: rgba($navy, 0.5);
+    opacity: 0;
+    transition: opacity 0.2s;
+    @include absolute-fill;
+    z-index: 1;
+  }
+
+  &:hover,
+  &:focus {
+    &:after {
+      opacity: 1;
+    }
+    .portrait-video__title {
+      transform: translateY(-1rem);
+    }
+  }
+}
+
+.portrait-video__title {
+  font-family: $font-family-sans-serif;
+  font-size: $typescale-4;
+  font-weight: $font-weight-semibold;
+  color: $white;
+  transition: transform 0.2s;
+}

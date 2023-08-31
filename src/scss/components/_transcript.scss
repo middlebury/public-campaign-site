@@ -2,6 +2,13 @@
   margin-top: $spacing-3;
 }
 
+.transcript a {
+  font-size: $typescale-1;
+  font-weight: $font-weight-semibold;
+  letter-spacing: $letter-spacing-video-group;
+  color: $navy-dark;
+}
+
 .transcript__button {
   display: inline-block;
   border-bottom: 1px solid transparent;

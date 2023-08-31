@@ -1,0 +1,26 @@
+{% set id = random(1234) %}
+<figure class="portrait-video js-video" data-video='<iframe src="https://player.vimeo.com/video/398243397?autoplay=1" width="400" height="225" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen allow="autoplay"></iframe>'>
+  <div class="portrait-video__content js-video-content">
+    <a href="https://player.vimeo.com/video/398243397" class="js-video-link portrait-video__link" role="button" aria-label="Play video" aria-describedby="midd-video-label-{{id}}">
+      {% include 'partials/img.twig' with { name: 'portrait_video', lazy: lazy } %}
+        <div class="portrait-video__body">
+          {% if not no_title %}
+            <h3 class="portrait-video__title" id="midd-video-label-{{id}}">
+              What do students do after graduation?
+            </h3>
+          {% endif  %}
+          <button class="portrait-video__button">
+            Play
+            {% include 'partials/icon.twig' with {
+              name: 'play',
+              class: 'video-button ml-3'
+            } %}
+          </button>
+        </div>
+    </a>
+  </div>
+    {% include 'partials/transcript.twig' with {
+      id: id,
+      class: 'mt-2'
+    } %}
+</figure>

@@ -214,4 +214,7 @@
   @include make-basic-theme('capital-projects');
 }
 
+.page-nav.story {
+  @include make-basic-theme('story');
+}
 

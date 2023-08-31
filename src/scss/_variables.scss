@@ -88,6 +88,7 @@ $navy-dark: #022543 !default;
 
 $gray-light: #dedede !default;
 $gray: #767676 !default;
+$gray-story: #aaa59f !default;
 
 // shades
 $white: #fff !default;
@@ -300,6 +301,10 @@ $basic-themes: (
   'capital-projects': (
     color-primary: $color-capital-projects,
     color-secondary: $blue-light
+  ),
+  'story': (
+    color-primary: $navy,
+    color-secondary: $gray-story
   )
 );
 

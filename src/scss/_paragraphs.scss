@@ -115,8 +115,33 @@
   // @include make-gutters;
 }
 
+.paragraph--video {
+  margin-bottom: $spacing-5;
+  
+  @include breakpoint(md) {
+    margin-bottom: $spacing-7;
+  }
+
+  @include breakpoint(lg) {
+    margin-top: $spacing-7;
+  }
+}
+
 .paragraph--campaign-stats {
   padding-top: $spacing-8;
   padding-bottom: $spacing-8;
+}
+
+.paragraph--audio {
+  margin-top: $spacing-4;
+  margin-bottom: $spacing-5;
+
+  @include breakpoint(md) {
+    margin-bottom: $spacing-7;
+  }
+
+  @include breakpoint(xl) {
+    margin-top: $spacing-7;
+  }
 }
 

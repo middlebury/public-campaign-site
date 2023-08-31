@@ -1,0 +1,20 @@
+<div class="audio paragraph--audio">
+  {% if panopto %}
+    <div class="audio__embed">
+      <iframe src="https://midd.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=f9b9f6b5-f52c-40f8-962b-db0b6b214532&v=1" frameborder="0" allowfullscreen allow="autoplay"></iframe>
+    </div>
+  {% else %}
+    <div class="js-audio">
+      <audio controls>
+        <source src="https://www.middlebury.edu/institute/sites/www.middlebury.edu.institute/files/2018-02/Ace_Your_Interview_v2.mp3" type="audio/mpeg">
+      </audio>
+    </div>
+  {% endif %}
+  <div class="audio__body">
+    <h3 class="sr-only audio__title" id="midd-audio-title-1">Audio title</h3>
+    {% if not no_text %}
+      <p class="audio__text" id="midd-audio-text-1">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis commodi placeat, perferendis ratione vitae officiis vero. Commodi ullam fugiat expedita qui veritatis adipisci minus quod neque! Voluptatum tempora iure quo.</p>
+    {% endif %}
+    {% include 'partials/transcript.twig' with { id: 999 } %}
+  </div>
+</div>
