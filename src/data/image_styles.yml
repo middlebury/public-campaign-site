@@ -4,6 +4,7 @@ image_styles:
     ratio: "16:9"
     srcset:
       - 288x162
+      - 224x126
       - 336x189
       - 416x234
 
@@ -16,7 +17,16 @@ image_styles:
       - 640x360
       - 832x468
       - 1136x639
-  
+
+  portrait_video: 
+    title: Portrait Video component
+    ratio: "9:16"
+    srcset: 
+      - 234x416
+      - 252x448
+      - 297x528
+    sizes: "(max-width: 512px) 234px, (max-width: 1200px) 252px, 297px"
+
   mega-cta-panel:
     title: Mega CTA Panel
     ratio: "16:9"
@@ -39,7 +49,6 @@ image_styles:
     ratio: "16:9"
     srcset:
       - 288x162
-      - 224x126
       - 336x189
       - 416x232
     # sizes: "(max-width: 512px) 90px, (max-width: 768px) 144px, 288px"
