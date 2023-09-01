@@ -1,20 +1,40 @@
-<div class="paragraph--image-text">
-  <div class="container media-object {% if right %} media-object--right{% endif %}">
-    <span class="{% if not right %} offset-md-1{% endif %} media-object__border {{color}}"></span>
-    <div class="media-object__image d-none d-md-inline-block">
+<div class="{{featured_story ? "paragraph--featured-story" : "paragraph--image-text"}}">
+  <div class="container media-object {% if right %} media-object--right{% endif %} {{featured_story ? "featured-story" : ""}}">
+    {% if not featured_story %}
+      <span class="{% if not right %} offset-md-1{% endif %} media-object__border {{color}}"></span>
+    {% endif %}
+    <div class="media-object__image {{featured_story ? "" : "d-none d-md-inline-block"}}">
       {% include 'partials/img.twig' with {
-        name: 'image_text'
+        name: featured_story ? 'featured_story' : 'image_text'
       } %}
     </div>
     <div class="media-object__body">
       <h3><a>{{title}}</a></h3>
-      <div class="media-object__image d-md-none">
-        {% include 'partials/img.twig' with {
-          name: 'image_text'
-        } %}
-      </div>
+      {% if not featured_story %}
+        <div class="media-object__image d-md-none">
+          {% include 'partials/img.twig' with {
+            name: 'image_text'
+          } %}
+        </div>
+      {% endif %}
       <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed, nulla. Error ea corrupti repellat asperiores fuga magnam minus, dolore veritatis eos? Laudantium, reiciendis quos. Est provident sint dolorem temporibus quam!</p>
-      <a class="media-object__body-link">Go to {{title}} »</a>
+      {% if featured_story %}
+        <div class="d-flex f2 font-semibold story-tags">
+
+          <span class="mr-4 mt-3 mt-lg-2">Tags:</span>
+
+          <ul class="d-flex flex-wrap mt-lg-1">
+          {% for i in 0..3 %}
+              <li class="mr-4 mt-3 mt-lg-0">
+              <a href="#" class="link-underline">another longer tag {{loop.index}}</a>
+              </li>
+          {% endfor %}
+          </ul>
+
+        </div>
+      {% else %}
+        <a class="media-object__body-link">Go to {{title}} »</a>
+      {% endif %}
     </div>
   </div>
 </div>

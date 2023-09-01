@@ -12,6 +12,59 @@
     }
 }
 
+.media-object.featured-story {
+  .media-object__body {
+    h3 {
+      font-size: rem(34);
+      font-weight: $font-weight-semibold;
+      margin-top: 0;
+      margin-bottom: $spacing-1;
+      text-transform: none;
+
+      @include breakpoint(md) {
+        margin-bottom: $spacing-2;
+      }
+
+      @include breakpoint(lg) {
+        margin-bottom: $spacing-3;
+      }
+    }
+
+    p {
+      margin-bottom: $spacing-3;
+
+      @include breakpoint(lg) {
+        margin-bottom: $spacing-4;
+      }
+    }
+
+    .story-tags {
+      flex-direction: column;
+    }
+  }
+
+  .media-object__image {
+    width: initial;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+
+    img {
+      width: 100%;
+    }
+
+    @include breakpoint(sm) {
+      order: 2;
+      margin-right: -$spacing-3;
+      margin-left: $spacing-5;
+    }
+
+    @include breakpoint(lg) {
+      margin-right: -$spacing-5;
+      margin-left: $spacing-8;
+    }
+  }
+}
+
 .media-object__border {
   position: absolute;
   border-top: $spacing-2 solid;

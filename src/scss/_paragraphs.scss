@@ -145,3 +145,17 @@
   }
 }
 
+.paragraph--featured-story {
+  margin-top: $spacing-3;
+  margin-bottom: $spacing-8;
+
+  // @include breakpoint(md) {
+  //   margin-top: $spacing-3;
+  //   margin-bottom: $spacing-8;
+  // }
+
+  @include breakpoint(md) {
+    margin-top: $spacing-5;
+    margin-bottom: $spacing-9;
+  }
+}
