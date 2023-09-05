@@ -1,0 +1,29 @@
+////
+/// Border utilities
+////
+
+@each $breakpoint, $variant in $responsive-variants {
+  @include breakpoint($breakpoint) {
+    @each $prop, $abbrev in (bottom: b, right: r, left: l, top: t) {
+      .border#{$variant}-#{$abbrev} {
+        border-#{$prop}: 1px solid $border-color;
+      }
+
+      .border#{$variant}-#{$abbrev}-0 {
+        border-#{$prop}: 0;
+      }
+    }
+  }
+}
+
+.border {
+  border: 1px solid $border-color;
+}
+
+.border-4 {
+  border-width: 4px;
+}
+
+.border-navy {
+  border-color: $navy;
+}

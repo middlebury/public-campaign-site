@@ -12,14 +12,15 @@
       </div>
     {% endif %}
 
-
-    <div class="paragraphs paragraphs--wide">
-      {% block paragraphs %}
-        {% include 'partials/lead.twig' %}
-        <hr>
-        {% include 'partials/top-level-paragraphs.twig' %}
-      {% endblock %}
-    </div>
+    {% block top_level_content %}
+      <div class="paragraphs paragraphs--wide">
+        {% block paragraphs %}
+          {% include 'partials/lead.twig' %}
+          <hr>
+          {% include 'partials/top-level-paragraphs.twig' %}
+        {% endblock %}
+      </div>
+    {% endblock %}
   </div>
 </div>
 

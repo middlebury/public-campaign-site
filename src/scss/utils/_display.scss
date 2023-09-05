@@ -28,5 +28,12 @@
         display: inline-flex;
       }
     }
-  }
-  
+ }
+
+.flex-row {
+  flex-direction: row !important;
+}
+
+.flex-column {
+  flex-direction: column !important;
+}

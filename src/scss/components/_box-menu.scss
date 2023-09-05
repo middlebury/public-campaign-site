@@ -46,6 +46,14 @@
       border-right-color: $blue-light;
     }
   }
+
+  &.story {
+    background-color: $navy;
+
+    .box-menu__list {
+      border-right-color: $gray-story;
+    }
+  }
 }
 
 .box-menu__list {

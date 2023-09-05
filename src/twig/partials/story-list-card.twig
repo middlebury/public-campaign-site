@@ -1,0 +1,40 @@
+<article class="border-t border-navy pt-2 pt-md-1"
+  aria-labelledby="midd-collection-item-label-{{ id }}">
+  <div class="mb-2">
+    <a href="">
+      <figure class="media">
+        {% include 'partials/img.twig' with {
+          name: 'collection_card'
+        } %}
+      </figure>
+    </a>
+  </div>
+  <h2 class="h3 f5 mb-2"
+    id="midd-collection-item-label-{{ id }}">
+    <a href="#">
+      {% if env.test or random(1) %}
+        Longer headline starting here lorem ipsum dolor sit amet consectetur
+        adipisicing elit
+      {% else %}
+        Shorter headline a few words
+      {% endif %}
+    </a>
+  </h2>
+  <p class="f2">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+  </p>
+
+  <div class="d-flex f2 mt-3 mt-lg-4 font-semibold story-tags">
+
+    <span class="mr-4 mt-3 mt-lg-2">Tags:</span>
+
+    <ul class="d-flex flex-wrap mt-lg-1">
+    {% for i in 0..3 %}
+        <li class="mr-4 mt-3 mt-lg-0">
+        <a href="#" class="link-underline">another longer tag {{loop.index}}</a>
+        </li>
+    {% endfor %}
+    </ul>
+
+  </div>
+</article>
