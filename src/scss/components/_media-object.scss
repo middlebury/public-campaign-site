@@ -34,6 +34,14 @@
   &.experience {
     border-top-color: $color-experience;
   }
+
+  &.unrestricted-giving {
+    border-top-color: $color-unrestricted-giving;
+  }
+
+  &.capital-projects {
+    border-top-color: $color-capital-projects;
+  }
 }
 
 .media-object__image {

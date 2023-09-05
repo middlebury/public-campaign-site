@@ -30,6 +30,22 @@
       border-right-color: $yellow;
     }
   }
+
+  &.unrestricted-giving {
+    background-color: $color-unrestricted-giving;
+
+    .box-menu__list {
+      border-right-color: $blue-light;
+    }
+  }
+
+  &.capital-projects {
+    background-color: $color-capital-projects;
+
+    .box-menu__list {
+      border-right-color: $blue-light;
+    }
+  }
 }
 
 .box-menu__list {

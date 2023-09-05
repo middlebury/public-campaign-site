@@ -44,6 +44,14 @@
         &.experience {
             background-color: $brown;
         }
+
+        &.unrestricted-giving {
+            background-color: $color-unrestricted-giving;
+        }
+
+        &.capital-projects {
+            background-color: $color-capital-projects;
+        }
     }
 }
 
