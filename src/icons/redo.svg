@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+    <title>redo</title>
+    <desc>Created with Sketch.</desc>
+    <g id="redo" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M20.4960938,3.5390625 L24,0 L24,9.43359375 L14.5664062,9.43359375 L18,6 C16.4765625,4.4765625 14.3320312,3.5625 12,3.5625 C7.3359375,3.5625 3.5625,7.3359375 3.5625,12 C3.5625,16.6640625 7.3359375,20.4375 12,20.4375 C15.4335938,20.4375 18.3984375,18.375 19.7109375,15.4335938 L22.9804688,16.8164062 C21.1289062,21.0585938 16.8984375,24 12,24 C5.37890625,24 0,18.6210938 0,12 C0,5.37890625 5.37890625,0 12,0 C15.3164062,0 18.3164062,1.3359375 20.4960938,3.5390625 Z" fill="#000000" fill-rule="nonzero"></path>
+    </g>
+</svg>
