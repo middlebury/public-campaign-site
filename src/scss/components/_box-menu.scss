@@ -8,34 +8,43 @@
   }
 
   &.access {
-    background-color: $blue;
-
-    .box-menu__list {
-      border-right-color: $navy-dark;
-    }
+    @include make-menu-themes('access');
   }
 
   &.academic-excellence {
-    background-color: $green;
-
-    .box-menu__list {
-      border-right-color: $light-green;
-    }
+    @include make-menu-themes('academic-excellence');
   }
 
   &.experience {
-    background-color: $brown;
-
-    .box-menu__list {
-      border-right-color: $yellow;
-    }
+    @include make-menu-themes('experience');
   }
+
+  &.unrestricted-giving {
+    @include make-menu-themes('unrestricted-giving');
+  }
+
+  &.capital-projects {
+    @include make-menu-themes('capital-projects');
+  }
+
 
   &.story {
     background-color: $navy;
 
     .box-menu__list {
       border-right-color: $gray-story;
+    }
+
+    .box-menu__item {
+      &:not(:last-child) {
+        &::after {
+          border-top-color: $gray-story;
+        }
+
+        @include breakpoint(lg) {
+          border-right-color: $gray-story;
+        }
+      }
     }
   }
 }

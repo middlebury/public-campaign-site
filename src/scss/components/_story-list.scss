@@ -1,0 +1,58 @@
+.story-list-filters {
+    margin-top: -$spacing-5;
+    margin-bottom: $spacing-8;
+
+    @include breakpoint(md) {
+        margin-bottom: $spacing-9;
+    }
+
+    a {
+        display: flex;
+        align-items: center;
+        font-size: $typescale-2;
+        font-weight: $font-weight-semibold;
+        letter-spacing: $letter-spacing-secondary;
+        text-transform: uppercase;
+
+        .icon {
+            transform: rotateY(180deg);
+        }
+    }
+
+    hr {
+        margin-left: initial;
+        margin-right: initial;
+        border-top: $spacing-1 solid $color-access;
+
+        &.access {
+            border-top-color: $color-access;
+        }
+        
+        &.academic-excellence {
+            border-top-color: $color-academic-excellence;
+        }
+    
+        &.experience {
+            border-top-color: $color-experience;
+        }
+    
+        &.unrestricted-giving {
+            border-top-color: $color-unrestricted-giving;
+        }
+    
+        &.capital-projects {
+            border-top-color: $color-capital-projects;
+        }
+    }
+
+    h2 {
+        font-size: $typescale-4;
+        font-weight: $font-weight-normal;
+        letter-spacing: initial;
+        text-transform: uppercase;
+
+        strong {
+            font-weight: $font-weight-bold;
+        }
+    }
+}

@@ -39,3 +39,25 @@
         background-color: map-get($theme, 'color-primary');
     }
 }
+
+@mixin make-menu-themes($name, $themes: $basic-themes) {
+    $theme: map-get($themes, $name);
+    
+    background-color: map-get($theme, 'color-primary');
+
+    .box-menu__list {
+      border-right-color: map-get($theme, 'color-secondary');
+    }
+
+    .box-menu__item {
+      &:not(:last-child) {
+        &::after {
+          border-top-color: map-get($theme, 'color-secondary');
+        }
+
+        @include breakpoint(lg) {
+          border-right-color: map-get($theme, 'color-secondary');
+        }
+      }
+    }
+}

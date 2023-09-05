@@ -20,23 +20,31 @@
         a {
             display: block; 
             width: 100%;
-            border-top: 8px solid;
+            border-top: 8px solid $color-access;
             padding-top: $spacing-2;
 
             @include breakpoint(lg) {
                 padding-top: $spacing-4;
             }
-        }
 
-        &:first-child {
-            a {
-                border-top-color: #1F9F8B;
+            &.access {
+                border-top-color: $color-access;
             }
-        }
-
-        &:nth-child(2) {
-            a {
-                border-top-color: #022543;
+            
+            &.academic-excellence {
+                border-top-color: $color-academic-excellence;
+            }
+        
+            &.experience {
+                border-top-color: $color-experience;
+            }
+        
+            &.unrestricted-giving {
+                border-top-color: $color-unrestricted-giving;
+            }
+        
+            &.capital-projects {
+                border-top-color: $color-capital-projects;
             }
         }
     }
