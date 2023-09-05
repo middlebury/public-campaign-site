@@ -1,0 +1,48 @@
+{% extends "campaign-top-level.twig" %}
+
+{% set has_page_image = false %}
+
+{% set has_filter = false %}
+
+{% block layout_header %}
+  {% include 'partials/campaign-header.twig' with {
+    is_block: true,
+    dark: true
+  } %}
+{% endblock %}
+
+{% block page_header %}
+  {% include 'partials/page-header.twig' with {
+    title: 'Your Impact',
+    image_src: has_page_image,
+    has_menu: true
+  } %}
+{% endblock %}
+
+{% block page %}
+  {% embed 'partials/top-level-layout.twig' with {
+    show_menu: true,
+    has_page_image: true,
+    has_filter: has_filter,
+    theme: 'story'
+  } %}
+    {% block top_level_content %}
+      {% if not has_filter %}
+        {% include 'paragraphs/image-with-text.twig' with {
+          right: true,
+          featured_story: true,
+          title: "Featured Story"
+        } %}
+      {% endif %}
+      <ul class="d-flex flex-wrap">
+        {% for item in 0..7 %}
+          <li class="col-md-4 mb-9">
+            {% include 'partials/story-list-card.twig' %}
+          </li>
+        {% endfor %}
+      </ul>
+
+      {% include 'partials/pagination.twig' %}
+    {% endblock %}
+  {% endembed %}
+{% endblock %}

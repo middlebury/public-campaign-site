@@ -2,13 +2,16 @@
   <div class="row">
 
     {% if show_menu %}
-      <div class="col-md-11 offset-md-1 pl-0 pr-3 px-md-0 px-lg-5">
+      <div class="col-md-11 offset-md-1 offset-lg-0 pl-0 pr-3 px-md-0 px-lg-5">
         {# set overlap if page has featured image #}
         {% include 'partials/box-menu.twig' with {
           overlap: has_page_image,
           items: top_level_nav_example,
           theme: theme
         } %}
+        {% if has_filter %}
+          {% include 'partials/story-list-filter.twig' %}
+        {% endif %}
       </div>
     {% endif %}
 

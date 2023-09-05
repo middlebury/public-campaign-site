@@ -2,6 +2,8 @@
 
 {% set has_page_image = false %}
 
+{% set has_filter = true %}
+
 {% block layout_header %}
   {% include 'partials/campaign-header.twig' with {
     is_block: true,
@@ -20,16 +22,18 @@
 {% block page %}
   {% embed 'partials/top-level-layout.twig' with {
     show_menu: true,
-    show_lead: true,
     has_page_image: true,
+    has_filter: has_filter,
     theme: 'story'
   } %}
     {% block top_level_content %}
-      {% include 'paragraphs/image-with-text.twig' with {
-        right: true,
-        featured_story: true,
-        title: "Featured Story"
-      } %}
+      {% if not has_filter %}
+        {% include 'paragraphs/image-with-text.twig' with {
+          right: true,
+          featured_story: true,
+          title: "Featured Story"
+        } %}
+      {% endif %}
       <ul class="d-flex flex-wrap">
         {% for item in 0..7 %}
           <li class="col-md-4 mb-9">
@@ -37,6 +41,8 @@
           </li>
         {% endfor %}
       </ul>
+
+      {% include 'partials/pagination.twig' %}
     {% endblock %}
   {% endembed %}
 {% endblock %}

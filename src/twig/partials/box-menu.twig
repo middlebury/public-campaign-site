@@ -1,6 +1,6 @@
 <nav class="box-menu{{ overlap ? ' box-menu--overlap' : '' }} {{class}} {{theme}}" aria-labelledby="midd-box-menu-label">
   <h2 class="sr-only" id="midd-box-menu-label">Box menu label (should be picked up from the page title)</h2>
-  <ul class="box-menu__list">
+  <ul class="offset-lg-1 box-menu__list">
     {% for item in items %}
       <li class="box-menu__item">
         <a href="" class="box-menu__link{% if item.active %} box-menu__link--active{% endif %}">

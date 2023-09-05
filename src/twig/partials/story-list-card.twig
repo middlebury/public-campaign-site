@@ -1,3 +1,4 @@
+{% set id = random(1234) %}
 <article class="border-t border-navy pt-2 pt-md-1"
   aria-labelledby="midd-collection-item-label-{{ id }}">
   <div class="mb-2">
@@ -9,7 +10,7 @@
       </figure>
     </a>
   </div>
-  <h2 class="h3 f5 mb-2"
+  <h3 class="h3 f5 mb-2"
     id="midd-collection-item-label-{{ id }}">
     <a href="#">
       {% if env.test or random(1) %}
@@ -19,7 +20,7 @@
         Shorter headline a few words
       {% endif %}
     </a>
-  </h2>
+  </h3>
   <p class="f2">
     Lorem ipsum dolor sit amet consectetur adipisicing elit.
   </p>
