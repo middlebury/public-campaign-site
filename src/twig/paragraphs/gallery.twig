@@ -1,0 +1,28 @@
+<div class="gallery paragraph--gallery">
+	<div
+		class="gallery__image">
+		{# should link to drupal page rendering the gallery images #}
+    <a href="/gallery-images#modal-{{ id }}" class="sr-only" target="_blank">View the gallery in a new window.</a>
+		<a class="gallery__link" data-lightbox-open="midd-lightbox-1" aria-label="Open gallery" aria-describedby="midd-gallery-1-label midd-gallery-1-count" role="button">
+			{% include 'partials/img.twig' with { name: 'video' } %}
+			<span class="button button--primary gallery__button">
+				Open Gallery
+				<span class="ml-3">
+					{% include 'partials/icon.twig' with { name: 'images' } %}
+				</span>
+				<span class="d-none d-sm-inline">
+					<span class="mx-2">|</span>
+					<span id="midd-gallery-1-count">{{gallery_data.length}}
+						images</span>
+				</span>
+			</span>
+		</a>
+	</div>
+	<div class="gallery__body">
+		<h2 class="h3 gallery__title" id="midd-gallery-1-label">Gallery title</h2>
+		<p class="gallery__text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit, ipsum incidunt quasi enim nihil unde id. Labore nulla fugiat necessitatibus corporis at facere quas error, quaerat quo ut obcaecati. Tenetur?</p>
+	</div>
+</div>
+
+
+{% include 'partials/gallery-modal.twig' %}

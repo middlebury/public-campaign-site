@@ -13,13 +13,17 @@
     "url": ""
   },
   "devDependencies": {
+    "@types/animejs": "^3.1.7",
+    "@types/lozad": "^1.16.2",
     "gulp": "^4.0.2",
     "svg-sprite": "^2.0.2"
   },
   "dependencies": {
     "@middlebury/gulp-config": "^1.1.1",
     "@types/micromodal": "^0.3.3",
+    "animejs": "^3.2.1",
     "intersection-observer": "^0.12.2",
+    "lozad": "^1.16.0",
     "micromodal": "^0.4.10",
     "normalize.css": "^8.0.1",
     "preact": "^10.16.0",

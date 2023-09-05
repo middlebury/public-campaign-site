@@ -8,5 +8,7 @@ import './charts';
 import './header-color-toggler';
 import './drawer';
 import './lazy-load-video';
+import './lightbox';
+import './smooth-scroll';
 import './toggler';
 import './video';

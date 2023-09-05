@@ -1,0 +1,89 @@
+{% set id = 1 %}
+<div
+  id="midd-lightbox-{{id}}"
+  aria-hidden="true"
+  class="lightbox"
+  role="dialog"
+  aria-modal="true"
+  aria-labelledby="midd-lightbox-{{id}}-label"
+  data-lightbox
+  tabindex="-1"
+>
+  <h2 id="midd-lightbox-{{id}}-label" class="sr-only">
+    {# same title as title in gallery.twig #}
+    Gallery title
+  </h2>
+
+  <div class="lightbox__controls">
+
+    <button class="lightbox__button" aria-label="Previous image" data-lightbox-prev>
+      {% include 'partials/icon.twig' with { name: 'chevron-left', class: 'mr-1' } %}
+      <span class="d-none d-md-inline-block">
+        Prev
+      </span>
+    </button>
+
+    <div class="lightbox__count" data-lightbox-count></div>
+
+    <button class="lightbox__button" aria-label="Next" data-lightbox-next>
+      <span class="d-none d-md-inline-block">
+        Next
+      </span>
+      {% include 'partials/icon.twig' with { name: 'chevron-right', class: 'ml-1' } %}
+    </button>
+
+    <button
+      class="lightbox__button lightbox__button--close"
+      aria-label="Close modal"
+      data-lightbox-close
+    >
+      Close
+      {% include 'partials/icon.twig' with { name: 'times', class: 'ml-1' } %}
+    </button>
+  </div>
+
+  <ol class="lightbox__thumbs-list" data-lightbox-thumbs>
+
+    {% for item in gallery_data %}
+
+      <li class="lightbox__thumbs-item">
+        <a href="#midd-lightbox-{{id}}-item-{{loop.index}}" class="lightbox__thumbs-button" data-lightbox-thumb>
+          <img data-src="{{item.thumb}}" alt="">
+          {% if not env.production %}
+            <span class="text-white">{{loop.index}}</span>
+          {% endif %}
+        </a>
+      </li>
+
+    {% endfor %}
+
+  </ol>
+
+  <div class="lightbox__images">
+
+    {% for item in gallery_data %}
+
+      <figure
+        class="lightbox__figure media media--contain-caption"
+        id="midd-lightbox-{{id}}-item-{{loop.index}}"
+        data-lightbox-item
+      >
+        {# use encoded svg to add placeholder aspect ratio #}
+        {# https://css-tricks.com/preventing-content-reflow-from-lazy-loaded-images/ #}
+          <img
+            src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 {{item.width}} {{item.height}}'/%3E"
+            {# src="" #}
+            data-src="{{item.src}}"
+            data-srcset="{% for scale in [1, 0.75, 0.5, 0.25] %}http://placekitten.com/{{(item.width * scale)|round}}/{{(item.height * scale)|round}} {{(item.width * scale)|round}}w{{not loop.last ? ', ' : ''}}{% endfor %}"
+            width="{{item.width}}"
+            alt=""
+          />
+        {# loop index shown for dev purposes #}
+        <figcaption class="media__caption text-white">{{loop.index}} {{item.caption}}</figcaption>
+      </figure>
+
+    {% endfor %}
+
+  </div>
+
+</div>
