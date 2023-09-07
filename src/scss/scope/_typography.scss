@@ -83,6 +83,68 @@
         @include link-border;
     }
 
+    a:not([href*='middlebury.edu']):not([href^='#']):not([href^='/']):not([href^='mailto:']):not([href*='drive.google.com']):not([href*='docs.google.com']):not([href*='.pdf']):not([href*='middleburycollege-my.sharepoint.com']):not([name]) {
+        @include link-external;
+    }
+
+    a[href^='mailto:'],
+    a[href*='drive.google.com'],
+    a[href*='docs.google.com'],
+    a[href*='.pdf'],
+    a[href*='middleburycollege-my.sharepoint.com'] {
+        &:after {
+            font-size: rem(10);
+            display: inline-block;
+            text-transform: uppercase;
+            letter-spacing: $letter-spacing-base;
+            padding: $spacing-1;
+            line-height: 1;
+            background: $navy;
+            color: $white;
+            margin-left: $spacing-1;
+            transition: 0.2s;
+        }
+
+        &:hover,
+        &:focus {
+            &:after {
+                transform: translateY(-4px);
+            }
+        }
+    }
+
+    a[href^='mailto:'] {
+        &:after {
+            content: 'Email';
+        }
+    }
+
+    a[href*='.pdf'] {
+        &:after {
+            content: 'PDF';
+        }
+    }
+
+    a[href*='drive.google.com'],
+    a[href*='docs.google.com'] {
+        &:after {
+            content: 'Google Drive';
+        }
+    }
+
+    a[href*='middleburycollege-my.sharepoint.com'] {
+        &:after {
+            content: 'Office 365';
+        }
+    }
+
+    // reset styles for jump links
+    a[id][name] {
+        color: currentColor;
+        text-decoration: none;
+        border: 0;
+    }
+
     ul, ol {
         margin: rem(18) 0;
         margin-left: $spacing-5;
