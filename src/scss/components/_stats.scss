@@ -1,0 +1,29 @@
+.stats {
+  // display: inline-block;
+  // text-align: center;
+  max-width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.stats__label {
+  display: block;
+  border-bottom: 1px solid $navy;
+  font-size: $typescale-9;
+  font-family: $font-family-serif;
+  line-height: $line-height-solid;
+  font-weight: 300;
+  padding-bottom: $spacing-2;
+  margin-bottom: $spacing-2;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.stats__text {
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: $letter-spacing-base;
+  font-weight: $font-weight-semibold;
+  font-size: $typescale-2;
+  text-align: center;
+}

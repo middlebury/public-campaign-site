@@ -1,0 +1,32 @@
+<div class="paragraph--chart typography" data-digest-content>
+  {% if title %}
+    <h2 class="mb-4">{{title}}</h2>
+  {% endif %}
+
+  {% if text is not empty %}
+    <p class="mb-5 mb-md-7">{{text|default("Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos dolorum, illum nesciunt quod quidem neque voluptatibus provident odit ut, ipsum doloremque minus repellat libero est corrupti omnis earum quae officia?")}}</p>
+  {% endif %}
+
+  {% if items.length > 1 %}
+    <div class="chart-group__list{% if items.length >= 3 %} chart-group__list--3+{% elseif items.length == 2 %} chart-group__list--2{% endif %}">
+      {% for item in items %}
+        <div class="chart-group__item chart-group__item--{{item.type}}">
+          {% if item.type == 'stats' %}
+
+            <div class="stats">
+              <span class="stats__label">{{item.prefix}}<span data-countup>{{item.number}}</span>{{item.suffix}}</span>
+              <span class="stats__text">{{item.label}}</span>
+            </div>
+
+          {% else %}
+            {% include 'partials/chart.twig' with item %}
+          {% endif %}
+        </div>
+      {% endfor %}
+    </div>
+  {% else %}
+
+    {% include 'partials/chart.twig' with item: items[0] %}
+
+  {% endfor %}
+</div>

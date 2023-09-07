@@ -23,5 +23,6 @@
 }
 
 .button--outer-border {
+    display: inline-block;
     @include button-theme('outer-border-light');
 }

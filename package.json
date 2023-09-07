@@ -14,14 +14,16 @@
   },
   "devDependencies": {
     "@types/animejs": "^3.1.7",
+    "@types/chart.js": "^2.9.38",
     "@types/lozad": "^1.16.2",
+    "@types/micromodal": "^0.3.3",
     "gulp": "^4.0.2",
     "svg-sprite": "^2.0.2"
   },
   "dependencies": {
     "@middlebury/gulp-config": "^1.1.1",
-    "@types/micromodal": "^0.3.3",
     "animejs": "^3.2.1",
+    "chart.js": "^2.9.4",
     "intersection-observer": "^0.12.2",
     "lozad": "^1.16.0",
     "micromodal": "^0.4.10",

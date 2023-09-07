@@ -159,3 +159,7 @@
     margin-bottom: $spacing-9;
   }
 }
+
+.paragraph--chart {
+  @extend %paragraph-space;
+}
