@@ -115,3 +115,31 @@
         margin: auto;
     }
 }
+
+.campaign-stats__cta {
+    margin: 0;
+
+    button, button > * {
+        width: 100%;
+
+        @include breakpoint(md) {
+            width: initial;
+        }
+    }
+
+    button {
+        padding-bottom: 4px;
+        border-bottom: 1px solid $white;
+        border-right-style: none;
+
+        @include breakpoint(md) {
+            padding-bottom: 0;
+            border-bottom: none;
+            border-right-style: solid;
+        }
+    }
+
+    @include breakpoint(md) {
+        margin: auto;
+    }
+}

@@ -27,3 +27,23 @@
 .border-navy {
   border-color: $navy;
 }
+
+.border-t.access {
+  border-top-color: $navy-dark;
+}
+
+.border-t.academic-excellence {
+  border-top-color: $light-green;
+}
+
+.border-t.experience {
+  border-top-color: $yellow;
+}
+
+.border-t.unrestricted-giving {
+  border-top-color: $blue-light;
+}
+
+.border-t.capital-projects {
+  border-top-color: $blue-light;
+}
