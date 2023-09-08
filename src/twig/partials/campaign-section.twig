@@ -43,6 +43,22 @@
                     <track kind="descriptions" srclang="en" src="descriptions.vtt" default/>
                 </video>
             </figure>
+            <button aria-label="Play/Pause Background Video" class="video--button" data-video-trigger>
+                <span aria-labelledby="video--pause--{{name}}" class="video--button-pause">
+                    <span id="video--pause--{{name}}" class="sr-only">Pause Animation</span>
+                    {% include 'partials/icon.twig' with {
+                        name: 'pause-homepage',
+                        class: 'homepage-button'
+                    } %}
+                </span>
+                <span aria-labelledby="video--play--{{name}}" class="video--button-play">
+                    <span id="video--play--{{name}}" class="sr-only">Play Animation</span>
+                    {% include 'partials/icon.twig' with {
+                        name: 'play-homepage',
+                        class: 'homepage-button'
+                } %}
+                </span>
+            </button>
         {% elseif background_image %}
             <figure class="campaign-section__background image">
             </figure>

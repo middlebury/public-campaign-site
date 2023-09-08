@@ -9,6 +9,39 @@
     padding-top: $spacing-5;
 }
 
+.midd-footer__right {
+    display: flex;
+    flex-direction: column;
+
+    @include breakpoint(md) {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    @include breakpoint(lg) {
+        flex-direction: column;
+        align-items: flex-end;
+        padding-top: rem(18);
+    }
+
+    .midd-footer__social-links {
+        margin-top: $spacing-4;
+
+        @include breakpoint(md) {
+            margin-top: 0;
+        }
+        @include breakpoint(lg) {
+            margin-top: $spacing-4;
+        }
+
+        .icon {
+            width: calc(16em / 12);
+            height: calc(16em / 12);
+        }
+    }
+}
+
 .midd-footer__links {
     height: 100%;
     display: flex;

@@ -13,13 +13,26 @@
                 </a>
             </div>
             <div class="col-lg-9">
-                <ul class="midd-footer__links">
-                    {% for link in campaign_footer %}
-                        <li>
-                            <a href="{{link.href}}">{{link.text}}</a>
-                        </li>
-                    {% endfor %}
-                </ul>
+                {% if social_links %}
+                    <div class="midd-footer__right">
+                {% endif %}
+                        <ul class="midd-footer__links">
+                            {% for link in campaign_footer %}
+                                <li>
+                                    <a href="{{link.href}}">{{link.text}}</a>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                        {% if social_links %}
+                            {% include 'partials/social-links.twig' with {
+                                class: "midd-footer__social-links",
+                                items: social_links,
+                                light: true
+                            } %}
+                        {% endif %}
+                {% if social_links %}
+                    </div>
+                {% endif %}
             </div>
         </div>
     </div>

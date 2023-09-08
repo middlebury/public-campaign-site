@@ -45,6 +45,17 @@ top_level_nav_example:
   - text: By the Numbers
   - text: Big Oppurtunities
 
+social_links:
+  - text: Instagram
+    href: http://go.middlebury.edu/instagram
+    slug: instagram
+  - text: Facebook
+    href: http://go.middlebury.edu/facebook
+    slug: facebook
+  - text: LinkedIn
+    href: http://go.middlebury.edu/linkedin
+    slug: linkedin
+
 # placeholder gallery data
 gallery_data:
   - src: http://placekitten.com/1280/720

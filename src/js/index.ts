@@ -11,5 +11,6 @@ import './lightbox';
 import './smooth-scroll';
 import './toggler';
 import './video';
+import './video-controls';
 import './countup';
 import './charts';

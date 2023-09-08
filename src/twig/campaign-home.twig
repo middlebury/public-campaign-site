@@ -28,7 +28,9 @@
 {% endblock %} 
 
 {% block layout_footer %}
-    {% include 'partials/campaign-footer.twig' %}
+    {% include 'partials/campaign-footer.twig' with { 
+      social_links: true
+    }%}
 {% endblock %}
 
 {% block layout_before_body_close %}

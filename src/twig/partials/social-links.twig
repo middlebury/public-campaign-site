@@ -1,0 +1,14 @@
+<ul class="d-inline-flex {{class}}">
+  {% for name in ['linkedin', 'instagram', 'facebook'] %}
+    {# {% if env.test or random(1) %} #}
+      <li class="mr-1">
+        <a href="#" class="d-inline-block {% if light %}text-white hover-fadeout{% else %}hover-fadein{% endif %} {{office_footer ? " px-1" : " p-1"}}">
+          {% include 'partials/icon.twig' with {
+            name: name,
+            class: large ? 'f5' : null
+          } %}
+        </a>
+      </li>
+    {# {% endif %} #}
+  {% endfor %}
+</ul>

@@ -5,27 +5,27 @@
 @each $breakpoint, $variant in $responsive-variants {
     @include breakpoint($breakpoint) {
       .d#{$variant}-none {
-        display: none;
+        display: none !important;
       }
   
       .d#{$variant}-inline {
-        display: inline;
+        display: inline !important;
       }
   
       .d#{$variant}-inline-block {
-        display: inline-block;
+        display: inline-block !important;
       }
   
       .d#{$variant}-block {
-        display: block;
+        display: block !important;
       }
   
       .d#{$variant}-flex {
-        display: flex;
+        display: flex !important;
       }
   
       .d#{$variant}-inline-flex {
-        display: inline-flex;
+        display: inline-flex !important;
       }
     }
  }

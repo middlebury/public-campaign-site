@@ -94,6 +94,52 @@
         }
     }
 
+    .video--button {
+        position: absolute;
+        bottom: $spacing-3;
+        right: $spacing-3;
+        color: white;
+        z-index: 30;
+        opacity: 0.5;
+        display: block;
+    
+        // @include breakpoint(sm) {
+        //   display: block;
+        // }
+    
+        // @include breakpoint(lg) {
+        //   bottom: $spacing-5;
+        //   left: $spacing-5;
+        // }
+    
+        @media (prefers-reduced-motion: reduce) {
+          display: none;
+        }
+    
+        .video--button-play {
+          display: none;
+        }
+    
+        .video--button-pause {
+          display: block;
+        }
+    
+        &.not-playing {
+          .video--button-play {
+            display: block;
+          }
+    
+          .video--button-pause {
+            display: none;
+          }
+        }
+    
+        .icon {
+          width: $typescale-9;
+          height: $typescale-9;
+        }
+      }
+
     .campaign-section__title {
         display: flex;
         flex-direction: column;
