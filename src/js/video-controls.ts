@@ -55,7 +55,9 @@ class VideoControls {
 }
 
 const introSection = $('.campaign-section.intro');
-console.log(introSection);
-new VideoControls(introSection);
+
+if(introSection) {
+  new VideoControls(introSection);
+}; 
 
 export default VideoControls;
