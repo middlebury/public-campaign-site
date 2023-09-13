@@ -105,35 +105,37 @@
         }
     }
 
-    &:hover {
-        .pillar-card__text-content {
-            height: 100%;
-            // cursor: default;
-            overflow-y: auto;
+    .pillar-card__content {
+        &:hover, &:focus {
+            .pillar-card__text-content {
+                height: 100%;
+                // cursor: default;
+                overflow-y: auto;
 
-            .pillar-card__title {
-                line-height: $line-height-solid;
-                background-color: transparent;
-                padding-bottom: 0;
-                padding-top: $spacing-3;
+                .pillar-card__title {
+                    line-height: $line-height-solid;
+                    background-color: transparent;
+                    padding-bottom: 0;
+                    padding-top: $spacing-3;
 
-                @include breakpoint(lg) {
-                    padding-top: $spacing-4;
+                    @include breakpoint(lg) {
+                        padding-top: $spacing-4;
+                    }
+
+                    @include breakpoint(xl) {
+                        padding-top: $spacing-5;
+                    }
                 }
 
-                @include breakpoint(xl) {
-                    padding-top: $spacing-5;
-                }
-            }
+                .pillar-card__text {
+                    display: block;
+                    opacity: 1;
+                    padding: 0 $spacing-3;
+                    padding-top: $spacing-3;
 
-            .pillar-card__text {
-                display: block;
-                opacity: 1;
-                padding: 0 $spacing-3;
-                padding-top: $spacing-3;
-
-                @include breakpoint(xl) {
-                    padding-top: $spacing-4;
+                    @include breakpoint(xl) {
+                        padding-top: $spacing-4;
+                    }
                 }
             }
         }
@@ -141,21 +143,24 @@
 
     &:first-child {
         .pillar-card__title, 
-        &:hover .pillar-card__text-content {
+        .pillar-card__content:hover .pillar-card__text-content,
+        .pillar-card__content:focus .pillar-card__text-content {
             background-color: $blue;
         }
     }
 
     &:nth-child(2) {
         .pillar-card__title, 
-        &:hover .pillar-card__text-content {
+        .pillar-card__content:hover .pillar-card__text-content,
+        .pillar-card__content:focus .pillar-card__text-content {
             background-color: $green;
         }
     }
 
     &:last-child {
         .pillar-card__title, 
-        &:hover .pillar-card__text-content {
+        .pillar-card__content:hover .pillar-card__text-content,
+        .pillar-card__content:focus .pillar-card__text-content {
             background-color: $brown;
         }
     }

@@ -43,7 +43,7 @@ $campaign-header-breakpoint: lg;
   &.text-dark {
     color: $navy-dark;
 
-    button {
+    a, button {
       &.button--outer-border {
         border-color: $navy-dark;
       }
