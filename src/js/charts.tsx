@@ -317,7 +317,7 @@ class MiddChart {
   draw() {
     this.el.classList.add('chart--loaded');
 
-    const { labels, datasets, type } = this.config;
+    const { labels, datasets, type, altText } = this.config;
 
     this.el.classList.add('chart', `chart--${type}`);
 
@@ -328,6 +328,8 @@ class MiddChart {
     this.canvas = document.createElement('canvas');
     this.canvas.style.width = '500px';
     this.canvas.style.height = '400px';
+    this.canvas.ariaLabel = altText;
+    this.canvas.role = "img";
 
     this.el.appendChild(this.canvas);
 
