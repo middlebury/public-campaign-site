@@ -31,6 +31,7 @@ const toPercent = (value: number, total: number): number =>
 
 interface PercentBarProps {
   labels: string[];
+  altText: string;
   datasets: DataSet[];
   colors: string[];
   legend: string;
@@ -38,6 +39,7 @@ interface PercentBarProps {
 
 const PercentBarChart: FunctionComponent<PercentBarProps> = ({
   labels,
+  altText,
   datasets,
   colors,
   legend
@@ -74,7 +76,7 @@ const PercentBarChart: FunctionComponent<PercentBarProps> = ({
   const sortedLabels = preparedData.map((data: any) => data.label);
 
   return (
-    <div>
+    <figure role="figure" aria-label={altText}>
       <div
         style={{
           display: 'flex',
@@ -108,7 +110,8 @@ const PercentBarChart: FunctionComponent<PercentBarProps> = ({
       {legend !== 'inline' && 
         <Legend items={sortedLabels} colors={colors} />
       }
-    </div>
+      <figcaption class="sr-only">{altText}</figcaption>
+    </figure>
   );
 };
 

@@ -86,7 +86,8 @@ interface ChartConfig {
    * https://www.chartjs.org/docs/latest/getting-started/usage.html?h=labels
    */
   labels: string[];
-
+  
+  altText: string;
   /**
    * The kinds of chart types we allow. Chart.js comes with more but we only configure a few
    * plus we add our custom percentBar as a type.
@@ -437,6 +438,7 @@ function parseConfig(el: HTMLElement): ChartConfig | void {
   const {
     datasets,
     labels,
+    altText,
     chart = 'pie',
     min,
     max,
@@ -445,7 +447,7 @@ function parseConfig(el: HTMLElement): ChartConfig | void {
     title,
     theme
   } = el.dataset;
-
+  
   if (!datasets || !labels) {
     console.warn('Cannot create a chart without labels and datasets.', el);
     return;
@@ -463,6 +465,7 @@ function parseConfig(el: HTMLElement): ChartConfig | void {
   return {
     datasets: parseJsonData(datasets),
     labels: parseJsonData(labels),
+    altText,
     type: chart,
     title,
     theme,
