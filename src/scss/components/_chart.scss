@@ -90,6 +90,10 @@
 .chart-legend__item {
   font-size: $typescale-2;
   margin-bottom: $spacing-1;
+
+  &:before {
+    content: initial !important;
+  }
 }
 
 .chart-legend__icon {
