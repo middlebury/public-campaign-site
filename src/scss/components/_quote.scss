@@ -1,9 +1,6 @@
 .quote {
-  border-top: 4px solid $blue;
-  border-bottom: 1px solid $blue;
-  margin-top: $spacing-7;
-  margin-bottom: $spacing-7;
-  padding: $spacing-5 $spacing-3;
+  margin-top: $spacing-5;
+  margin-bottom: $spacing-5;
 
   @include breakpoint(md) {
     margin-top: $spacing-7;
@@ -11,35 +8,20 @@
   }
 
   .quote__text {
-    color: $blue-dark;
-    font-size: $typescale-5;
-    line-height: $line-height-heading;
-    margin-bottom: $spacing-2;
-  
+    font-size: $typescale-4;
+    margin-left: $spacing-3;
+    padding-left: $spacing-3;
+    border-left: 1px solid $gray-light;
+
     @include breakpoint(md) {
-      font-size: $typescale-6;
+      margin-left: $spacing-4;
     }
-  
-    .quote--marks & {
-      quotes: '“' '”';
-      position: relative;
-  
-      &:before {
-        content: open-quote;
-        position: absolute;
-        top: 0;
-        right: 100%;
-      }
-  
-      &:after {
-        content: close-quote;
-      }
+
+    @include breakpoint(lg) {
+      margin-left: $spacing-5;
+      padding-left: $spacing-4;
     }
   }
-}
-
-.quote__cite {
-  font-size: $typescale-3;
 }
 
 .pullquote {
@@ -55,22 +37,48 @@
     color: $blue;
     font-size: $typescale-6;
     line-height: $line-height-body;
-    padding: $spacing-2 0;
-  
+    padding-top: $spacing-2;
+    padding-bottom: $spacing-2;
+    padding-left: rem(12);
+
     @include breakpoint(md) {
-      padding: $spacing-3 0;
+      padding-top: $spacing-3;
+      padding-bottom: $spacing-2;
     }
 
     @include breakpoint(xl) {
       font-size: $typescale-7;
+    }
+
+    .quote--marks {
+      quotes: '\201C' '\201D';
+      position: relative;
+    
+      &:before {
+        content: open-quote;
+        top: -1*rem(4);
+        right: 100%;
+        left: -1*rem(12);
+        position: absolute;
+      }
+    
+      &:after {
+        content: close-quote;
+      }
+    }
+  }
+
+  .quote__cite {
+    font-size: $typescale-2;
+    padding-bottom: $spacing-2;
+    padding-left: rem(12);
+
+    @include breakpoint(md) {
+      padding-bottom: $spacing-3;
     }
   }
 
   svg {
     height: rem(14);
   } 
-
-  // &:before, &:after {
-  //   content: url('/img/pull-quote-graphic.svg');
-  // }
 }
