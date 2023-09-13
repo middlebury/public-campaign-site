@@ -5,6 +5,8 @@
 
   data-theme="{{theme}}"
 
+  data-alt-text="{{alt_text}}"
+
   {# Array<{label:string,data: Array<number>}> #}
   data-datasets='{{datasets|json_encode()|default('[{"label": "dataset 1", "data": [1,2,3,4,5]}]')}}'
 
