@@ -36,6 +36,18 @@
 
     &.homepage-stats {
         background-color: $light-green;
+
+        &:before {
+            padding-top: percentage(475/320); 
+
+            @include breakpoint(sm) {
+                padding-top: percentage(225/256);
+            }
+
+            @include breakpoint(lg) {
+                padding-top: percentage(9/16);
+            }
+        }
     }
 
     .campaign-section__wrapper {
@@ -47,7 +59,7 @@
     }
 
     &.mega-cta-panel {
-        .campaign-section__wrapper {
+        &:before {
             background: linear-gradient(360deg, rgba($navy-dark, 0.4) 30%, rgba($navy-dark, 0.3) 60%, rgba($navy-dark, 0.6) 100%);
         }
     }
