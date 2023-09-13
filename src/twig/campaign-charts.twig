@@ -45,7 +45,8 @@
                 { label: 'data 1', data: [10,40,70] },
                 { label: 'data 1', data: [15,47,60] },
                 { label: 'data 1', data: [24,42,86] }
-              ]
+              ],
+              alt_text: '[description of chart goes here]'
             }
           ]
         } %}
@@ -62,7 +63,8 @@
               labels: ["Administration","Advising/Counseling","Analyst/Research","Communications/Marketing/PR","Management/Strategic Planning","Operations/Project Management","Sales/Account Management","Teaching/Training","Translation/Interpretation","Other"],
               datasets: [
                 { label: 'Percentage of employment', data: [41,14,4,10,4,18,2,4,1,2] }
-              ]
+              ],
+              alt_text: '[description of chart goes here]'
             }
           ]
         } %}
@@ -75,13 +77,15 @@
               type: 'pie',
               title: 'chart 1',
               labels: ['label 1', 'label 2', 'label 3'],
-              datasets: [ { label: 'data 1', data: [1,2,3] },  { label: 'data 1', data: [3,2,6] }  ]
+              datasets: [ { label: 'data 1', data: [1,2,3] },  { label: 'data 1', data: [3,2,6] }  ],
+              alt_text: '[description of chart goes here]'
             },
             {
               type: 'doughnut',
               title: 'chart 1',
               labels: ['label 1', 'label 2', 'label 3'],
-              datasets: [ { label: 'data 1', data: [1,2,3] }, { label: 'data 1', data: [1,9,5] }  ]
+              datasets: [ { label: 'data 1', data: [1,2,3] }, { label: 'data 1', data: [1,9,5] }  ],
+              alt_text: '[description of chart goes here]'
             }
           ]
         } %}
@@ -95,19 +99,22 @@
               type: 'pie',
               title: 'chart 1',
               labels: ['label 1', 'label 2', 'label 3'],
-              datasets: [ { label: 'data 1', data: [1,2,3] } ]
+              datasets: [ { label: 'data 1', data: [1,2,3] } ],
+              alt_text: '[description of chart goes here]'
             },
             {
               type: 'doughnut',
               title: 'chart 2',
               labels: ['label 1', 'label 2', 'label 3'],
-              datasets: [ { label: 'data 1', data: [3,10,20] } ]
+              datasets: [ { label: 'data 1', data: [3,10,20] } ],
+              alt_text: '[description of chart goes here]'
             },
             {
               type: 'doughnut',
               title: 'chart 3',
               labels: ['label 1', 'label 2', 'label 3'],
-              datasets: [ { label: 'data 1', data: [13,2,12] } ]
+              datasets: [ { label: 'data 1', data: [13,2,12] } ],
+              alt_text: '[description of chart goes here]'
             }
           ]
         } %}
@@ -119,13 +126,15 @@
               type: 'line',
               title: 'chart 1',
               labels: ['2019', '2020', '2021', '2022'],
-              datasets: [ { label: 'data 1', data: [3,6,13,30] } ]
+              datasets: [ { label: 'data 1', data: [3,6,13,30] } ],
+              alt_text: '[description of chart goes here]'
             },
             {
               type: 'line',
               title: 'chart 2',
               labels: ['2019', '2020', '2021', '2022'],
-              datasets: [ { label: 'data 1', data: [6,17,29,50] } ]
+              datasets: [ { label: 'data 1', data: [6,17,29,50] } ],
+              alt_text: '[description of chart goes here]'
             },
           ]
         } %}
@@ -142,7 +151,8 @@
                 { label: 'data 1', data: [3,-6,13,-30] },
                 { label: 'data 2', data: [70,25,-4,44] },
                 { label: 'data 3', data: [13,-15,-9,52] },
-              ]
+              ],
+              alt_text: '[description of chart goes here]'
             },
             {
               type: 'line',
@@ -152,7 +162,8 @@
                 { label: 'data 1', data: [19,17,29,-50] },
                 { label: 'data 2', data: [25,-11,34,56] },
                 { label: 'data 3', data: [101,-17,37,-28] }
-              ]
+              ],
+              alt_text: '[description of chart goes here]'
             },
           ]
         } %}
@@ -179,7 +190,8 @@
             { type: 'stats', number: 600.23, prefix: '$', suffix: 'k', label: 'of summer internship funding', },
             { type: 'stats', number: 800, label: 'Summer internships', },
             { type: 'stats', number: 7500, suffix: '+', label: 'Alumni Career volunteers', },
-          ]
+          ],
+          alt_text: '[description of chart goes here]'
         } %}
 
         {% include 'paragraphs/map-chart.twig' with {
