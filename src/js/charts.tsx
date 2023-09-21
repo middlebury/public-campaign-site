@@ -9,7 +9,7 @@ import { $$ } from './utils/dom';
 // Colors for percentage chart
 const colors = [
   '#022543',
-  '#acd6eb',
+  '#75a3cd',
   '#ffffff',
   '#1f9f8b',
   '#c26533',
