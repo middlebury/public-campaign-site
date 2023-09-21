@@ -6,7 +6,7 @@
 
         <div class="campaign-nav">
           <a href="#" class="button--outer-border text-decor-none d-none d-md-inline-flex mr-3 mr-lg-4">
-            <span class="button {{dark ? "button--primary" : "button--light"}} button--outline">Give a Gift CTA</span>
+            <span class="button {% if dark %}button--primary{% elseif is_sticky %}button--primary button--light-outline{% else %}button--light{% endif %} button--outline">Give a Gift CTA</span>
           </a>
           <button class="campaign-nav__handle menu-button" data-drawer="midd-nav-drawer" aria-label="Open navigation">
             <span class="d-none d-md-inline mr-2">Menu</span>
@@ -21,7 +21,7 @@
                 {% for item in site_nav.items %}
                   <li class="campaign-nav__item">
 
-                    <a href="" class="campaign-nav__link">{{item.text}}</a>
+                    <a href="" class="campaign-nav__link {{ loop.first ? "campaign-nav__link--active" : ""}}">{{item.text}}</a>
 
                     {% if item.items %}
                       <ul class="campaign-nav__list campaign-nav__list--sub">
