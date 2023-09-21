@@ -127,6 +127,11 @@
   }
 }
 
+.campaign-nav__link--active {
+  text-decoration: none;
+  border-top-color: $white;
+}
+
 .campaign-nav__link--sub {
   padding-top: $spacing-3;
   padding-bottom: $spacing-3;

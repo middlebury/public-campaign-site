@@ -98,15 +98,18 @@
     }
 
     @include breakpoint(lg) {
-      margin-bottom: $spacing-2;
       border-right: 1px solid $navy-dark;
-    
-      @include breakpoint(md) {
-        flex: 0 0 auto;
-        padding-right: $spacing-3;
-        margin-right: $spacing-3;
-        margin-bottom: $spacing-2;
-      }
+    }
+  }
+
+  @include breakpoint(lg) {
+    margin-bottom: $spacing-2;
+  
+    @include breakpoint(md) {
+      flex: 0 0 auto;
+      padding-right: $spacing-3;
+      margin-right: $spacing-3;
+      margin-bottom: $spacing-2;
     }
   }
 }

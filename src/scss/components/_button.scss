@@ -8,6 +8,10 @@
     &.button--outline {
         @include button-theme('primary-outline');
     }
+
+    &.button--light-outline {
+        @include button-theme('primary-light-outline');
+    }
 }
 
 .button--light {

@@ -250,6 +250,13 @@ $btn-themes: (
     hover-color: $btn-primary-color,
     hover-bg: $btn-primary-bg
   ),
+  'primary-light-outline': (
+    color: $btn-primary-color, 
+    bg: transparent,
+    border-color: $btn-primary-color,
+    hover-color: $btn-primary-color,
+    hover-bg: $btn-primary-bg,
+  ),
   'light': (
     color: $btn-light-color,
     bg: $btn-light-bg,

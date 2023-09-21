@@ -25,7 +25,7 @@
     }
 
     &.pillars {
-        background-color: $yellow;
+        background-color: $blue-light;
     }
 
     &.video-group {
@@ -35,7 +35,7 @@
     }
 
     &.homepage-stats {
-        background-color: $light-green;
+        background-color: $blue-light;
 
         &:before {
             padding-top: percentage(475/320); 
