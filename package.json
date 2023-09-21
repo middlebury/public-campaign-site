@@ -2,6 +2,7 @@
   "name": "public-campaign-site",
   "version": "1.0.0",
   "description": "Public Campaign Website",
+  "type": "module",
   "scripts": {
     "start": "gulp dev",
     "build": "gulp build",
@@ -21,7 +22,7 @@
     "svg-sprite": "^2.0.2"
   },
   "dependencies": {
-    "@middlebury/gulp-config": "^1.1.1",
+    "@middlebury/gulp-config": "^2.0.0",
     "animejs": "^3.2.1",
     "chart.js": "^2.9.4",
     "intersection-observer": "^0.12.2",

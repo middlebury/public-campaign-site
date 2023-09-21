@@ -1,6 +1,6 @@
-const path = require('path');
-const gulp = require('gulp');
-const { createConfig } = require('@middlebury/gulp-config');
+import path from 'node:path';
+import gulp from 'gulp';
+import { createConfig } from '@middlebury/gulp-config';
 
 const { cwd } = process;
 
@@ -28,4 +28,4 @@ const options = {
     typescriptBuild: true
 };
 
-module.exports = createConfig(options);
+export const { dev, build } = createConfig(options);
