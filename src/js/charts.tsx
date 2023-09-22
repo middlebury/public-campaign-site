@@ -42,6 +42,14 @@ const theme: {[key: string]: string[]} = {
   'experience': [
     '#f4b824',
     '#ffffff'
+  ],
+  'capital-projects': [
+    '#acd6eb',
+    '#ffffff'
+  ],
+  'unrestricted-giving': [
+    '#acd6eb',
+    '#ffffff'
   ]
 }
 
