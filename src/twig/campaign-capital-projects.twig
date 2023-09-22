@@ -1,0 +1,20 @@
+{% extends "campaign-top-level.twig" %}
+
+{% set has_page_image = true %}
+
+{% block page_header %}
+  {% include 'partials/page-header.twig' with {
+    title: 'Capital Projects',
+    image_src: has_page_image,
+    has_menu: true
+  } %}
+{% endblock %}
+
+{% block page %}
+  {% include 'partials/top-level-layout.twig' with {
+    show_menu: true,
+    show_stats: true,
+    has_page_image: has_page_image,
+    theme: 'capital-projects'
+  } %}  
+{% endblock %} 
