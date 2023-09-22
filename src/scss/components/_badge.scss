@@ -1,0 +1,23 @@
+.badge {
+  display: inline-block;
+  font-size: $typescale-1;
+  color: $gray;
+  border: 1px solid currentColor;
+  padding: rem(2) rem(2) rem(1) rem(2);
+  font-weight: $font-weight-semibold;
+  text-transform: uppercase;
+  line-height: $line-height-solid;
+  font-family: $font-family-sans-serif;
+  letter-spacing: $letter-spacing-base;
+}
+
+.badge--primary {
+  background: $navy;
+  color: $white;
+  border-color: $navy;
+
+  &.badge--outline {
+    background: transparent;
+    color: $navy;
+  }
+}

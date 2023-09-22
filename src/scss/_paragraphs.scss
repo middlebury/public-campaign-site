@@ -113,6 +113,10 @@
 .paragraph--video-group {
   @extend %paragraph-full-width;
   // @include make-gutters;
+
+  @include breakpoint(lg) {
+    margin-top: $spacing-3;
+  }
 }
 
 .paragraph--video {

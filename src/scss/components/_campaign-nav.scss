@@ -157,7 +157,16 @@
 }
 
 .campaign-header.text-dark {
-  .campaign-nav__link{
+  .campaign-nav__link--active {
+    border-top-color: $navy-dark;
+
+    &:hover,
+    &:focus {
+      border-top-color: $navy-dark;
+    }
+  }
+
+  .campaign-nav__link {
     color: $navy-dark;
 
     &:hover,

@@ -110,13 +110,8 @@ hr {
     border: 0;
     margin: 0;
     border-top: 1px solid $navy;
-    margin-left: calc(50% - 50vw + 16px);
-    margin-right: calc(50% - 50vw + 16px);
-
-    @include breakpoint(lg) {
-        margin-left: calc(50% - 50vw + 32px);
-        margin-right: calc(50% - 50vw + 32px);
-    }
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
 }
 
 blockquote {

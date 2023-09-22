@@ -55,5 +55,8 @@
 }
 
 .article-spotlight-item__link {
-  font-size: $typescale-2;
+  // font-size: $typescale-2;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
 }

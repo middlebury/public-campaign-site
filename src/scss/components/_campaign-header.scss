@@ -51,6 +51,11 @@ $campaign-header-breakpoint: lg;
       .button--light.button--outline {
         color: $navy-dark;
         border-color: $navy-dark;
+
+        &:hover, &:focus {
+          background-color: $navy-dark;
+          color: $white;
+        }
       }
 
       &.campaign-nav__handle {
@@ -94,7 +99,7 @@ $campaign-header-breakpoint: lg;
 
       @include breakpoint(md) {
         width: initial;
-        margin-left: -$spacing-8;
+        margin-left: rem(-144);
         margin-bottom: $spacing-3;
       }
     }

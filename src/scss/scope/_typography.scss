@@ -11,8 +11,8 @@
                 content: '\2022';
                 position: absolute;
                 right: calc(100% + 20px);
-                top: 6px;
-                font-size: 10px;
+                top: 4px;
+                font-size: $typescale-2;
                 }
     
                 @include breakpoint(md) {
@@ -75,7 +75,7 @@
     }
 
     p {
-        margin: rem(18) 0;
+        margin-bottom: rem(18);
     }
 
     a {
@@ -146,12 +146,12 @@
     }
 
     ul, ol {
-        margin: rem(18) 0;
+        margin-bottom: rem(18);
         margin-left: $spacing-5;
 
         > li {
             font-size: $typescale-4;
-            margin-top: $spacing-2;
+            // margin-top: $spacing-2;
             position: relative;
         }
     }
@@ -162,8 +162,8 @@
                 content: '\2022';
                 position: absolute;
                 right: calc(100% + 8px);
-                top: 6px;
-                font-size: 10px;
+                top: 4px;
+                font-size: $typescale-2;
             }
         }
     }

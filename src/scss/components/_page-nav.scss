@@ -212,6 +212,7 @@
 
 .page-nav.capital-projects {
   @include make-basic-theme('capital-projects');
+  border-bottom: 1px solid $white;
 }
 
 .page-nav.story {
