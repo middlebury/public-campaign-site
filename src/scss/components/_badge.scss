@@ -1,5 +1,6 @@
 .badge {
   display: inline-block;
+  height: fit-content;
   font-size: $typescale-1;
   color: $gray;
   border: 1px solid currentColor;
@@ -9,6 +10,8 @@
   line-height: $line-height-solid;
   font-family: $font-family-sans-serif;
   letter-spacing: $letter-spacing-base;
+  text-decoration: none;
+  margin-top: rem(6);
 }
 
 .badge--primary {

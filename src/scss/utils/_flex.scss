@@ -38,5 +38,8 @@
         .align-items#{$variant}-center {
             align-items: center !important;
         }
+        .align-items#{$variant}-between {
+            align-items: space-between !important;
+        }
     }
 }
