@@ -150,7 +150,7 @@
 }
 
 .paragraph--featured-story {
-  margin-top: $spacing-3;
+  margin-top: $spacing-8;
   margin-bottom: $spacing-8;
 
   // @include breakpoint(md) {
@@ -159,7 +159,7 @@
   // }
 
   @include breakpoint(md) {
-    margin-top: $spacing-5;
+    margin-top: $spacing-9;
     margin-bottom: $spacing-9;
   }
 }
