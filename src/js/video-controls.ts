@@ -30,7 +30,7 @@ class VideoControls {
       this.controls.classList.add('not-playing');
       this.controls.setAttribute('aria-hidden', 'true');
     } else {
-      this.controls.setAttribute('aria-hidden', 'false');
+      this.controls.setAttribute('aria-hidden', 'true');
       this.playButton.setAttribute('aria-hidden', 'true');
       this.pauseButton.setAttribute('aria-hidden', 'false');
     }
