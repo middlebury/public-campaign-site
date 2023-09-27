@@ -1,5 +1,5 @@
 image_styles:
-  pillars: 
+  pillars:
     title: Homepage Campaign Pillars
     ratio: "16:9"
     srcset:
@@ -18,10 +18,10 @@ image_styles:
       - 832x468
       - 1136x639
 
-  portrait_video: 
+  portrait_video:
     title: Portrait Video component
     ratio: "9:16"
-    srcset: 
+    srcset:
       - 234x416
       - 252x448
       - 297x528
@@ -52,21 +52,21 @@ image_styles:
       - 336x189
       - 416x232
     # sizes: "(max-width: 512px) 90px, (max-width: 768px) 144px, 288px"
-  
+
   image_text:
-    title: Our Priorities 
+    title: Our Priorities
     ratio: "16:9"
-    srcset: 
+    srcset:
       - 288x162
       - 432x243
       - 666x375
       - 808x455
     sizes: "(max-width: 512px) 288px, (max-width: 768px) 432px, (max-width: 1200px) 666px, 808px"
-  
+
   featured_story:
-    title: Our Priorities 
+    title: Our Priorities
     ratio: "16:9"
-    srcset: 
+    srcset:
       - 320x180
       - 432x243
       - 666x375
@@ -78,7 +78,7 @@ image_styles:
     ratio: "16:9"
     srcset:
       - 896x504
-  
+
   image_floated: # 3:4
     title: Image component with left/right alignment
     ratio: "3:4"
@@ -88,10 +88,15 @@ image_styles:
       - 260x346
       - 296x394
     sizes: "(max-width: 512px) 128px, (max-width: 768px) 239px, (max-width: 1200px) 260px, 296px"
-  
+
   collection_card:
     title: Collection Item on the Collection content type
     ratio: "16:9"
     srcset:
       - 400x225
       - 640x360
+
+  small_image:
+    ratio: "1:1"
+    srcset:
+      - 180x180
