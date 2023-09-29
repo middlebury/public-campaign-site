@@ -55,7 +55,9 @@
 }
 
 .campaign-pillars__pillar-card {
-    padding-bottom: $spacing-4;
+    &:not(:last-child) {
+        padding-bottom: $spacing-6;
+    }
 
     @include breakpoint(lg) {
         @include make-gutters;
