@@ -29,14 +29,14 @@
     Lorem ipsum dolor sit amet consectetur adipisicing elit.
   </p>
 
-  <div class="d-flex f2 mt-3 mt-lg-4 font-semibold story-tags">
+  <div class="d-flex f2 mt-3 mt-lg-4 font-semibold story-list-tags">
 
     <span class="mr-4 mt-3 mt-lg-2">Tags:</span>
 
     <ul class="d-flex flex-wrap mt-lg-1">
     {% for i in 0..3 %}
         <li class="mr-4 mt-3 mt-lg-0">
-        <a href="#" class="link-underline">another longer tag {{loop.index}}</a>
+        <a href="#" class="link-underline">{{random(1) ? 'long tag' : 'another long tag'}} {{loop.index}}</a>
         </li>
     {% endfor %}
     </ul>
