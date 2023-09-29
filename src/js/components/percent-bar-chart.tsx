@@ -60,7 +60,7 @@ const PercentBarChart: FunctionComponent<PercentBarProps> = ({
   
   const preparedData = data
     // sort the data from lowest to greatest
-    .sort((a: any, b: any) => a.value - b.value)
+    //.sort((a: any, b: any) => a.value - b.value)
     // add the percentage for the value to the data object
     .map((d: any) => {
       const percent = toPercent(d.value, total);
