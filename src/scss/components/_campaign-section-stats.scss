@@ -120,7 +120,7 @@
 .campaign-stats__cta {
     margin: 0;
 
-    button, button > * {
+    a, a > * {
         width: 100%;
 
         @include breakpoint(md) {
@@ -128,7 +128,7 @@
         }
     }
 
-    button {
+    a {
         padding-bottom: 4px;
         border-bottom: 1px solid $white;
         border-right-style: none;

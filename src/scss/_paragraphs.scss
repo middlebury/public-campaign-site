@@ -3,13 +3,8 @@
 ////
 
 %paragraph-space {
-  margin-top: $spacing-7;
-  margin-bottom: $spacing-7;
-
-  @include breakpoint(md) {
-    margin-top: $spacing-8;
-    margin-bottom: $spacing-8;
-  }
+  margin-top: $spacing-8;
+  margin-bottom: $spacing-8;
 
   @include breakpoint(lg) {
     margin-top: $spacing-9;
@@ -66,6 +61,8 @@
     @include make-col-offset(2);
   }
 
+  @extend %paragraph-space;
+
   .paragraph--expand,
   .paragraph--video,
   .paragraph--image:not(.image--left):not(.image--right) {
@@ -89,30 +86,20 @@
   }
 }
 
-.paragraph--video-group,
+.paragraph,
 .paragraph--lead,
-.paragraph--text {
-  margin-bottom: $spacing-8;
-
-  @include breakpoint(lg) {
-    margin-bottom: $spacing-9;
-  }
-}
-
-.paragraph--image-text {
-  margin-top: $spacing-8;
-  margin-bottom: $spacing-8;
-
-  @include breakpoint(md) {
-    margin-top: $spacing-9;
-    margin-bottom: $spacing-9;
-  }
+.paragraph--text,
+.paragraph--image-text,
+.paragraph--chart,
+.paragraph--featured-story {
+  @extend %paragraph-space;
 }
 
 .paragraph--article-spotlight,
 .paragraph--video-group {
   @extend %paragraph-full-width;
-  // @include make-gutters;
+  
+  margin-top: $spacing-7;
 
   @include breakpoint(lg) {
     margin-top: $spacing-8;
@@ -147,23 +134,4 @@
   @include breakpoint(xl) {
     margin-top: $spacing-7;
   }
-}
-
-.paragraph--featured-story {
-  margin-top: $spacing-8;
-  margin-bottom: $spacing-8;
-
-  // @include breakpoint(md) {
-  //   margin-top: $spacing-3;
-  //   margin-bottom: $spacing-8;
-  // }
-
-  @include breakpoint(md) {
-    margin-top: $spacing-9;
-    margin-bottom: $spacing-9;
-  }
-}
-
-.paragraph--chart {
-  @extend %paragraph-space;
 }

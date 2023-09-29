@@ -1,8 +1,15 @@
 .page-header {
-  margin-bottom: $spacing-8;
+}
+
+.page-header__title {
+  font-size: rem(32);
+  font-weight: $font-weight-medium;
+  text-transform: uppercase;
+  letter-spacing: $letter-spacing-secondary;
 
   @include breakpoint(md) {
-    margin-bottom: $spacing-9;
+    font-weight: $font-weight-light;
+    font-size: $typescale-10;
   }
 }
 
@@ -12,12 +19,10 @@
   position: relative;
   overflow: hidden;
   min-height: 300px;
-  margin-bottom: $spacing-7;
 
   img {
     @include absolute-fill;
     object-fit: cover;
-    // font-family: "object-fit: cover;";
   }
 
   .page-header__title {
@@ -61,15 +66,18 @@
 .page-header--has-menu {
   margin-bottom: 0;
 
-  // .page-header__content {
-  //   margin-bottom: 0;
-  // }
+  .page-header__content {
+    margin-bottom: $spacing-4;
+
+    @include breakpoint(lg) {
+    margin-bottom: $spacing-5;
+    }
+  }
 }
 
 .page-header__content {
   @include make-col-ready;
   padding-top: $spacing-5;
-  margin-bottom: $spacing-4;
 
   @include breakpoint(md) {
     padding-top: $spacing-6;
@@ -80,7 +88,6 @@
 
   @include breakpoint(lg) {
     padding-top: $spacing-9;
-    margin-bottom: $spacing-5;
   }
 
   .page-header--has-image & {
@@ -112,16 +119,5 @@
     @include breakpoint(lg) {
       margin-top: 0;
     }
-  }
-}
-
-.page-header__title {
-  font-size: rem(32);
-  font-weight: $font-weight-light;
-  text-transform: uppercase;
-  letter-spacing: $letter-spacing-secondary;
-
-  @include breakpoint(md) {
-    font-size: $typescale-10;
   }
 }

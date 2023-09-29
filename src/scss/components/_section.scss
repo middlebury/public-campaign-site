@@ -1,19 +1,18 @@
-h2.section__title {
-  font-size: $typescale-7;
-  font-weight: $font-weight-normal;
-  text-transform: uppercase;
-  margin-top: $spacing-8;
-  margin-bottom: $spacing-4;
-  // border-top: 1px solid currentColor;
-  // margin: 0 !important;
+.section__header {
+  h2 {
+    font-size: $typescale-7;
+    font-weight: $font-weight-normal;
+    text-transform: uppercase;
+    margin-bottom: $spacing-4;
+    
+    @include breakpoint(md) {
+      font-size: rem(32);
+      margin-bottom: $spacing-5;
+    }
 
-  @include breakpoint(md) {
-    font-size: rem(32);
-    margin-bottom: $spacing-5;
-  }
-
-  @include breakpoint(lg) {
-    margin-top: $spacing-9;
-    margin-bottom: $spacing-7;
+    @include breakpoint(lg) {
+      margin-bottom: $spacing-7;
+    }
   }
 }
+
