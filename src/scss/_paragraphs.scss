@@ -96,7 +96,8 @@
 }
 
 .paragraph--article-spotlight,
-.paragraph--video-group {
+.paragraph--video-group, 
+.paragraph--quad-story {
   @extend %paragraph-full-width;
   
   margin-top: $spacing-7;

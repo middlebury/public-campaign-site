@@ -81,11 +81,11 @@
     }
 
     a {
-        font-weight: $font-weight-semibold;
+        // font-weight: $font-weight-semibold;
         @include link-border;
     }
 
-    a:not([href*='middlebury.edu']):not([href^='#']):not([href^='/']):not([href^='mailto:']):not([href*='drive.google.com']):not([href*='docs.google.com']):not([href*='.pdf']):not([href*='middleburycollege-my.sharepoint.com']):not([name]) {
+    a:not([href*='middlebury.edu']):not([href^='#']):not([href^='/']):not([href^='mailto:']):not([href*='drive.google.com']):not([href*='docs.google.com']):not([href*='.pdf']):not([href*='middleburycollege-my.sharepoint.com']):not([name]):not([href*='tel']) {
         @include link-external;
     }
 
