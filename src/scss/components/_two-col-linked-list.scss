@@ -30,6 +30,7 @@
 
 
             @include breakpoint(lg) {
+                border-top-width: 8px;
                 padding-top: $spacing-4;
             }
 
