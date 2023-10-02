@@ -6,6 +6,16 @@
     display: flex;
     position: relative;
     flex-direction: column;
+
+    .media-object__body {
+      h3 {
+        line-height: $line-height-basic;
+
+        @include breakpoint(md) {
+          font-weight: $font-weight-medium;
+        }
+      }
+    }
     
     @include breakpoint(sm) {
       flex-direction: row;
@@ -15,13 +25,15 @@
 .media-object.featured-story {
   .media-object__body {
     h3 {
-      font-size: rem(34);
-      font-weight: $font-weight-semibold;
+      font-size: $spacing-5;
+      font-weight: $font-weight-normal;
       margin-top: 0;
       margin-bottom: $spacing-1;
       text-transform: none;
 
       @include breakpoint(md) {
+        font-size: rem(34);
+        font-weight: $font-weight-semibold; 
         margin-bottom: $spacing-2;
       }
 
@@ -31,15 +43,11 @@
     }
 
     p {
-      margin-bottom: $spacing-3;
+      // margin-bottom: $spacing-3;
 
-      @include breakpoint(lg) {
-        margin-bottom: $spacing-4;
-      }
-    }
-
-    .story-tags {
-      flex-direction: column;
+      // @include breakpoint(lg) {
+      //   margin-bottom: $spacing-4;
+      // }
     }
   }
 
@@ -72,8 +80,11 @@
   width: 100%;
 
   @include breakpoint(md) {
-    border-top-width: $spacing-3;
     max-width: calc(11 / 12 * 100% - 64px);
+  }
+
+  @include breakpoint(lg) {
+    border-top-width: $spacing-3;
   }
 
   &.access {
@@ -99,7 +110,7 @@
 
 .media-object__image {
   width: 100%;
-  margin-bottom: $spacing-2;
+  // margin-bottom: $spacing-2;
 
   @include breakpoint(md) {
     width: initial;
@@ -159,11 +170,11 @@
 
   p {
     font-size: $typescale-3;
-    margin-bottom: $spacing-3;
+    // margin-bottom: $spacing-3;
 
     @include breakpoint(lg) {
       font-size: $typescale-4;
-      margin-bottom: $spacing-4;
+      // margin-bottom: $spacing-4;
     }
   }
 

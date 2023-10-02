@@ -1,0 +1,39 @@
+{% extends "campaign-top-level.twig" %}
+
+{% set has_page_image = false %}
+
+{% block page_header %}
+  {% include 'partials/page-header.twig' with {
+    title: 'Get Involved',
+    image_src: has_page_image
+  } %}
+{% endblock %}
+
+{% block layout_header %}
+  {% include 'partials/campaign-header.twig' with {
+    is_block: true,
+    dark: true
+  } %}
+{% endblock %}
+
+{% block page %}
+  {% embed 'partials/top-level-layout.twig' with {
+    show_menu: false
+  } %} 
+    {% block paragraphs %}
+      {% embed 'paragraphs/text.twig' %}
+        {% block text_body %}
+          <p>If you are interested in volunteering, please complete our <a href="#">volunteer registration for</a> and indicate your area(s) of interest. A staff member will then be in touch with you. If you would like more information about volunteer roles and time commitments, please email us at <a href="mailto:alumni@middlebury.edu">alumni@middlebury.edu</a> or call the alumni office at <a href="tel:+18024435183">(802) 443-5183</a>.</p>
+        {% endblock %}
+      {% endembed %}
+      <hr>
+      {% include 'paragraphs/quad-story.twig' with {
+        title: 'Connect with Middlebury'
+      } %}
+      <hr>
+      {% include 'paragraphs/quad-story.twig' with {
+        title: 'Volunteer'
+      } %}
+    {% endblock %}
+  {% endembed %}
+{% endblock %}

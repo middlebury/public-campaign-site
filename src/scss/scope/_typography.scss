@@ -4,7 +4,7 @@
             > li {
                 position: relative;
                 margin-left: 22px;
-                margin-bottom: $spacing-5;
+                margin-bottom: rem(18);
                 font-size: $typescale-4;
     
                 &:before {
@@ -36,13 +36,15 @@
     }
 
     h2 {
-        font-size: $typescale-7;
-        margin-top: $spacing-5;
-        margin-bottom: $spacing-4;
+        &:not(h2[class*="section"]){
+            font-size: $typescale-7;
+            margin-top: $spacing-5;
+            margin-bottom: $spacing-4;
 
-        @include breakpoint(md) {
-            font-size: rem(32);
-            margin-top: $spacing-7;
+            @include breakpoint(md) {
+                font-size: rem(32);
+                margin-top: $spacing-7;
+            }
         }
     }
 
@@ -79,11 +81,11 @@
     }
 
     a {
-        font-weight: $font-weight-semibold;
+        // font-weight: $font-weight-semibold;
         @include link-border;
     }
 
-    a:not([href*='middlebury.edu']):not([href^='#']):not([href^='/']):not([href^='mailto:']):not([href*='drive.google.com']):not([href*='docs.google.com']):not([href*='.pdf']):not([href*='middleburycollege-my.sharepoint.com']):not([name]) {
+    a:not([href*='middlebury.edu']):not([href^='#']):not([href^='/']):not([href^='mailto:']):not([href*='drive.google.com']):not([href*='docs.google.com']):not([href*='.pdf']):not([href*='middleburycollege-my.sharepoint.com']):not([name]):not([href*='tel']) {
         @include link-external;
     }
 

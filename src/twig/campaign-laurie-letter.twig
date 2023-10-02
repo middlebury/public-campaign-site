@@ -1,0 +1,43 @@
+{% extends "campaign-top-level.twig" %}
+
+{% set has_page_image = false %}
+
+{% block page_header %}
+  {% include 'partials/page-header.twig' with {
+    title: '&#8216;SO NEEDED IN THESE TIMES&#8217;',
+    image_src: has_page_image
+  } %}
+{% endblock %}
+
+{% block layout_header %}
+  {% include 'partials/campaign-header.twig' with {
+    is_block: true,
+    dark: true
+  } %}
+{% endblock %}
+
+{% block page %}
+  {% embed 'partials/top-level-layout.twig' with {
+    show_menu: false
+  } %} 
+    {% block paragraphs %}
+      {% embed 'paragraphs/text.twig' %}
+        {% block text_body %}
+          {% include 'partials/image-with-caption.twig' with {
+            class: 'mb-6',
+            name: 'small_image',
+            no_caption: true
+          } %}
+          <p>Dear Friends,</p>
+          <p><strong>Immersing young people in environments and experiences</strong> that prepare them to navigate a complicated world, and to thrive in it, has never been more necessary. Few institutions do this better than Middlebury. But we can’t stand still. Middlebury must continue to evolve, our sights set on the future.</p>
+          <p>With your partnership, we’ll leverage Middlebury’s extraordinary assets and build new connections between our constellation of renowned schools and programs, so every student can take advantage of all we have to offer. </p>
+          <p><strong>We’ll develop in every student 21st-century literacies</strong>, so whatever fields they study, wherever life takes them, they’ll be fluent in data analysis, cultural difference, environmental change, and conflict transformation, essentials to addressing the world’s great challenges.</p>
+          <p>In the core jewel that is our undergraduate College, the global affairs incubator of our Institute of International Studies, the literary force of our Bread Loaf School of English and Writers’ Conferences, the linguistic and intercultural powerhouses of our Language Schools and Schools Abroad, we’ll turn our global footprint of offerings into a global network of educational opportunities.</p>
+          <p><strong>Greater diversity of learning brings deeper knowledge and insight—</strong> so needed in these times. Together let’s ensure our students become 21st-century versions of what Middlebury students and graduates have always been: conscientious, engaged, impactful people of the world.</p>
+          <p>Laurie L. Patton</p>
+          <p>President</p>
+        {% endblock %}
+      {% endembed %}
+    {% endblock %}
+  {% endembed %}
+{% endblock %}

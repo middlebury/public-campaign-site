@@ -1,0 +1,49 @@
+.profile-spotlight-item {
+  margin-bottom: $spacing-5;
+  display: flex;
+
+  @include breakpoint(md) {
+    display: block;
+    margin-bottom: 0;
+  }
+}
+
+.profile-spotlight-item__media {
+  margin-bottom: $spacing-3;
+  margin-right: $spacing-3;
+
+  @include breakpoint(md) {
+    margin-right: 0;
+  }
+}
+
+.profile-spotlight-item__content {
+  flex: 1;
+}
+
+.profile-spotlight-item__text {
+  font-size: $typescale-3;
+  font-weight: $font-weight-normal;
+  margin-bottom: $spacing-3;
+  line-height: $line-height-base;
+}
+
+.profile-spotlight-item__name {
+  font-family: $font-family-sans-serif;
+  font-size: $typescale-3;
+  font-weight: $font-weight-semibold;
+  letter-spacing: 0;
+  margin-bottom: $spacing-1;
+  line-height: $line-height-base;
+}
+
+.profile-spotlight-item__title {
+  color: $gray;
+  font-size: $typescale-2;
+  font-style: italic;
+  margin-bottom: $spacing-3;
+}
+
+.profile-spotlight-item__link {
+  font-size: $typescale-2;
+}

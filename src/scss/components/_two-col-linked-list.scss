@@ -1,5 +1,9 @@
 .two-col-linked-list {
-    margin-bottom: $spacing-9;
+    margin-bottom: $spacing-8;
+
+    @include breakpoint(md) {
+        margin-bottom: $spacing-9;
+    }
     
     li {
         font-size: $typescale-3;
@@ -9,7 +13,7 @@
         text-transform: uppercase;
 
         @include breakpoint(md) {
-            font-weight: $font-weight-normal;
+            font-weight: $font-weight-medium;
             font-size: $typescale-5;
         }
 
@@ -20,10 +24,13 @@
         a {
             display: block; 
             width: 100%;
-            border-top: 8px solid $color-access;
+            border-top: 4px solid $color-access;
             padding-top: $spacing-2;
+            line-height: $line-height-basic;
+
 
             @include breakpoint(lg) {
+                border-top-width: 8px;
                 padding-top: $spacing-4;
             }
 

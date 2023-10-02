@@ -3,20 +3,15 @@
 ////
 
 %paragraph-space {
-    margin-top: $spacing-7;
-    margin-bottom: $spacing-7;
-  
-    @include breakpoint(md) {
-      margin-top: $spacing-8;
-      margin-bottom: $spacing-8;
-    }
-  
-    @include breakpoint(lg) {
-      margin-top: $spacing-9;
-      margin-bottom: $spacing-9;
-    }
+  margin-top: $spacing-8;
+  margin-bottom: $spacing-8;
+
+  @include breakpoint(lg) {
+    margin-top: $spacing-9;
+    margin-bottom: $spacing-9;
+  }
 }
-  
+
 // %paragraph-space-sm {
 //     margin-top: $spacing-6;
 //     margin-bottom: $spacing-5;
@@ -31,97 +26,90 @@
 //         margin-bottom: $spacing-7;
 //     }
 // }
-  
+
 %paragraph-full-width {
-    margin-left: calc(50% - 50vw);
-    margin-right: calc(50% - 50vw);
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
 }
-  
+
 .paragraphs {
-    margin-bottom: $spacing-8;
-
-    @include breakpoint(lg) {
-        margin-bottom: $spacing-9;
-    }
-
-    > [class*='paragraph']:first-child {
-        margin-top: 0;
-    }
-
-    > [class*='paragraph']:last-child {
-        margin-bottom: 0;
-    }
-}
-  
-.paragraphs--wide {
-    @include make-col-ready;
-  
-    @include breakpoint(md) {
-      @include make-col(10);
-      @include make-col-offset(1);
-    }
-  
-    @include breakpoint(lg) {
-      @include make-col(8);
-      @include make-col-offset(2);
-    }
-  
-    .paragraph--expand,
-    .paragraph--video,
-    .paragraph--image:not(.image--left):not(.image--right) {
-      @include breakpoint(lg) {
-        // Main column is 10 wide, so we divide by remaining
-        // columns on sides to pull them out to 12 columns.
-        // More on these techniques here:
-        // https://css-tricks.com/full-width-containers-limited-width-parents/
-        margin-left: calc(-100% * 2 / 12);
-        margin-right: calc(-100% * 2 / 12);
-        @include make-gutters;
-      }
-    }
-  
-    .paragraphs--wide__offset {
-      @include breakpoint(lg) {
-        @include make-col-offset(2);
-        @include make-col-ready;
-        @include make-col(10);
-      }
-    }
-}
-
-.paragraph--video-group, 
-.paragraph--lead,
-.paragraph--text {
   margin-bottom: $spacing-8;
 
   @include breakpoint(lg) {
     margin-bottom: $spacing-9;
   }
+
+  > [class*="paragraph"]:first-child {
+    margin-top: 0;
+  }
+
+  > [class*="paragraph"]:last-child {
+    margin-bottom: 0;
+  }
 }
 
-.paragraph--image-text {
-  margin-top: $spacing-8;
-  margin-bottom: $spacing-8;
+.paragraphs--wide {
+  @include make-col-ready;
 
   @include breakpoint(md) {
-    margin-top: $spacing-9;
-    margin-bottom: $spacing-9;
+    @include make-col(10);
+    @include make-col-offset(1);
   }
+
+  @include breakpoint(lg) {
+    @include make-col(8);
+    @include make-col-offset(2);
+  }
+
+  @extend %paragraph-space;
+
+  .paragraph--expand,
+  .paragraph--video,
+  .paragraph--image:not(.image--left):not(.image--right) {
+    @include breakpoint(lg) {
+      // Main column is 10 wide, so we divide by remaining
+      // columns on sides to pull them out to 12 columns.
+      // More on these techniques here:
+      // https://css-tricks.com/full-width-containers-limited-width-parents/
+      margin-left: calc(-100% * 2 / 12);
+      margin-right: calc(-100% * 2 / 12);
+      @include make-gutters;
+    }
+  }
+
+  .paragraphs--wide__offset {
+    @include breakpoint(lg) {
+      @include make-col-offset(2);
+      @include make-col-ready;
+      @include make-col(10);
+    }
+  }
+}
+
+.paragraph,
+.paragraph--lead,
+.paragraph--text,
+.paragraph--image-text,
+.paragraph--chart,
+.paragraph--featured-story {
+  @extend %paragraph-space;
 }
 
 .paragraph--article-spotlight,
-.paragraph--video-group {
+.paragraph--video-group, 
+.paragraph--quad-story {
   @extend %paragraph-full-width;
-  // @include make-gutters;
+  
+  margin-top: $spacing-7;
 
   @include breakpoint(lg) {
-    margin-top: $spacing-3;
+    margin-top: $spacing-8;
   }
 }
 
 .paragraph--video {
   margin-bottom: $spacing-5;
-  
+
   @include breakpoint(md) {
     margin-bottom: $spacing-7;
   }
@@ -147,23 +135,4 @@
   @include breakpoint(xl) {
     margin-top: $spacing-7;
   }
-}
-
-.paragraph--featured-story {
-  margin-top: $spacing-8;
-  margin-bottom: $spacing-8;
-
-  // @include breakpoint(md) {
-  //   margin-top: $spacing-3;
-  //   margin-bottom: $spacing-8;
-  // }
-
-  @include breakpoint(md) {
-    margin-top: $spacing-9;
-    margin-bottom: $spacing-9;
-  }
-}
-
-.paragraph--chart {
-  @extend %paragraph-space;
 }

@@ -22,7 +22,7 @@
 {% block page %}
   {% embed 'partials/top-level-layout.twig' with {
     show_menu: true,
-    has_page_image: true,
+    has_page_image: has_page_image,
     has_filter: has_filter,
     theme: 'story'
   } %}
@@ -36,7 +36,7 @@
       {% endif %}
       <ul class="d-flex flex-wrap">
         {% for item in 0..7 %}
-          <li class="col-md-4 mb-9">
+          <li class="col-md-4 mb-8 mb-md-9">
             {% include 'partials/story-list-card.twig' %}
           </li>
         {% endfor %}
