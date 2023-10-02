@@ -28,6 +28,10 @@
         background-color: $blue-light;
     }
 
+    &.video {
+        background-color: $color-primary;
+    }
+
     &.video-group {
         .campaign-section__title-border {
             max-width: percentage(5/7);

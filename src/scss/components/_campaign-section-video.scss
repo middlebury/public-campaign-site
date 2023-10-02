@@ -1,0 +1,21 @@
+.campaign-video {
+    color: $white;
+
+    .campaign-video--container {
+        @include make-container;
+        padding: 0;
+
+        @include breakpoint(sm) {
+            display: flex;
+        }
+
+        @include breakpoint(lg) {
+            display: block;
+        }
+    }
+
+    .transcript a {
+        color: $white;
+    }
+
+}
