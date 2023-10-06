@@ -61,10 +61,6 @@
     margin-left: 0;
     margin-right: 0;
   }
-}
-
-.page-header--has-menu {
-  margin-bottom: 0;
 
   .page-header__content {
     margin-bottom: $spacing-4;
@@ -73,6 +69,10 @@
     margin-bottom: $spacing-5;
     }
   }
+}
+
+.page-header--has-menu {
+  margin-bottom: 0;
 }
 
 .page-header__content {
