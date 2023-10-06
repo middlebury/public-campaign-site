@@ -12,6 +12,16 @@
         @include breakpoint(lg) {
             display: block;
         }
+
+        .campaign-section__title {
+            @include breakpoint(lg) {
+                margin-bottom: $spacing-9;
+            }
+    
+            @include breakpoint(xl) {
+                margin-bottom: $spacing-9;
+            }
+        }
     }
 
     .campaign-section__title {
