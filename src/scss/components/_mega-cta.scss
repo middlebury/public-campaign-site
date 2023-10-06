@@ -47,16 +47,13 @@
   font-weight: $font-weight-normal;
   letter-spacing: $letter-spacing-solid;
   text-transform: uppercase;
-  margin-bottom: $spacing-4;
+  margin-bottom: $spacing-5;
+  line-height: $line-height-basic;
 
   @include breakpoint(md) {
     font-weight: $font-weight-light;
     font-size: $typescale-10;
   } 
-
-  @include breakpoint(xl) {
-    margin-bottom: $spacing-7;
-  }
 }
 
 .mega-cta__date-time {
