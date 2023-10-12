@@ -4,7 +4,7 @@
 
 {% block page_header %}
   {% include 'partials/page-header.twig' with {
-    title: 'Campaign Contacts',
+    title: 'Campaign Leadership',
     image_src: has_page_image
   } %}
 {% endblock %}
@@ -21,27 +21,37 @@
     show_menu: false
   } %} 
     {% block paragraphs %}
+      {% embed 'paragraphs/text.twig' %}
+        {% block text_body %}
+          <p>Intro paragraph Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+        {% endblock %}
+      {% endembed %}
       {% include 'paragraphs/small-image-with-text.twig' with {
         title: 'Dan Courcey',
-        text: 'Executive Assistant to the Vice President of Advancement
-<br><a href="mailto:dcourcey@middlebury.edu">dcourcey@middlebury.edu</a><br>
-(802) 443-5150'
+        text: 'This as about the lifespan of our relationship with students of all backgrounds. Making sure, as they leave Middlebury, they’re prepared for the world and the workforce.'
       } %}
       {% include 'paragraphs/small-image-with-text.twig' with {
-        title: 'Stacie Marshall',
-        text: 'Executive Assistant to the Vice President of Advancement<br><a href="mailto:staciem@middlebury.edu">staciem@middlebury.edu</a><br>
-(802) 443-5217'
+        title: 'Dan Courcey',
+        text: 'This as about the lifespan of our relationship with students of all backgrounds. Making sure, as they leave Middlebury, they’re prepared for the world and the workforce.'
       } %}
-      {% include 'paragraphs/small-image-with-text.twig' with {
-        title: 'Jamie Black',
-        text: 'Associate Vice President for Advancement and Campaign Operations; Campaign Co-Executive Director<br><a href="mailto:jlblack@middlebury.edu">jlblack@middlebury.edu</a><br>
-(802) 443-5614'
+      <hr>
+      {% embed 'paragraphs/text.twig' with {
+        title: 'BOARD OF TRUSTEES'
       } %}
-      {% include 'paragraphs/small-image-with-text.twig' with {
-        title: "Alanna Shanler '99",
-        text: 'Associate Vice President for Advancement and Campaign Engagement; Campaign Co-Executive Director<br><a href="mailto:ashanley@middlebury.edu">ashanley@middlebury.edu</a><br>
-(802) 443-5350'
-      } %}   
+        {% block text_body %}
+          <p>Laurie L. Patton,&nbsp;President</p>
+          <h3>CHARTER&nbsp;TRUSTEES</h3>
+          <p>Kirtley Horton Cameron ’95; Catherine Lee ’92; George C. Lee II ’88; Caroline Sneath McBride ’75; Dennis D. Parker ’77; Richard T. Scanlon ’93; Susan Scher ’86; Karen A. Stolley ’77, Vice Chair; William F. Truscott ’83,&nbsp;Chair</p>
+          <h3>TERM&nbsp;TRUSTEES</h3>
+          <p>Belinda L. Badcock; Joseph W. Brown ’90; Leilani McClellan Brown ’93; Barbara Griffin Cole; Janine Feng ’92; Graham Goldsmith ’89; Parker Harris III ’89; Lucienne M. Ide ’97; Carol L. Jones; Alice J. (A.J.) Murphy ’98; Suzanne Reider ’87; Henry J. Simonds ’97; Elizabeth Cromwell Speers ’86; Mark D. Spence ’98; John E. Waldron ’91; Larry Yarbrough; Kashif Zafar&nbsp;’92</p>
+          <h3>ALUMNI&nbsp;TRUSTEES</h3>
+          <p>Koby Altman ’04; Zachary Bourque ’01; Denver Edwards ’88; Anne Davis Peterson ’85; Shawn Ryan ’88; Danielle (Dani) Virtue ’82; recent grauduate&nbsp;trustee</p>
+          <h3>RECENT GRADUATE&nbsp;TRUSTEE</h3>
+          <p>Kenshin Cho&nbsp;’20</p>
+          <h3>TRUSTEES&nbsp;EMERITI</h3>
+          <p>Dort A. Cameron III ’67; James S. Davis ’66; Churchill G. Franklin ’71; Frederick M. Fritz ’68; Nancy Coffrin Furlong ’75; Claire Waterhouse Gargalli ’64; Robert C. Graham Jr. ’63; Willard T. Jackson ’51; William H. Kieffer III ’64; Roxanne McCormick Leighton ’67; John M. McCardell Jr.; C. Irving Meeker ’50; Garrett Moran ’76; Patricia Judah Palmer ’57; Kimberly Collins Parizeau ’79; Elisabeth Robert ’78; Frank W. Sesno ’77; Deborah G. Thomas ’75; John R. Tormondsen ’82; J. Edward (Ted) Virtue ’82; Marna C. Whittington; Linda Foster Whitton ’80; Kendrick R. Wilson&nbsp;III</p>
+        {% endblock %}
+      {% endembed %}
     {% endblock %}
   {% endembed %}
 {% endblock %}
