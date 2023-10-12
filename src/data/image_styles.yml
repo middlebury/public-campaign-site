@@ -77,7 +77,11 @@ image_styles:
     title: Featured image (basic content, story page, event page)
     ratio: "16:9"
     srcset:
+      - 400x225
+      - 640x360
       - 896x504
+      - 1136x639
+    sizes: "(max-width: 1136px) 100vw, 1136px"
 
   image_floated: # 3:4
     title: Image component with left/right alignment
