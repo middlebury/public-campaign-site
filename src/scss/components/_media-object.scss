@@ -234,6 +234,10 @@
     width: fit-content;
     margin-right: $spacing-4;
     margin-bottom: $spacing-4;
+
+    @include breakpoint(sm) {
+      margin-bottom: 0;
+    }
   }
 
   .typography {
