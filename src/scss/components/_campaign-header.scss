@@ -84,6 +84,11 @@ $campaign-header-breakpoint: lg;
 .campaign-header__logo {
   display: flex;
   flex-direction: column;
+  margin-top: -$spacing-1;
+
+  @include breakpoint(md) {
+    margin-top: 0;
+  }
 
   svg {
     fill: $white;

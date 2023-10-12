@@ -27,27 +27,21 @@
     h3 {
       font-size: $spacing-5;
       font-weight: $font-weight-normal;
-      margin-top: 0;
+      margin-top: $spacing-1;
       margin-bottom: $spacing-1;
       text-transform: none;
+      line-height: $line-height-heading;
 
       @include breakpoint(md) {
         font-size: rem(34);
         font-weight: $font-weight-semibold; 
+        margin-top: 0;
         margin-bottom: $spacing-2;
       }
 
       @include breakpoint(lg) {
         margin-bottom: $spacing-3;
       }
-    }
-
-    p {
-      // margin-bottom: $spacing-3;
-
-      // @include breakpoint(lg) {
-      //   margin-bottom: $spacing-4;
-      // }
     }
   }
 
@@ -224,6 +218,31 @@
 
     & ~ ul {
       margin-top: $spacing-2;
+    }
+  }
+}
+
+.small-media-object {
+  display: flex;
+  flex-direction: column;
+
+  @include breakpoint(sm) {
+    flex-direction: row;
+  }
+
+  img {
+    width: fit-content;
+    margin-right: $spacing-4;
+    margin-bottom: $spacing-4;
+
+    @include breakpoint(sm) {
+      margin-bottom: 0;
+    }
+  }
+
+  .typography {
+    h3 {
+      margin-top: 0;
     }
   }
 }

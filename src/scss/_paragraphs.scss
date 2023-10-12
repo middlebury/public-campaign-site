@@ -77,6 +77,10 @@
     }
   }
 
+  .paragraph--text {
+    @extend %paragraph-space;
+  }
+
   .paragraphs--wide__offset {
     @include breakpoint(lg) {
       @include make-col-offset(2);
@@ -86,9 +90,20 @@
   }
 }
 
+.paragraph--image:not(.image--left):not(.image--right) {
+  margin-bottom: $spacing-5;
+
+  @include breakpoint(md) {
+    margin-bottom: $spacing-7;
+  }
+
+  @include breakpoint(lg) {
+    margin-top: $spacing-7;
+  }
+}
+
 .paragraph,
 .paragraph--lead,
-.paragraph--text,
 .paragraph--image-text,
 .paragraph--chart,
 .paragraph--featured-story {
@@ -106,6 +121,16 @@
     margin-top: $spacing-8;
   }
 }
+
+.paragraph--small-image-with-text {
+  margin-top: $spacing-7;
+  margin-bottom: $spacing-7;
+
+  @include breakpoint(md) {
+    margin-top: $spacing-8;
+    margin-bottom: $spacing-8;
+  }
+} 
 
 .paragraph--video {
   margin-bottom: $spacing-5;
