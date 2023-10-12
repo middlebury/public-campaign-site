@@ -63,7 +63,7 @@ image_styles:
       - 808x455
     sizes: "(max-width: 512px) 288px, (max-width: 768px) 432px, (max-width: 1200px) 666px, 808px"
 
-  featured_story:
+  featured_story: # featured image on story list page
     title: Our Priorities
     ratio: "16:9"
     srcset:
@@ -73,7 +73,7 @@ image_styles:
       - 808x455
     sizes: "(max-width: 512px) 320px, (max-width: 768px) 432px, (max-width: 1200px) 666px, 808px"
 
-  featured: # basic content, event detail, story detail
+  featured: # featured image on story page
     title: Featured image (basic content, story page, event page)
     ratio: "16:9"
     srcset:
