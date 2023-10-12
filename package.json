@@ -19,7 +19,9 @@
     "@types/lozad": "^1.16.2",
     "@types/micromodal": "^0.3.3",
     "gulp": "^4.0.2",
-    "svg-sprite": "^2.0.2"
+    "gulp-replace": "^1.1.4",
+    "svg-sprite": "^2.0.2",
+    "yargs": "^17.7.2"
   },
   "dependencies": {
     "@middlebury/gulp-config": "^2.0.2",

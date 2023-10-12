@@ -1,9 +1,12 @@
 import path from 'node:path';
 import gulp from 'gulp';
+import replace from 'gulp-replace';
 import { createConfig } from '@middlebury/gulp-config';
-
+import yargs from 'yargs';
+import { hideBin } from 'yargs/helpers';
 const { cwd } = process;
 
+const args = yargs(hideBin(process.argv)).argv;
 const DIST_DIR = 'dist';
 const SOURCE_DIR = 'src';
 
@@ -16,6 +19,14 @@ const copyDeps = () => {
   return gulp
     .src('./node_modules/chart.js/dist/Chart.min.js')
     .pipe(gulp.dest('./dist/js'));
+};
+
+export const replaceImagePaths = () => {
+  const imagesDir = args.imagesDir || '/img/';
+  return gulp
+    .src('./dist/css/*.css')
+    .pipe(replace('/img/', imagesDir))
+    .pipe(gulp.dest('./dist/css'));
 };
 
 const options = {
