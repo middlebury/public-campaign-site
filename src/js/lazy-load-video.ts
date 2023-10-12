@@ -12,7 +12,9 @@ class LazyLoadVideo {
     }
 
     init() {
-        this.loadVideo();
+        if(window.matchMedia('(min-width: 512px)').matches) {
+            this.loadVideo();
+        }
     }
 
     loadVideo() {
