@@ -8,6 +8,10 @@
                 {% include 'partials/campaign-section-pillars.twig' with {
                     id: id
                 } %}
+            {% elseif name == 'video' %}
+                {% include 'partials/campaign-section-video.twig' with {
+                    id: id
+                } %}
             {% elseif name == 'video-group' %}
                 {% include 'partials/campaign-section-video-group.twig' with {
                     id: id

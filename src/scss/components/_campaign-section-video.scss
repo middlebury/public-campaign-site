@@ -4,14 +4,7 @@
     .campaign-video--container {
         @include make-container;
         padding: 0;
-
-        @include breakpoint(sm) {
-            display: flex;
-        }
-
-        @include breakpoint(lg) {
-            display: block;
-        }
+        max-width: 1136px;
     }
 
     .transcript a {
