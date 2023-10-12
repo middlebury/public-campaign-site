@@ -54,5 +54,12 @@
                 border-top-color: $color-capital-projects;
             }
         }
+
+        p {
+            margin-top: $spacing-3;
+            text-transform: none;
+            font-weight: $font-weight-normal;
+            letter-spacing: initial;
+        }
     }
 }

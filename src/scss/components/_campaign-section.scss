@@ -81,6 +81,14 @@
           height: 100%;
           object-fit: cover;
         }
+
+        video { 
+            display: none;
+
+            @include breakpoint(sm) {
+                display: initial;
+            }
+        }
     
         &:after {
           content: '';
@@ -94,7 +102,12 @@
 
         &.video {
             position: fixed;
-            background: transparent no-repeat 50% 0% / cover;
+            background: $navy no-repeat 50% 50% / cover;
+            background-image: url(https://via.placeholder.com/425x756);
+
+            @include breakpoint(sm) {
+                background-image: initial;
+            }
 
             &:after {
                 opacity: 1;

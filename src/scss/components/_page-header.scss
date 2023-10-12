@@ -65,6 +65,14 @@
 
 .page-header--has-menu {
   margin-bottom: 0;
+
+  .page-header__content {
+    margin-bottom: $spacing-4;
+
+    @include breakpoint(lg) {
+    margin-bottom: $spacing-5;
+    }
+  }
 }
 
 .page-header__content {

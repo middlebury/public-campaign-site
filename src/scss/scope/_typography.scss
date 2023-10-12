@@ -190,4 +190,20 @@
     strong {
         font-weight: $font-weight-bold;
     }
+
+    blockquote {
+        margin: $spacing-5 $spacing-3;
+        font-size: $typescale-4;
+        border-left: 1px solid $gray-light;
+
+        @include breakpoint(md) {
+            margin: $spacing-7 $spacing-4;
+            margin-right: $spacing-3;
+        }
+
+        @include breakpoint(lg) {
+            margin-left: $spacing-5;
+            padding-left: $spacing-4;
+        }
+    }
 }
