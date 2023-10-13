@@ -30,6 +30,18 @@
 
     &.video {
         background-color: $color-primary;
+         
+        &:before {
+            padding-top: percentage(5/4);
+            
+            @include breakpoint(sm) {
+                padding-top: percentage(225/256);
+            }
+
+            @include breakpoint(lg) {
+                padding-top: percentage(9/16);
+            }
+        }
     }
 
     &.video-group {

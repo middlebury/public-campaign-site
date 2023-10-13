@@ -56,10 +56,16 @@
         }
 
         p {
-            margin-top: $spacing-3;
-            text-transform: none;
+            font-size: $typescale-2;
             font-weight: $font-weight-normal;
             letter-spacing: initial;
+            text-transform: none;
+            margin-top: $spacing-3;
+
+            @include breakpoint(lg) {
+                font-size: $typescale-3;
+                padding-right: $spacing-9;
+            }
         }
     }
 }

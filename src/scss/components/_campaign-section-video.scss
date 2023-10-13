@@ -3,8 +3,19 @@
 
     .campaign-video--container {
         @include make-container;
-        padding: 0;
-        max-width: 1136px;
+        // padding: 0;
+        // max-width: 1136px;
+
+        .video {
+            margin: auto;
+            // padding: 0 $spacing-3;
+            @include make-col(12);
+
+            @include breakpoint(lg) {
+                @include make-col(10);
+                padding: 0 $spacing-5;
+            }
+        }
     }
 
     .transcript a {
