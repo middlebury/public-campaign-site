@@ -44,6 +44,9 @@
 
     &:after {
       content: map-get($theme, 'outer-border-content');
-      margin-left: map-get($theme, 'outer-border-margin');
+    }
+
+    span {
+        margin-right: map-get($theme, 'outer-border-margin');
     }
 }

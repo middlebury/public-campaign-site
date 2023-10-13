@@ -3,12 +3,16 @@
 
     .campaign-video--container {
         @include make-container;
-        // padding: 0;
-        // max-width: 1136px;
+        margin-top: $spacing-9;
+        margin-bottom: $spacing-9;
+
+        @include breakpoint(lg) {
+            margin-top: rem(120);
+            margin-bottom: rem(120);
+        }
 
         .video {
             margin: auto;
-            // padding: 0 $spacing-3;
             @include make-col(12);
 
             @include breakpoint(lg) {
