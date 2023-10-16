@@ -60,13 +60,9 @@
         name: 'featured'
     } %}
 
-    {% include 'paragraphs/image.twig' with {
-        name: 'featured'
-    } %}
-    
-    {% include 'paragraphs/image.twig' with {
-        name: 'featured'
-    } %}
+    {% include 'paragraphs/video.twig' with {
+        hide_caption_text: true
+    }%}
 
     <div class="typography paragraph--text">
         {% for i in 2..6 %}
