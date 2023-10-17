@@ -17,7 +17,7 @@
 
     @include breakpoint(md) {
       padding-top: $spacing-3;
-      padding-bottom: $spacing-2;
+      padding-bottom: $spacing-3;
     }
 
     @include breakpoint(xl) {
