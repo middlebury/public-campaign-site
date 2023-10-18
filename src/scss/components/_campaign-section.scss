@@ -139,7 +139,7 @@
         color: white;
         z-index: 30;
         opacity: 0;
-        display: block;
+        display: none;
         
         &.show-button {
             opacity: 0.5;
@@ -147,6 +147,10 @@
     
         @media (prefers-reduced-motion: reduce) {
           display: none;
+        }
+
+        @include breakpoint(sm) {
+            display: block;
         }
     
         .video--button-play {
