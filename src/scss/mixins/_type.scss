@@ -18,3 +18,11 @@
       margin-left: $spacing-1;
     }
 }
+
+@mixin small-caps {
+    font-family: $font-family-sans-serif;
+    font-size: $typescale-2;
+    text-transform: uppercase;
+    letter-spacing: $letter-spacing-base;
+    font-weight: $font-weight-semibold;
+}

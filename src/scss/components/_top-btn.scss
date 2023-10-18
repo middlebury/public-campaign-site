@@ -1,0 +1,24 @@
+.to-top-btn {
+  color: $navy;
+  padding: $spacing-3;
+  background: $white;
+  font-size: $typescale-2;
+  font-weight: $font-weight-medium;
+  box-shadow: 0 0 8px rgba(#000, 0.2);
+  position: fixed;
+  bottom: $spacing-2;
+  right: $spacing-2;
+  transition: transform 0.2s, bottom 0.2s;
+  z-index: $z-index-to-top-button;
+
+  &[hidden] {
+    transform: translateY(100%);
+    bottom: 0;
+  }
+
+  &:hover {
+    @media (hover: hover) {
+      transform: translateY(-10%);
+    }
+  }
+}

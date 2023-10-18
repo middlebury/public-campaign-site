@@ -60,7 +60,6 @@
 
     &.video {
         position: initial;
-        // display: block;
         height: fit-content;
         background-color: $color-primary;
 
@@ -113,7 +112,7 @@
 
         &.video {
             background: $navy no-repeat 50% 50% / cover;
-            background-image: url(https://via.placeholder.com/425x756);
+            background-image: url('/img/home-bg-mobile.jpg');
 
             @include breakpoint(sm) {
                 position: fixed;
@@ -128,7 +127,6 @@
         }
 
         &.image{
-            background-image: url('https://via.placeholder.com/1440x810');
             background-size: cover;
             background-position: center center;
         }

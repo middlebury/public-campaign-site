@@ -14,3 +14,4 @@ import './video';
 import './video-controls';
 import './countup';
 import './charts';
+import './to-top-btn';

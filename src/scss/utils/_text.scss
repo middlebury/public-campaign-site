@@ -71,3 +71,7 @@ $text-colors: (
     color: $hex;
   }
 }
+
+.text-caps {
+  @include small-caps;
+}
