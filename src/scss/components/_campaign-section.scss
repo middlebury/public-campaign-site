@@ -28,11 +28,7 @@
 
     &.intro {
         &:before {
-            padding-top: 85vh;
-
-            @include breakpoint(lg) {
-                padding-top: 100vh;
-            }
+            padding-top: 100vh;
         }
     }
 
