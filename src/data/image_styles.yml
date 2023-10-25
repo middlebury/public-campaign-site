@@ -113,3 +113,8 @@ image_styles:
       - 144x192
       - 288x384
     sizes: "(max-width: 512px) 90px, (max-width: 768px) 144px, 288px"
+  
+  small_events_image: 
+    title: Image for event details on Get Involved page
+    srcset: 
+      - 296x167
