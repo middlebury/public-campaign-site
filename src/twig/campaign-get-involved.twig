@@ -27,6 +27,28 @@
         {% endblock %}
       {% endembed %}
       <hr>
+       {% include 'paragraphs/small-image-with-text.twig' with {
+          name: 'small_events_image',
+          text: '<h3><strong>BURLINGTON, VT</strong></h3>
+
+<p><strong>Wednesday, December 6</strong><br />
+An evening to celebrate the warmth of the holiday season and the launch of For Every Future: The Campaign for Middlebury</p>
+
+<p><strong>6:00 PM</strong><br />
+Refreshments, Mingling, and Good Cheer</p>
+
+<p><strong>7:00 PM</strong><br />
+Purpose and Place, Voices of Middlebury<br />
+<em>An Evening of Storytelling&nbsp;</em></p>
+
+<p><strong>Hula</strong><br />
+50 Lakeside Avenue<br />
+Burlington, Vermont</p>
+
+<p><a href="https://engage.middlebury.edu/pages/events/fy24/for-every-future-campaign-launch-in-burlington-vt">Register for Burlington</a></p>
+'
+        } %}
+      <hr>
       {% include 'paragraphs/quad-story.twig' with {
         title: 'Connect with Middlebury'
       } %}
