@@ -35,9 +35,11 @@ $intro-text-animation: fadeInFromLeft $intro-text-animation-duration ease-in for
 
     .intro-anim__text {
         width: 100%;
-        margin-bottom: $spacing-5;
+        margin-bottom: $spacing-8;
+        margin-top: -$spacing-5;
 
         @include breakpoint(md) {
+            margin-top: 0;
             margin-bottom: $spacing-8;
         }
 
