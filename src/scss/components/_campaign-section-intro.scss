@@ -5,13 +5,17 @@ $intro-text-animation: fadeInFromLeft $intro-text-animation-duration ease-in for
     position: relative;
     display: flex;
     align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: -$spacing-5;
 
     @include breakpoint(md) {
+        position: initial;
         height: 100%;
+        margin-top: 0;
     }
 
     .intro-anim__wordmark {
-        position: relative;
         position: absolute;
         width: 100%;
         margin: auto;
@@ -31,10 +35,11 @@ $intro-text-animation: fadeInFromLeft $intro-text-animation-duration ease-in for
 
     .intro-anim__text {
         width: 100%;
+        margin-bottom: $spacing-5;
 
-        // @include breakpoint(md) {
+        @include breakpoint(md) {
             margin-bottom: $spacing-8;
-        // }
+        }
 
         span {
             display: block;
@@ -131,9 +136,10 @@ $intro-text-animation: fadeInFromLeft $intro-text-animation-duration ease-in for
     display: flex;
     flex-direction: column;
     width: 100%;
+    position: absolute;
+    bottom: -$spacing-9;
 
     @include breakpoint(md) {
-        position: absolute;
         bottom: $spacing-1;
     }
     
