@@ -21,6 +21,14 @@ const copyDeps = () => {
     .pipe(gulp.dest('./dist/js'));
 };
 
+const copyMeta = () => {
+  return gulp
+    .src([
+      './composer.json'
+    ])
+    .pipe(gulp.dest('./dist/'));
+};
+
 export const replaceImagePaths = () => {
   const imagesDir = args.imagesDir || '/img/';
   return gulp
@@ -35,7 +43,7 @@ const options = {
       watch: src('js/**/*'),
       dest: dist('js/bundle.js')
     },
-    beforeBuild: [copyDeps],
+    beforeBuild: [copyDeps, copyMeta],
     typescriptBuild: true
 };
 
