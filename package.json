@@ -20,18 +20,18 @@
     "@types/micromodal": "^0.3.5",
     "gulp": "^4.0.2",
     "gulp-replace": "^1.1.4",
-    "svg-sprite": "^2.0.3",
+    "svg-sprite": "^2.0.4",
     "yargs": "^17.7.2"
   },
   "dependencies": {
-    "@middlebury/gulp-config": "^2.0.4",
+    "@middlebury/gulp-config": "^2.1.0",
     "animejs": "^3.2.2",
     "chart.js": "^2.9.4",
     "intersection-observer": "^0.12.2",
     "lozad": "^1.16.0",
     "micromodal": "^0.4.10",
     "normalize.css": "^8.0.1",
-    "preact": "^10.19.6",
-    "tslib": "^2.6.0"
+    "preact": "^10.24.3",
+    "tslib": "^2.8.0"
   }
 }
