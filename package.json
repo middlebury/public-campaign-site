@@ -18,7 +18,7 @@
     "@types/chart.js": "^2.9.38",
     "@types/lozad": "^1.16.4",
     "@types/micromodal": "^0.3.5",
-    "gulp": "^4.0.2",
+    "gulp": "^5.0.0",
     "gulp-replace": "^1.1.4",
     "svg-sprite": "^2.0.4",
     "yargs": "^17.7.2"
