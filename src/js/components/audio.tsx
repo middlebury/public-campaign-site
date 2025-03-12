@@ -124,7 +124,7 @@ class AudioPlayer extends Component<AudioPlayerProps, AudioPlayerState> {
     const playBtn = (
       <button
         class={btnClasses}
-        aria-label={playing ? 'Pause' : 'Play'}
+        aria-label={playing ? 'Pause' : 'Listen'}
         aria-describedby="midd-audio-title-1"
         onClick={this.handleBtnClick}
       >
