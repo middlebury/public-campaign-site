@@ -61,7 +61,7 @@ class Slider extends Component<SliderProps> {
 
     return (
       <div class="slider">
-        <label htmlFor={id} class="slider__label">
+        <label htmlFor={id} id={`${id}-label`} class="slider__label">
           {label}
         </label>
         <div
@@ -73,6 +73,7 @@ class Slider extends Component<SliderProps> {
             id={id}
             class="slider__handle"
             role="slider"
+            aria-labelledby={`${id}-label`}
             style={{
               width: sliderLeft + '%'
             }}
