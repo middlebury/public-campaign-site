@@ -4,7 +4,7 @@ Project setup with [@middlebury/gulp-config](https://github.com/middlebury/gulp-
 
 ## Requirements
 
-Node ^20.19.4
+Node ^24.14.1
 
 ### Install packages
 
