@@ -4,7 +4,7 @@
   <div class="video__content js-video-content">
     <a href="https://player.vimeo.com/video/221201240" class="js-video-link video__link" role="button" aria-label="Play video" aria-describedby="midd-video-label-{{id}}">
       {% include 'partials/img.twig' with { name: 'video', lazy: lazy } %}
-      <button class="video__button">
+      <span class="video__button">
         <span class="video__play-button">
           Play
           <span class="ml-3">
@@ -15,7 +15,7 @@
           </span>
         </span>
         <time class="video__duration" datetime="3m 27s">03:27</time>
-      </button>
+      </span>
     </a>
   </div>
   <figcaption class="video__body">
