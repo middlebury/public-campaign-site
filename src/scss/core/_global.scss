@@ -1,6 +1,7 @@
 ////
 /// Contains mainly classless selectors for base resets and styles
 ////
+@use './variables';
 
 *,
 :before,
@@ -12,11 +13,11 @@
  * 1. prevent chrome from hiding background images and colors by default when printing
  */
 body {
-    font-family: $font-family-base;
-    line-height: $line-height-body;
-    font-size: $font-size-base;
-    color: $body-color;
-    background-color: $body-bg;
+    font-family: variables.$font-family-base;
+    line-height: variables.$line-height-body;
+    font-size: variables.$font-size-base;
+    color: variables.$body-color;
+    background-color: variables.$body-bg;
     margin: 0;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -50,18 +51,18 @@ img {
 }
 
 a {
-    color: $link-color;
-    text-decoration: $link-decoration;
+    color: variables.$link-color;
+    text-decoration: variables.$link-decoration;
   
     &:hover {
-        text-decoration: $link-hover-decoration;
+        text-decoration: variables.$link-hover-decoration;
     }
 }
 
 p {
-    font-family: $font-family-base;
-    font-size: $paragraph-font-size;
-    line-height: $paragraph-line-height;
+    font-family: variables.$font-family-base;
+    font-size: variables.$paragraph-font-size;
+    line-height: variables.$paragraph-line-height;
     margin-top: 0;
     margin-bottom: 0;
 }
@@ -77,21 +78,21 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: $headings-font-family;
-  font-weight: $headings-font-weight;
-  line-height: $headings-line-height;
-  letter-spacing: $letter-spacing-solid;
+  font-family: variables.$headings-font-family;
+  font-weight: variables.$headings-font-weight;
+  line-height: variables.$headings-line-height;
+  letter-spacing: variables.$letter-spacing-solid;
   margin-top: 0;
   margin-bottom: 0;
 }
 
 .h3 {
-    font-weight: $font-weight-semibold;
+    font-weight: variables.$font-weight-semibold;
     letter-spacing: initial;
 }
 
 strong {
-    font-weight: $font-weight-semibold;
+    font-weight: variables.$font-weight-semibold;
 }
   
 ol,
@@ -109,7 +110,7 @@ hr {
     box-sizing: border-box;
     border: 0;
     margin: 0;
-    border-top: 1px solid $navy;
+    border-top: 1px solid variables.$navy;
     margin-left: calc(50% - 50vw);
     margin-right: calc(50% - 50vw);
 }

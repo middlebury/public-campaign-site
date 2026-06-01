@@ -2,18 +2,18 @@
 /// Sass mixins
 ////
 
-@import 'mixins/basic-level-themes';
-@import 'mixins/breakpoints';
-@import 'mixins/clearfix';
-@import 'mixins/grid-framework';
-@import 'mixins/grid';
-@import 'mixins/screen-reader';
-@import 'mixins/buttons';
-@import 'mixins/type';
+@use '../mixins/basic-level-themes';
+@use '../mixins/breakpoints';
+@use '../mixins/clearfix';
+@use '../mixins/grid-framework';
+@use '../mixins/grid';
+@use '../mixins/screen-reader';
+@use '../mixins/buttons';
+@use '../mixins/type';
 
 // Scope
 
-@import 'scope/campaign-section';
+@use '../scope/campaign-section';
 
 @mixin absolute-fill {
     position: absolute;

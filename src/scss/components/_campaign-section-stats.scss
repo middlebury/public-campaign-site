@@ -1,3 +1,5 @@
+@use "../core/functions";
+
 .paragraph--campaign-stats {
 
     &.campaign-stats{
@@ -72,7 +74,7 @@
         }
 
         @include breakpoint(xl) {
-            font-size: rem(32);
+            font-size: functions.rem(32);
         }
     }
 
@@ -85,13 +87,13 @@
 
 .campaign-stats__chart {
     margin: auto;
-    margin-bottom: rem(54);
+    margin-bottom: functions.rem(54);
 
     @include breakpoint(sm) {
-        margin-bottom: rem(72);
+        margin-bottom: functions.rem(72);
     }
     @include breakpoint(lg) {
-        margin-bottom: rem(84);
+        margin-bottom: functions.rem(84);
     }
 
     &:not(:first-child) {

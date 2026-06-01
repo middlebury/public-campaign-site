@@ -1,6 +1,8 @@
 ////
 /// Convert a number into an rem unit given a base font size
 ////
+@use 'sass:math';
+
 @function rem($target, $base: 16) {
-    @return $target / $base * 1rem;
+    @return math.div($target, $base) * 1rem;
 }

@@ -1,9 +1,12 @@
+@use "../core/functions";
+@use "sass:math";
+
 .gallery {
 }
 
 .gallery__image {
   position: relative;
-  padding-top: percentage(9 / 16);
+  padding-top: math.percentage(9 / 16);
   height: 0;
   overflow: hidden;
 
@@ -48,7 +51,7 @@
 
 .gallery__title {
   // @include h3;
-  // font-size: rem(32);
+  // font-size: functions.rem(32);
   // font-weight: $font-weight-normal;
   // letter-spacing: $letter-spacing-secondary;
   // text-transform: uppercase;

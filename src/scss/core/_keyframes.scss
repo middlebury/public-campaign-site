@@ -1,3 +1,5 @@
+@use './variables';
+
 @keyframes slideInLeft {
     from {
         transform: translateX(-100%);
@@ -9,13 +11,13 @@
 
 @keyframes moveUpDown {
     0% {
-        transform: translateY(-$spacing-1);
+        transform: translateY(-#{variables.$spacing-1});
     }
     50% {
-        transform: translateY($spacing-1);
+        transform: translateY(variables.$spacing-1);
     }
     100% {
-        transform: translateY(-$spacing-1);
+        transform: translateY(-#{variables.$spacing-1});
     }
 }
 

@@ -1,7 +1,9 @@
+@use "../core/mixins";
+
 .box-menu {
   // margin-bottom: $spacing-7;
 
-  @include print-hide;
+  @include mixins.print-hide;
 
   // @include breakpoint(md) {
   //   margin-bottom: $spacing-8;

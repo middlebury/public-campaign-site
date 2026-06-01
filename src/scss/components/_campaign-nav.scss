@@ -1,6 +1,8 @@
+@use "../core/functions";
+
 .campaign-nav {
   display: flex;
-  @include print-hide;
+  @include mixins.print-hide;
 }
 
 .campaign-nav__handle {
@@ -21,8 +23,8 @@
   }
 
   .icon {
-    width: rem(16);
-    height: rem(14);
+    width: functions.rem(16);
+    height: functions.rem(14);
   }
   
   &.menu-button {
@@ -35,7 +37,7 @@
     padding: $spacing-3;
     
     .icon {
-      height: rem(16);
+      height: functions.rem(16);
     }
   }
 }

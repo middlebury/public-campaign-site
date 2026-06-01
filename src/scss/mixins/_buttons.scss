@@ -1,3 +1,4 @@
+@use "sass:map";
 @mixin button-base() {
     display: inline-block;
     font-family: $font-family-base;
@@ -21,19 +22,19 @@
 }
 
 @mixin button-theme($name, $themes: $btn-themes) {
-    $theme: map-get($themes, $name);
-    $bg: map-get($theme, 'bg');
-    $color: map-get($theme, 'color');
-    $border-color: map-get($theme, 'border-color');
-    $hover-color: map-get($theme, 'hover-color');
-    $hover-bg: map-get($theme, 'hover-bg');
-    $hover-border-color: map-get($theme, 'hover-border-color');
+    $theme: map.get($themes, $name);
+    $bg: map.get($theme, 'bg');
+    $color: map.get($theme, 'color');
+    $border-color: map.get($theme, 'border-color');
+    $hover-color: map.get($theme, 'hover-color');
+    $hover-bg: map.get($theme, 'hover-bg');
+    $hover-border-color: map.get($theme, 'hover-border-color');
     background-color: $bg;
     color: $color;
     border-color: $border-color;
-    border-width: map-get($theme, 'outer-border-width');
-    border-right-style: map-get($theme, 'outer-border-type');
-    height: map-get($theme, 'height');
+    border-width: map.get($theme, 'outer-border-width');
+    border-right-style: map.get($theme, 'outer-border-type');
+    height: map.get($theme, 'height');
     
     &:hover,
     &:focus {
@@ -43,10 +44,10 @@
     }
 
     &:after {
-      content: map-get($theme, 'outer-border-content');
+      content: map.get($theme, 'outer-border-content');
     }
 
     span {
-        margin-right: map-get($theme, 'outer-border-margin');
+        margin-right: map.get($theme, 'outer-border-margin');
     }
 }
