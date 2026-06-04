@@ -1,3 +1,5 @@
+@use "../core/functions";
+
 %make-columns {
   @include make-col-ready;
 
@@ -43,7 +45,7 @@
 }
 
 .mega-cta__title {
-  font-size: rem(40);
+  font-size: functions.rem(40);
   font-weight: $font-weight-normal;
   letter-spacing: $letter-spacing-solid;
   text-transform: uppercase;

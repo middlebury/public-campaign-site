@@ -1,3 +1,5 @@
+@use "../core/functions";
+
 %media-object-border-top {
   border-top: 1px solid $gray-light;
 }
@@ -33,7 +35,7 @@
       line-height: $line-height-heading;
 
       @include breakpoint(md) {
-        font-size: rem(34);
+        font-size: functions.rem(34);
         font-weight: $font-weight-semibold; 
         margin-top: 0;
         margin-bottom: $spacing-2;
@@ -158,7 +160,7 @@
     }
 
     @include breakpoint(lg) {
-      font-size: rem(32);
+      font-size: functions.rem(32);
       font-weight: $font-weight-semibold;
       margin-top: $spacing-5;
       margin-bottom: $spacing-4;

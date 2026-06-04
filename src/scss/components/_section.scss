@@ -6,7 +6,7 @@
     margin-bottom: $spacing-4;
     
     @include breakpoint(md) {
-      font-size: rem(32);
+      font-size: functions.rem(32);
       margin-bottom: $spacing-5;
     }
 

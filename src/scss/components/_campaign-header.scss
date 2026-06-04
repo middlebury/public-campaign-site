@@ -1,3 +1,5 @@
+@use '../core/functions'; 
+
 $campaign-header-breakpoint: lg;
 
 .campaign-header {
@@ -104,7 +106,7 @@ $campaign-header-breakpoint: lg;
 
       @include breakpoint(md) {
         width: initial;
-        margin-left: rem(-144);
+        margin-left: functions.rem(-144);
         margin-bottom: $spacing-3;
       }
     }

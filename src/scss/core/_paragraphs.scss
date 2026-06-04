@@ -1,0 +1,166 @@
+////
+/// Paragraphs handle spacing, layout, and alignment of Drupal Paragraphs render in the main content region of a page.
+////
+@use './variables';
+@use '../mixins/breakpoints';
+@use "../mixins/grid";
+
+%paragraph-space {
+  margin-top: variables.$spacing-8;
+  margin-bottom: variables.$spacing-8;
+
+  @include breakpoints.breakpoint(lg) {
+    margin-top: variables.$spacing-9;
+    margin-bottom: variables.$spacing-9;
+  }
+}
+
+// %paragraph-space-sm {
+//     margin-top: variables.$spacing-6;
+//     margin-bottom: variables.$spacing-5;
+
+//     @include breakpoint(md) {
+//         margin-top: variables.$spacing-7;
+//         margin-bottom: variables.$spacing-6;
+//     }
+
+//     @include breakpoint(lg) {
+//         margin-top: variables.$spacing-8;
+//         margin-bottom: variables.$spacing-7;
+//     }
+// }
+
+%paragraph-full-width {
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+}
+
+.paragraphs {
+  margin-bottom: variables.$spacing-8;
+
+  @include breakpoints.breakpoint(lg) {
+    margin-bottom: variables.$spacing-9;
+  }
+
+  > [class*="paragraph"]:first-child {
+    margin-top: 0;
+  }
+
+  > [class*="paragraph"]:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.paragraphs--wide {
+  @include grid.make-col-ready;
+
+  @include breakpoints.breakpoint(md) {
+    @include grid.make-col(10);
+    @include grid.make-col-offset(1);
+  }
+
+  @include breakpoints.breakpoint(lg) {
+    @include grid.make-col(8);
+    @include grid.make-col-offset(2);
+  }
+
+  @extend %paragraph-space;
+
+  .paragraph--expand,
+  .paragraph--video,
+  .paragraph--image:not(.image--left):not(.image--right) {
+    @include breakpoints.breakpoint(lg) {
+      // Main column is 10 wide, so we divide by remaining
+      // columns on sides to pull them out to 12 columns.
+      // More on these techniques here:
+      // https://css-tricks.com/full-width-containers-limited-width-parents/
+      margin-left: calc(-100% * 2 / 12);
+      margin-right: calc(-100% * 2 / 12);
+      @include grid.make-gutters;
+    }
+  }
+
+  .paragraph--text {
+    @extend %paragraph-space;
+  }
+
+  .paragraphs--wide__offset {
+    @include breakpoints.breakpoint(lg) {
+      @include grid.make-col-offset(2);
+      @include grid.make-col-ready;
+      @include grid.make-col(10);
+    }
+  }
+}
+
+.paragraph--image:not(.image--left):not(.image--right) {
+  margin-bottom: variables.$spacing-5;
+
+  @include breakpoints.breakpoint(md) {
+    margin-bottom: variables.$spacing-7;
+  }
+
+  @include breakpoints.breakpoint(lg) {
+    margin-top: variables.$spacing-7;
+  }
+}
+
+.paragraph,
+.paragraph--lead,
+.paragraph--image-text,
+.paragraph--chart,
+.paragraph--featured-story {
+  @extend %paragraph-space;
+}
+
+.paragraph--article-spotlight,
+.paragraph--video-group, 
+.paragraph--quad-story {
+  @extend %paragraph-full-width;
+  
+  margin-top: variables.$spacing-7;
+
+  @include breakpoints.breakpoint(lg) {
+    margin-top: variables.$spacing-8;
+  }
+}
+
+.paragraph--small-image-with-text {
+  margin-top: variables.$spacing-7;
+  margin-bottom: variables.$spacing-7;
+
+  @include breakpoints.breakpoint(md) {
+    margin-top: variables.$spacing-8;
+    margin-bottom: variables.$spacing-8;
+  }
+} 
+
+.paragraph--video {
+  margin-bottom: variables.$spacing-5;
+
+  @include breakpoints.breakpoint(md) {
+    margin-bottom: variables.$spacing-7;
+  }
+
+  @include breakpoints.breakpoint(lg) {
+    margin-top: variables.$spacing-7;
+  }
+}
+
+.paragraph--campaign-stats {
+  padding-top: variables.$spacing-8;
+  padding-bottom: variables.$spacing-8;
+}
+
+.paragraph--audio {
+  margin-top: variables.$spacing-4;
+  margin-bottom: variables.$spacing-5;
+
+  @include breakpoints.breakpoint(md) {
+    margin-bottom: variables.$spacing-7;
+  }
+
+  @include breakpoints.breakpoint(xl) {
+    margin-top: variables.$spacing-7;
+  }
+}

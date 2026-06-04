@@ -1,6 +1,8 @@
+@use '../core/variables';
+
 $section-title-border-color: (
-    pillars: $white,
-    video-group: $light-green
+    pillars: variables.$white,
+    video-group: variables.$light-green
 );
 
 @mixin make-border-styles($border-colors: $section-title-border-color) {

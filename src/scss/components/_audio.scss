@@ -1,3 +1,4 @@
+@use "sass:math";
 .audio {
   margin-left: calc(50% - 50vw + #{$spacing-3});
   margin-right: calc(50% - 50vw + #{$spacing-3});
@@ -10,7 +11,7 @@
 
 .audio__embed {
   position: relative;
-  padding-top: percentage(9 / 16);
+  padding-top: math.percentage(9 / 16);
 
   iframe {
     position: absolute;

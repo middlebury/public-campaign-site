@@ -1,3 +1,6 @@
+@use 'sass:color';
+@use 'functions';
+
 ////
 /// Sass Variables
 ////
@@ -17,8 +20,8 @@ $screen-xl: 1440px !default;
 $grid-columns: 12 !default;
 $container-max-width: 1440px !default;
 
-$grid-gutter-width: rem(32) !default;
-$grid-gutter-width-lg: rem(64) !default;
+$grid-gutter-width: functions.rem(32) !default;
+$grid-gutter-width-lg: functions.rem(64) !default;
 
 $breakpoints: (
   xs: 0,
@@ -45,15 +48,15 @@ $responsive-variants: (
 ////
 
 $spacing-0: 0 !default;
-$spacing-1: rem(4) !default;
-$spacing-2: rem(8) !default;
-$spacing-3: rem(16) !default;
-$spacing-4: rem(24) !default;
-$spacing-5: rem(32) !default;
-$spacing-6: rem(40) !default;
-$spacing-7: rem(48) !default;
-$spacing-8: rem(64) !default;
-$spacing-9: rem(96) !default;
+$spacing-1: functions.rem(4) !default;
+$spacing-2: functions.rem(8) !default;
+$spacing-3: functions.rem(16) !default;
+$spacing-4: functions.rem(24) !default;
+$spacing-5: functions.rem(32) !default;
+$spacing-6: functions.rem(40) !default;
+$spacing-7: functions.rem(48) !default;
+$spacing-8: functions.rem(64) !default;
+$spacing-9: functions.rem(96) !default;
 
 $spacing: (
   0: $spacing-0,
@@ -127,16 +130,16 @@ $font-family-serif: (
 ) !default;
 
 // type scale
-$typescale-1: rem(12) !default;
-$typescale-2: rem(14) !default;
-$typescale-3: rem(16) !default;
-$typescale-4: rem(18) !default;
-$typescale-5: rem(20) !default;
-$typescale-6: rem(24) !default;
-$typescale-7: rem(28) !default;
-$typescale-8: rem(36) !default;
-$typescale-9: rem(48) !default;
-$typescale-10: rem(64) !default;
+$typescale-1: functions.rem(12) !default;
+$typescale-2: functions.rem(14) !default;
+$typescale-3: functions.rem(16) !default;
+$typescale-4: functions.rem(18) !default;
+$typescale-5: functions.rem(20) !default;
+$typescale-6: functions.rem(24) !default;
+$typescale-7: functions.rem(28) !default;
+$typescale-8: functions.rem(36) !default;
+$typescale-9: functions.rem(48) !default;
+$typescale-10: functions.rem(64) !default;
 
 $typescale: (
   1: $typescale-1,
@@ -219,7 +222,7 @@ $btn-font-size: $typescale-1 !default;
 // primary
 $btn-primary-bg: $color-primary !default;
 $btn-primary-color: $white !default;
-$btn-primary-hover-bg: lighten($color-primary, 10%) !default;
+$btn-primary-hover-bg: color.adjust($color-primary, $lightness: 10%) !default;
 $btn-primary-hover-color: $white !default;
 
 // light

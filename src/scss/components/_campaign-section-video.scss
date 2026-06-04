@@ -1,3 +1,5 @@
+@use "../core/functions";
+
 .campaign-video {
     color: $white;
 
@@ -7,8 +9,8 @@
         margin-bottom: $spacing-9;
 
         @include breakpoint(lg) {
-            margin-top: rem(120);
-            margin-bottom: rem(120);
+            margin-top: functions.rem(120);
+            margin-bottom: functions.rem(120);
         }
 
         .video {

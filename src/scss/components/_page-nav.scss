@@ -1,3 +1,5 @@
+@use "../core/mixins";
+
 .page-nav {
   margin-top: $spacing-4;
   margin-bottom: $spacing-5;
@@ -15,7 +17,7 @@
     height: 100%;
   }
 
-  @include print-hide;
+  @include mixins.print-hide;
 
   a {
     color: $white;

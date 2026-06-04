@@ -1,3 +1,6 @@
+@use "../core/functions";
+@use "sass:math";
+
 .campaign-section {
     position: relative;
     color: $white;
@@ -7,14 +10,14 @@
         display: block;
         content: "";
         width: 100%;
-        padding-top: percentage(377/160); 
+        padding-top: math.percentage(377/160); 
 
         @include breakpoint(sm) {
-            padding-top: percentage(225/256);
+            padding-top: math.percentage(225/256);
         }
 
         @include breakpoint(lg) {
-            padding-top: percentage(9/16);
+            padding-top: math.percentage(9/16);
         }
     }
 
@@ -38,7 +41,7 @@
 
     &.video-group {
         .campaign-section__title-border {
-            max-width: percentage(5/7);
+            max-width: math.percentage(5/7);
         }
     }
 
@@ -46,14 +49,14 @@
         background-color: $blue-light;
 
         &:before {
-            padding-top: percentage(475/320); 
+            padding-top: math.percentage(475/320); 
 
             @include breakpoint(sm) {
-                padding-top: percentage(225/256);
+                padding-top: math.percentage(225/256);
             }
 
             @include breakpoint(lg) {
-                padding-top: percentage(9/16);
+                padding-top: math.percentage(9/16);
             }
         }
     }
@@ -196,7 +199,7 @@
         }
 
         @include breakpoint(xl) {
-            font-size: rem(32);
+            font-size: functions.rem(32);
         }
 
         @include make-border-styles;
