@@ -2,6 +2,15 @@
     color: $white;
 
     .campaign-video--container {
+
+        .campaign-video--title {
+          font-size: rem(32);
+          font-weight: $font-weight-semibold;
+          text-transform: uppercase;
+          color: $light-green;
+          margin-bottom: $spacing-3;
+        }
+
         @include make-container;
         margin-top: $spacing-9;
         margin-bottom: $spacing-9;
@@ -16,8 +25,8 @@
             @include make-col(12);
 
             @include breakpoint(lg) {
-                @include make-col(10);
-                padding: 0 $spacing-5;
+                @include make-col(8);
+                // padding: 0 $spacing-5;
             }
         }
     }

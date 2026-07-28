@@ -59,16 +59,16 @@
     }
 
     &.video {
-        position: initial;
-        height: fit-content;
-        background-color: $color-primary;
+        // position: initial;
+        // height: fit-content;
+        // background-color: $color-primary;
 
         .campaign-section__wrapper {
-            position: initial;
+            // position: initial;
         }
          
         &:before {
-            padding-top: 0;
+            // padding-top: 0;
         }
     }
 
