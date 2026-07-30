@@ -1,15 +1,12 @@
 .campaign-video {
     color: $white;
+    height: 560px;
+
+    @include breakpoint(sm) {
+      height: fit-content;
+    }
 
     .campaign-video--container {
-
-        .campaign-video--title {
-          font-size: rem(32);
-          font-weight: $font-weight-semibold;
-          text-transform: uppercase;
-          color: $light-green;
-          margin-bottom: $spacing-3;
-        }
 
         @include make-container;
         margin-top: $spacing-9;
@@ -28,7 +25,27 @@
                 @include make-col(8);
                 // padding: 0 $spacing-5;
             }
+
+            .video__title {
+              font-size: $typescale-4;
+              font-weight: $font-weight-semibold;
+              letter-spacing: $letter-spacing-solid;
+              text-transform: uppercase;
+              color: $light-green;
+              margin-top: 0;
+              margin-bottom: $spacing-2;
+
+              @include breakpoint(md) {
+                font-size: rem(24);
+              }
+
+              @include breakpoint(xl) {
+                font-size: rem(32);
+                margin-bottom: $spacing-3;
+              }
+            }
         }
+
     }
 
     .transcript a {
