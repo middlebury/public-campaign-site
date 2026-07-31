@@ -1,13 +1,24 @@
 .campaign-video {
     color: $white;
+    min-height: 560px;
+    height: fit-content;
+
+    @include breakpoint(sm) {
+      min-height: auto;
+      height: fit-content;
+    }
 
     .campaign-video--container {
+
         @include make-container;
         margin-top: $spacing-9;
         margin-bottom: $spacing-9;
 
-        @include breakpoint(lg) {
+        @include breakpoint(md) {
             margin-top: rem(120);
+        }
+
+        @include breakpoint(lg) {
             margin-bottom: rem(120);
         }
 
@@ -16,10 +27,30 @@
             @include make-col(12);
 
             @include breakpoint(lg) {
-                @include make-col(10);
-                padding: 0 $spacing-5;
+                @include make-col(8);
+                // padding: 0 $spacing-5;
+            }
+
+            .video__title {
+              font-size: $typescale-4;
+              font-weight: $font-weight-semibold;
+              letter-spacing: $letter-spacing-solid;
+              text-transform: uppercase;
+              color: $light-green;
+              margin-top: 0;
+              margin-bottom: $spacing-2;
+
+              @include breakpoint(md) {
+                font-size: rem(24);
+              }
+
+              @include breakpoint(xl) {
+                font-size: rem(32);
+                margin-bottom: $spacing-3;
+              }
             }
         }
+
     }
 
     .transcript a {

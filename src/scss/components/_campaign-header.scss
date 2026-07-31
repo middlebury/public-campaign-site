@@ -4,7 +4,7 @@ $campaign-header-breakpoint: lg;
   background: transparent;
   color: $white;
   width: 100%;
-  position: fixed;
+  position: absolute;
   z-index: $z-index-campaign-header;
   font-size: $typescale-2;
   font-weight: $font-weight-bold;
@@ -96,9 +96,9 @@ $campaign-header-breakpoint: lg;
     &:first-child {
       margin-left: -$spacing-5;
       margin-bottom: $spacing-2;
-      opacity: 0;
+      opacity: 1;
       
-      animation: fadeIn 1s ease-in 3s forwards;
+      // animation: fadeIn 1s ease-in 3s forwards;
 
       width: 200px;
 

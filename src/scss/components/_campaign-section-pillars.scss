@@ -11,6 +11,8 @@
 
         @include breakpoint(lg) {
             display: block;
+            padding-left: $spacing-5;
+            padding-right: $spacing-5;
         }
 
         .campaign-section__title {

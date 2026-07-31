@@ -61,14 +61,41 @@
     &.video {
         position: initial;
         height: fit-content;
-        background-color: $color-primary;
 
         .campaign-section__wrapper {
-            position: initial;
+            position: relative;
         }
          
         &:before {
             padding-top: 0;
+        }
+    }
+
+    &.text-content {
+        position: initial;
+        height: fit-content;
+        color: $black;
+        margin-top: -100px;
+
+        @include breakpoint(sm) {
+          margin-top: -60px;
+        }
+
+        @include breakpoint(lg) {
+          margin-top: -34px;
+        }
+
+        @include breakpoint(xl) {
+          margin-top: -56px;
+        }
+
+        &:before {
+            padding-top: 0;
+        }
+
+        .text-content--wrapper {
+          background-color: $white;
+          border-top: 8px solid $teal;
         }
     }
 
@@ -213,4 +240,6 @@
         justify-content: center;
         height: 100%;
     }
+    
 }
+

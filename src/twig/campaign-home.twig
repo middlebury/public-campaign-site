@@ -5,13 +5,27 @@
 {% endblock %}
 
 {% block page %}
-    {% include 'partials/campaign-section.twig' with {
+    {# {% include 'partials/campaign-section.twig' with {
         name: 'intro',
         background_video: 'https://player.vimeo.com/progressive_redirect/playback/862522756/rendition/360p/file.mp4?loc=external&signature=3b32d3218c4daa0419a38f3c3742732083b8fe597fca6d7eaef8c741b4788dad'
-    } %}
+    } %} #}
     {% include 'partials/campaign-section.twig' with {
-        name: 'video'
+        name: 'video',
+        background_image: true
     } %}
+    <div class="col-md-10 col-lg-6 mb-6 mb-lg-8 m-auto campaign-section text-content">
+        <div class="p-2 p-md-4 p-xl-5 text-content--wrapper">
+            <p class="">
+                The For Every Future campaign launched with an ambitious vision: to raise $600 million and expand the ways Middlebury already excels. This community came together and raised nearly $650 million two years ahead of schedule.
+                <br><br>
+                Over 23,000 donors supported this achievement. Gifts provided $190 million for financial aid and opportunity grants, $132 million for faculty and academic programs, $102 million for experiential learning beyond the classroom and $142 million in unrestricted support.
+                <br><br>
+                During this time, more than 82% of undergraduate alumni—over 26,000 people—engaged with the College, including nearly 7,500 who reconnected for the first time in years.
+                <br><br>
+                All that’s left to say is thank you to every person who supported this campaign. Every person who decided to dream together about what the College can and will be.
+            </p>
+        </div>
+    </div>
     {% include 'partials/campaign-section.twig' with {
         name: 'pillars',
         dark_header: true
