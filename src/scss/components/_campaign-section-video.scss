@@ -12,8 +12,11 @@
         margin-top: $spacing-9;
         margin-bottom: $spacing-9;
 
-        @include breakpoint(lg) {
+        @include breakpoint(md) {
             margin-top: rem(120);
+        }
+
+        @include breakpoint(lg) {
             margin-bottom: rem(120);
         }
 
