@@ -1,8 +1,10 @@
 .campaign-video {
     color: $white;
-    height: 560px;
+    min-height: 560px;
+    height: fit-content;
 
     @include breakpoint(sm) {
+      min-height: auto;
       height: fit-content;
     }
 
