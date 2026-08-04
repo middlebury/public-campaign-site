@@ -20,16 +20,16 @@ campaign_header:
 
 
 campaign_footer:
-  - text: 'About'
-    href: 'https://www.middlebury.edu/about'
-  - text: 'Make a Gift'
-    href: 'https://www.middlebury.edu/alumni-and-families'
+  - text: 'Why Now'
+    href: 'https://www.middlebury.edu/campaign/why-now'
+  - text: 'Campaign Leadership'
+    href: 'https://www.middlebury.edu/campaign/campaign-leadership'
   - text: 'Ways to Give'
-    href: 'https://www.middlebury.edu'
-  - text: 'Contact'
-    href: 'https://www.middlebury.edu/'
-  - text: 'Leadership'
-    href: 'https://www.middlebury.edu/'
+    href: 'https://www.middlebury.edu/alumni-and-families/giving/ways-give'
+  - text: 'Make a Gift'
+    href: 'hhttps://engage.middlebury.edu/for-every-future-campaign'
+  - text: 'Contact Us'
+    href: 'https://www.middlebury.edu/campaign/contact-us'
 
 campaign_pillars:
   - title: 'Access'

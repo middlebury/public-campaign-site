@@ -15,6 +15,10 @@
             padding-right: $spacing-5;
         }
 
+        @include breakpoint(xl) {
+            padding-bottom: $spacing-8;
+        }
+
         .campaign-section__title {
             @include breakpoint(lg) {
                 margin-bottom: $spacing-9;

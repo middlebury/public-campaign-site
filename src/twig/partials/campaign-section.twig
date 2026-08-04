@@ -12,6 +12,7 @@
                 {% include 'partials/campaign-section-video.twig' with {
                     id: id,
                     no_title: true,
+                    custom_cover_img: true 
                 } %}
             {% elseif name == 'video-group' %}
                 {% include 'partials/campaign-section-video-group.twig' with {
@@ -66,7 +67,7 @@
                 </span>
             </button>
         {% elseif background_image %}
-            <figure class="campaign-section__background image" style="background: no-repeat center / cover #0d395f url('https://placehold.co/1440x810');">
+            <figure class="campaign-section__background image" style="background: no-repeat center / cover #0d395f url({{ background_url ?? 'https://placehold.co/1440x810' }});">
             </figure>
         {% endif %}
     </div>
