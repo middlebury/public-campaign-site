@@ -29,10 +29,11 @@
     </div>
     <div class="paragraphs paragraphs--wide">
       {% include 'paragraphs/chart-group.twig' with {
+        title: 'The Big Picture',
+        text: 'Breakdown of key campaign areas',
         items: [
           {
             type: 'pie',
-            title: 'The Big Picture',
             labels: ['Access $190 million','Academic Excellence $132 million','Experience $102 million','Unrestricted Support $142 million','Capital Projects $74 million'],
             datasets: [ { label: '', data: [30,20,16,22,12] } ],
             alt_text: '[description of chart goes here]'
