@@ -1,14 +1,18 @@
 {% set id = random(1234) %}
 <!-- video iframe html should be escaped -->
-<figure class="video js-video" data-video='<iframe src="https://player.vimeo.com/video/221201240?autoplay=1" width="400" height="225" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen allow="autoplay"></iframe>'>
+<figure class="video js-video" data-video='<iframe src="https://player.vimeo.com/video/1194510747?h=e45ae56cda" width="400" height="225" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen allow="autoplay"></iframe>'>
   <figcaption class="video__body">
     {% if name == 'video' %}
       <h3 class="video__title" id="midd-video-label-{{id}}">Celebrating For Every Future</h3>
     {% endif %}
   </figcaption>
   <div class="video__content js-video-content">
-    <a href="https://player.vimeo.com/video/221201240" class="js-video-link video__link" role="button" aria-label="Play video" aria-describedby="midd-video-label-{{id}}">
-      {% include 'partials/img.twig' with { name: 'video', lazy: lazy } %}
+    <a href="https://player.vimeo.com/video/1194510747?h=e45ae56cda" class="js-video-link video__link" role="button" aria-label="Play video" aria-describedby="midd-video-label-{{id}}">
+      {% if custom_cover_img %}
+        <img loading="eager" data-original-image-width="3840" data-original-image-height="2160" srcset="https://www.middlebury.edu/campaign/sites/default/files/styles/400x225/public/2026-07/College-People-Liv%20Davidson-Xander%20Bowles-FEF%20Campaign%20Wrap%20Video-Thumbnail.jpg?fv=rJZ0LW_-&amp;itok=Cg6z_oPw 400w, https://www.middlebury.edu/campaign/sites/default/files/styles/640x360/public/2026-07/College-People-Liv%20Davidson-Xander%20Bowles-FEF%20Campaign%20Wrap%20Video-Thumbnail.jpg?fv=VP7vDH0A&amp;itok=JNfNbqjK 640w, https://www.middlebury.edu/campaign/sites/default/files/styles/896x504/public/2026-07/College-People-Liv%20Davidson-Xander%20Bowles-FEF%20Campaign%20Wrap%20Video-Thumbnail.jpg?fv=PV1hmSvR&amp;itok=wjkIMbXb 896w, https://www.middlebury.edu/campaign/sites/default/files/styles/1136x639/public/2026-07/College-People-Liv%20Davidson-Xander%20Bowles-FEF%20Campaign%20Wrap%20Video-Thumbnail.jpg?fv=Nh0Lu3m0&amp;itok=pWDe4WD3 1136w" sizes="(max-width: 1136px) 100vw, 1136px" src="https://www.middlebury.edu/campaign/sites/default/files/styles/1136x639/public/2026-07/College-People-Liv%20Davidson-Xander%20Bowles-FEF%20Campaign%20Wrap%20Video-Thumbnail.jpg?fv=Nh0Lu3m0&amp;itok=pWDe4WD3" alt="Both wearing shades of blue, Liv Davidson and Xander Bowles look at each other and smile in the president's office.">
+      {% else %}
+        {% include 'partials/img.twig' with { name: 'video', lazy: lazy } %}
+      {% endif %}
       <span class="video__button">
         <span class="video__play-button">
           Play
@@ -19,7 +23,7 @@
             } %}
           </span>
         </span>
-        <time class="video__duration" datetime="3m 27s">03:27</time>
+        <time class="video__duration" datetime="3m 27s">03:22</time>
       </span>
     </a>
   </div>

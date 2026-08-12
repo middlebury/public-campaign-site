@@ -34,6 +34,12 @@
 
     &.pillars {
         background-color: $blue-light;
+
+        @include breakpoint(xl) {
+          &:before {
+            padding-top: 51.25%;
+          }
+        }
     }
 
     &.video-group {

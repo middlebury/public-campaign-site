@@ -88,8 +88,8 @@
 }
 
 .chart-legend__item {
-  font-size: $typescale-2;
-  margin-bottom: $spacing-1;
+  font-size: $typescale-2 !important;
+  margin-bottom: $spacing-1 !important;
 
   &:before {
     content: initial !important;
